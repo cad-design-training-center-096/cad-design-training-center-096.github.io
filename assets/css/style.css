@@ -37,7 +37,20 @@ Buy Pro
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
+/* Default: nav links are black */
+.navbar .nav-link {
+  color: black !important;
+}
 
+/* On home page: white by default */
+body.home-page .navbar .nav-link {
+  color: white !important;
+}
+
+/* On home page when scrolled: black */
+body.home-page.scrolled .navbar .nav-link {
+  color: black !important;
+}
 
 body {
   font: 1rem/1.7 "Inter", sans-serif;
@@ -45,6 +58,7 @@ body {
   color: var(--bs-body-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   overflow-x: hidden;
 }
 
 .site-wrap {
@@ -874,6 +888,11 @@ h6 {
   font-weight: 600;
   font-size: 0.75rem;
   margin-bottom: 10px;
+}
+
+.py-8 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .about__v4 .features li .icon {

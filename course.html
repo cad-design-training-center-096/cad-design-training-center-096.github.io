@@ -36,7 +36,7 @@
   </script>
 </head>
 
-<body>
+<body >
 
 
   <!-- ======= Site Wrap =======-->
@@ -47,21 +47,37 @@
     <header class="fbs__net-navbar navbar navbar-expand-lg fixed-top bg-white shadow-sm"
       aria-label="freebootstrap.net navbar">
       <div class="container d-flex align-items-center justify-content-between">
+
+        <!-- Start Logo-->
+        <a class="navbar-brand w-auto" href="index.html">
+          <!-- Uncomment to use a text logo -->
+          <!-- Vertex -->
+
+
+          <!-- <img class="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder">  -->
+          <img src="assets/images/logo.png" style="width: 55px; height:50px; margin-left:30px"
+            alt="FreeBootstrap.net image placeholder">
+
+        </a>
+        <!-- End Logo-->
+
         <!-- Start offcanvas-->
         <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1"
           aria-labelledby="fbs__net-navbarsLabel">
 
           <div class="offcanvas-header">
             <div class="offcanvas-header-logo">
+              <img src="assets/images/logo.png" style="width: 55px; height:50px; margin-left:30px;" alt="CDTC">
               </a>
             </div>
             <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas"
               aria-label="Close"></button>
           </div>
 
+
           <div class="offcanvas-body align-items-lg-center">
             <ul class="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
-              <li class="nav-item"><a class="nav-link scroll-link" href="index.html">Home</a></li>
+              <li class="nav-item scrolled"><a class="nav-link scroll-link" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link scroll-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link scroll-link" href="course.html">Courses</a></li>
               <li class="nav-item"><a class="nav-link scroll-link" href="certification.html">Certification</a></li>
@@ -69,17 +85,26 @@
               <li class="nav-item"><a class="nav-link scroll-link" href="testimonial.html">Testimonial</a></li>
               <li class="nav-item"><a class="nav-link scroll-link" href="faqs.html">FAQs</a></li>
               <li class="nav-item"><a class="nav-link scroll-link" href="contact.html">Contact</a></li>
+              <div class="d-block d-lg-none">
+                <hr />
+
+                <div class="d-flex gap-2 mt-2">
+                  <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Buy Now</a>
+                  <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Quotation</a>
+                </div>
+
+                <hr />
+
+                <p class="text-muted mt-2">Version 1.0 (Stable)</p>
+              </div>
             </ul>
           </div>
         </div>
         <!-- End offcanvas-->
 
-
-
-
         <div class="ms-auto w-auto">
           <div class="header-social d-flex align-items-center gap-1">
-            <a class="btn btn-primary py-2" href="#">Buy Now</a>
+            <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Buy Now</a>
             <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Quotation</a>
 
             <button class="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto"
@@ -153,9 +178,9 @@
         =============================================================================================================================================== -->
     
 <!-- ======= Courses Compact Section with Background Image ======= -->
-<section class="section bg-light py-8 courses-background" id="course">
-  <div class="container ">
-    <div class="text-center mb-5">
+<section class="section bg-light courses-background" id="course">
+  <div class="container py-8 ">
+    <div class="text-center mb-5 ">
      
       <h2 class="fw-bold">Build Future-Ready Design Experts</h2>
       <p>On-campus 4-day CAD training with certification & job guidance. Choose from single software or full combo plans.</p>
