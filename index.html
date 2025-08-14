@@ -50,10 +50,10 @@
       <!-- Uncomment to use a text logo -->
       <!-- Vertex --> 
       
-      <!-- 
-      <img class="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder"> 
-      <img class="logo light img-fluid" src="assets/images/logo-light.svg" alt="FreeBootstrap.net image placeholder"> 
-      -->
+      
+      <!-- <img class="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder">  -->
+      <img src="assets/images/logo.png" style="width: 55px; height:50px; margin-left:30px" alt="FreeBootstrap.net image placeholder"> 
+     
     </a>
     <!-- End Logo-->
 
@@ -62,15 +62,12 @@
       
       <div class="offcanvas-header">
         <div class="offcanvas-header-logo">
-          <a class="logo-link" id="fbs__net-navbarsLabel" href="index.html">
-            <!-- logo dark -->
-            <!-- <img class="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder">  -->
-            <!-- logo light -->
-            <img class="logo light img-fluid" src="assets/images/logo-light.svg" alt="FreeBootstrap.net image placeholder">
+            <img src="assets/images/logo.png" style="width: 55px; height:50px; margin-left:30px;" alt="CDTC">
           </a>
         </div>
         <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+
 
       <div class="offcanvas-body align-items-lg-center">
         <ul class="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
@@ -82,6 +79,18 @@
           <li class="nav-item"><a class="nav-link scroll-link" href="testimonial.html">Testimonial</a></li>
           <li class="nav-item"><a class="nav-link scroll-link" href="faqs.html">FAQs</a></li>
           <li class="nav-item"><a class="nav-link scroll-link" href="contact.html">Contact</a></li>
+          <div class="d-block d-lg-none">
+            <hr />
+          
+            <div class="d-flex gap-2 mt-2">
+              <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Buy Now</a>
+              <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Quotation</a>
+            </div>
+          
+            <hr />
+          
+            <p class="text-muted mt-2">Version 1.0 (Stable)</p>
+          </div>
         </ul>
       </div>
     </div>
@@ -89,7 +98,7 @@
 
     <div class="ms-auto w-auto">
       <div class="header-social d-flex align-items-center gap-1">
-        <a class="btn btn-primary py-2" href="loginRegister.html">Buy Now</a>
+        <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Buy Now</a>
         <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Quotation</a>
 
         <button class="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto" data-bs-toggle="offcanvas" data-bs-target="#fbs__net-navbars" aria-controls="fbs__net-navbars" aria-label="Toggle navigation" aria-expanded="false">
@@ -115,10 +124,12 @@
         
         
 <!-- ======= Hero with Video Background and Top Gradient Overlay ======= -->
+<!-- ======= Hero with Video Background and Top Gradient Overlay ======= -->
 <section id="hero-video" style="position: relative; height: 100vh; overflow: hidden;">
   <!-- Background Video -->
-  <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background-color: #000; z-index: -1;">
-    <source src="assets/video/clay_4a485c49f2.mp4" type="video/mp4">
+  <video id="hero-bg-video" autoplay muted loop playsinline 
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background-color: #000; z-index: -1;">
+    <source src="assets/video/4.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -132,62 +143,139 @@
   </div>
 
   <!-- Hero Content: Centered horizontally, aligned to bottom -->
-  <div class="container h-100 d-flex flex-column justify-content-end align-items-center text-center text-white" style="position: relative; z-index: 1; padding-bottom: 60px;">
+  <div class="container h-100 d-flex flex-column justify-content-end align-items-center text-center text-white" 
+       style="position: relative; z-index: 1; padding-bottom: 60px;">
     <div>
       <h1 class="display-4 fw-bold mb-4" style="color: #ffffff; text-shadow: 
         -1px -1px 0 #000,  
          1px -1px 0 #000,
         -1px  1px 0 #000,
          1px  1px 0 #000;">
-        Design Beyond Engineering
+        <div class="d-flex flex-column">
+          <p>CAD DESIGN TRAINING CENTER</p>
+          <p style="font-size: 25px;"> - Design Beyond Engineering</p>
+        </div>
       </h1>
 
       <a href="#contact" class="btn btn-light me-2">Get Started</a>
       <a href="#about" class="btn btn-outline-light">Learn More</a>
     </div>
   </div>
+
+  <!-- Left and Right Buttons -->
+  <button id="prev-video" style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); z-index: 2; background-color: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-size: 18px;">&#8592;</button>
+  <button id="next-video" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); z-index: 2; background-color: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-size: 18px;">&#8594;</button>
 </section>
+<!-- End Hero -->
+
+<script>
+  const videos = [
+    "assets/video/4.mp4",
+    "assets/video/10.mp4",
+    "assets/video/11.mp4",
+    "assets/video/12.mp4",
+    "assets/video/13.mp4",
+    "assets/video/14.mp4",
+    "assets/video/15.mp4",
+    "assets/video/16.mp4",
+    "assets/video/17.mp4",
+    "assets/video/18.mp4",
+    "assets/video/19.mp4"
+  ];
+
+  let currentVideo = 0;
+  const videoElement = document.getElementById("hero-bg-video");
+
+  // Function to play a specific video
+  function playVideo(index) {
+    currentVideo = index;
+    videoElement.src = videos[currentVideo];
+    videoElement.load();
+    videoElement.play();
+  }
+
+  // Automatic video scroll every 5 seconds
+  let autoScroll = setInterval(() => {
+    currentVideo = (currentVideo + 1) % videos.length;
+    playVideo(currentVideo);
+  }, 5000);
+
+  // Previous and Next button handlers
+  document.getElementById("prev-video").addEventListener("click", () => {
+    currentVideo = (currentVideo - 1 + videos.length) % videos.length;
+    playVideo(currentVideo);
+
+    // Reset automatic scroll timer
+    clearInterval(autoScroll);
+    autoScroll = setInterval(() => {
+      currentVideo = (currentVideo + 1) % videos.length;
+      playVideo(currentVideo);
+    }, 5000);
+  });
+
+  document.getElementById("next-video").addEventListener("click", () => {
+    currentVideo = (currentVideo + 1) % videos.length;
+    playVideo(currentVideo);
+
+    // Reset automatic scroll timer
+    clearInterval(autoScroll);
+    autoScroll = setInterval(() => {
+      currentVideo = (currentVideo + 1) % videos.length;
+      playVideo(currentVideo);
+    }, 5000);
+  });
+</script>
+
 <!-- End Hero -->
 
 
 
         
 <!-- ======= About & Journey Timeline Section ======= -->
-<section class="about__v4 section bg-white py-5" id="about">
+
+
+<section class="about__v4 section bg-white py-6" id="about">
   <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Left: Image + Mission/Vision -->
+    <div class="row align-items-center gx-6">
+      <!-- Left: Video -->
       <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-        <div class="img-wrap position-relative">
-          <img src="assets/images/videoframe_4240.png" alt="CAD Training" class="img-fluid rounded-4 shadow-sm">
+
+        <div class="video-wrap position-relative rounded-4 shadow-sm overflow-hidden" style="transition: transform 0.3s;">
           
-          <!-- Mission and Vision -->
-          <div class="d-flex flex-column gap-3 mt-4">
-            <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-light border-start border-4 border-primary">
-              <i class="bi bi-bullseye fs-4 text-primary"></i>
-              <div>
-                <h5 class="fw-bold text-uppercase mb-1">Our Mission</h5>
-                <p class="mb-0 small">Empowering students with industry-standard CAD skills through focused, practical training.</p>
-              </div>
-            </div>
-            <div class="d-flex align-items-start gap-3 p-3 rounded-3 bg-light border-start border-4 border-primary">
-              <i class="bi bi-eye fs-4 text-primary"></i>
-              <div>
-                <h5 class="fw-bold text-uppercase mb-1">Our Vision</h5>
-                <p class="mb-0 small">To become the most trusted name in CAD training across technical institutions nationwide.</p>
-              </div>
-            </div>
+          <!-- Background Video -->
+    <video id="about-video" autoplay muted loop playsinline
+      style="width: 100%; height: 100%; border-radius: 1rem; display: block; object-fit: cover; aspect-ratio: 4 / 3">
+      <source src="assets/video/avatar_IV.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+
+
+
+          <!-- Mute/Unmute Button always visible -->
+          <div style="position: absolute; bottom: 15px; right: 15px; z-index: 2;">
+            <button id="mute-toggle" 
+                    style="background-color: #000; border: none; color: #fff; padding: 12px 18px; border-radius: 0.5rem; cursor: pointer; font-weight: bold; font-size: 16px;">
+              Unmute Video
+            </button>
           </div>
+
+          <!-- Mission & Vision commented out for now -->
+          <!--
+          <div class="d-flex flex-column gap-3 mt-4 position-relative" style="z-index: 1;">
+            ...
+          </div>
+          -->
+
         </div>
       </div>
 
+
       <!-- Right: About Content -->
       <div class="col-lg-6" data-aos="fade-left">
-        <span class="text-uppercase text-primary fw-semibold fs-6 mb-2 d-block">About Us</span>
         <h2 class="fw-bold mb-4">Master 5 CAD Tools in Just <span class="text-primary editable">4 Days</span></h2>
         <p class="mb-3">We offer a structured and intensive CAD training program tailored for engineering and diploma students, with practical exposure to top CAD platforms used across the industry.</p>
-        
+
         <div class="row gy-3">
           <div class="col-sm-6 d-flex align-items-start gap-2">
             <i class="bi bi-check-circle-fill text-primary"></i>
@@ -214,7 +302,7 @@
             <span>Certified Course with Job Assistance</span>
           </div>
         </div>
-        
+
         <div class="mt-4">
           <p class="small text-muted">* The training timeline, i.e. <span class="text-primary fw-bold editable">4 Days</span>, is customizable for institutions. Contact us for customized sessions.</p>
         </div>
@@ -223,123 +311,310 @@
   </div>
 </section>
 
-<!-- ======= Timeline Section ======= -->
-<section class="section bg-light py-5" id="timeline">
-  <div class="container">
-    <!-- Section Heading -->
-    <div class="text-center mb-4">
-      <span class="text-uppercase text-primary fw-semibold fs-6">Our Journey</span>
-      <h2 class="fw-bold mb-3">From Vision to Reality</h2>
-    </div>
-  </div>
+<script>
+  const video = document.getElementById("about-video");
+  const muteBtn = document.getElementById("mute-toggle");
 
-  <!-- Full-width black background with image -->
-  <div class="black-background-wrapper">
-    <div class="image-inner">
-      <img src="assets/images/visual selection.png" alt="Our Journey Visual" class="img-fluid rounded">
+  muteBtn.addEventListener("click", () => {
+    video.muted = !video.muted;
+    muteBtn.textContent = video.muted ? "Unmute Video" : "Mute Video";
+  });
+</script>
+
+
+
+<!-- pricing section start -->
+<div class="pricing_section layout_padding">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <!-- Left side - Pricing Plans -->
+            <div class="col-lg-6" style="padding-right:30px;"> <!-- Added spacing from model -->
+                <div class="pricing_section_2">
+                    <div class="row">
+                        <!-- Plan 1 -->
+                        <div class="col-md-12 mb-4">
+                            <div class="pricing_box" style="padding:25px 15px;"> <!-- Reduced box size -->
+                                
+                                <h5 class="cloud_text">4-Day CAD Master Program</h5>
+                                <h1 class="dolor_text">₹71,000</h1>
+                                <h3 class="monthly_text">PER BATCH (Incl. GST)</h3>
+                                <p class="band_text">
+                                    AutoCAD, SolidWorks, CATIA, NX, Creo<br>
+                                    Certificates & job assistance<br>
+                                    Max 65 students per batch
+                                </p>
+                              <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Book Now</a>
+                            </div>
+                        </div>
+                        <!-- Plan 2 -->
+                        <div class="col-md-12 mb-4">
+                            <div class="pricing_box" style="padding:25px 15px;"> <!-- Reduced box size -->
+                                
+                                <h5 class="cloud_text">Annual Training Partnership</h5>
+                                <h1 class="dolor_text">₹2,50,000+</h1>
+                                <h3 class="monthly_text">YEARLY</h3>
+                                <p class="band_text">
+                                    Multiple batches throughout the year<br>
+                                    Discounted pricing for bulk sessions<br>
+                                    Dedicated account manager
+                                </p>
+                                <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right side - 3D Model Viewer -->
+            <div class="col-lg-6 text-center" style="display:flex; justify-content:flex-end; padding-right:40px;">
+                <model-viewer 
+                    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
+                    alt="3D Astronaut Model" 
+                    camera-controls 
+                    auto-rotate 
+                    rotation-per-second="30deg"
+                    shadow-intensity="1"
+                    disable-zoom
+                    camera-orbit="90deg 75deg 5m"
+                    field-of-view="25deg"
+                    style="width:100%; max-width:600px; height:700px;">
+                </model-viewer>
+            </div>
+
+        </div>
     </div>
-  </div>
-</section>
+</div>
+<!-- pricing section end -->
+
+
+
+
+<!-- Include model-viewer script -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 <!-- ======= Custom Styling ======= -->
 <style>
-  #timeline {
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-
-  .black-background-wrapper {
-    background-color: #000;
-    padding: 20px 0;
-    width: 100%;
-  }
-
-  .image-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
-
-  .image-inner img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    display: block;
-  }
-
-  #timeline h2 {
-    margin-bottom: 10px;
-  }
+    .pricing_section {
+        padding: 60px 0;
+        background: linear-gradient(135deg, #0a0c1d, #1E447F);
+    }
+    .pricing_taital {
+        font-size: 38px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: #00c6ff;
+        letter-spacing: 1px;
+    }
+    .pricing_text {
+        max-width: 800px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: #cfd6e3;
+    }
+    .pricing_box {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 35px 20px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 0 15px rgba(0, 198, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+    .pricing_box::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), 
+                          linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+    }
+    .pricing_box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0, 198, 255, 0.35);
+    }
+    .number_text {
+        font-size: 28px;
+        color: #00c6ff;
+        position: relative;
+        z-index: 1;
+    }
+    .cloud_text {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0;
+        color: #fff;
+        z-index: 1;
+        position: relative;
+    }
+    .dolor_text {
+        font-size: 34px;
+        color: #00ffb3;
+        font-weight: bold;
+        z-index: 1;
+        position: relative;
+    }
+    .monthly_text {
+        font-size: 14px;
+        font-weight: 600;
+        color: #cfd6e3;
+        margin-bottom: 15px;
+        z-index: 1;
+        position: relative;
+    }
+    .band_text {
+        font-size: 15px;
+        color: #e6e6e6;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        z-index: 1;
+        position: relative;
+    }
+    .signup_bt a {
+        display: inline-block;
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        transition: background 0.3s ease, transform 0.3s ease;
+        z-index: 1;
+        position: relative;
+    }
+    .signup_bt a:hover {
+        background: linear-gradient(135deg, #00ffb3, #00c6ff);
+        transform: scale(1.05);
+    }
 </style>
 
 
-<!-- ======= Trusted by Industry Leaders Section with Seamless Marquee ======= -->
+
+
+
+
+<!-- ======= Trusted by Industry Leaders (India – Education) ======= -->
 <style>
+  :root {
+    --airbus-blue: #1E447F;
+  }
+
   .marquee-container {
     width: 100vw;
     overflow: hidden;
-    background-color: #fff;
+    background: #fff;
     padding: 20px 0;
   }
 
   .marquee-track {
     display: flex;
+    gap: 30px;
+    align-items: center;
     width: max-content;
     animation: scroll-marquee 30s linear infinite;
   }
 
+  .marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
   .marquee-track img {
     height: 50px;
-    margin: 0 30px;
     object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.9;
+    transition: opacity 0.2s ease, filter 0.2s ease;
+  }
+
+  .marquee-track img:hover {
+    filter: none;
+    opacity: 1;
   }
 
   @keyframes scroll-marquee {
     0% {
       transform: translateX(0);
     }
+
     100% {
       transform: translateX(-50%);
     }
+  }
+
+  /* Optional: better spacing on small screens */
+  @media (max-width: 576px) {
+    .marquee-track {
+      gap: 20px;
+    }
+
+    .marquee-track img {
+      height: 40px;
+    }
+  }
+
+  /* Airbus blue color for heading & underline */
+  .text-center>span {
+    color: var(--airbus-blue);
+  }
+
+  .text-center>h2 {
+    color: var(--airbus-blue);
+    font-weight: 700;
+  }
+
+  .text-center hr {
+    border-color: var(--airbus-blue);
   }
 </style>
 
 <!-- Section Heading -->
 <div class="text-center mb-5">
-  <span class="text-uppercase text-primary fw-semibold fs-6">Trusted By Industry Leaders</span>
-  <h2 class="fw-bold">Our Valuable Organisations</h2>
+  <span class="text-uppercase fw-semibold fs-6">Trusted By Industry Leaders</span>
+  <h2 class="fw-bold">Our Partner Institutions</h2>
 </div>
 
 <!-- Seamless Scrolling Logo Marquee -->
-<div class="marquee-container">
+<div class="marquee-container" aria-label="Partner institutions logo marquee">
   <div class="marquee-track">
-    <!-- Logos duplicated twice for seamless loop -->
-    <img src="assets/images/logo/logo-uber__black.svg" alt="Uber">
-    <img src="assets/images/logo/logo-air-bnb__black.svg" alt="Airbnb">
-    <img src="assets/images/logo/logo-american-apparel.svg" alt="American Apparel">
-    <img src="assets/images/logo/logo-american-apparel__black.svg" alt="American Apparel Black">
-    <img src="assets/images/logo/logo-apple.svg" alt="Apple">
-    <img src="assets/images/logo/logo-google__black.svg" alt="Google">
-    <img src="assets/images/logo/logo-ibm.svg" alt="IBM">
-    <img src="assets/images/logo/logo-invision.svg" alt="InVision">
-    <img src="assets/images/logo/logo-microsoft.svg" alt="Microsoft">
-    <img src="assets/images/logo/logo-youtube.svg" alt="YouTube">
-    <img src="assets/images/logo/logo-netflix.svg" alt="Netflix">
+    <!-- Set 1 -->
+    <img src="assets/images/institutions/iit-bombay.svg" alt="IIT Bombay">
+    <img src="assets/images/institutions/iit-delhi.svg" alt="IIT Delhi">
+    <img src="assets/images/institutions/iit-madras.svg" alt="IIT Madras">
+    <img src="assets/images/institutions/iit-kanpur.svg" alt="IIT Kanpur">
+    <img src="assets/images/institutions/iisc-bengaluru.svg" alt="Indian Institute of Science Bengaluru">
+    <img src="assets/images/institutions/iim-ahmedabad.svg" alt="IIM Ahmedabad">
+    <img src="assets/images/institutions/iim-bangalore.svg" alt="IIM Bangalore">
+    <img src="assets/images/institutions/aiims-delhi.svg" alt="AIIMS New Delhi">
+    <img src="assets/images/institutions/du.svg" alt="University of Delhi">
+    <img src="assets/images/institutions/jnu.svg" alt="Jawaharlal Nehru University">
+    <img src="assets/images/institutions/nit-trichy.svg" alt="NIT Tiruchirappalli">
+    <img src="assets/images/institutions/nit-warangal.svg" alt="NIT Warangal">
+    <img src="assets/images/institutions/nid-ahmedabad.svg" alt="National Institute of Design Ahmedabad">
 
     <!-- Duplicate for seamless loop -->
-    <img src="assets/images/logo/logo-uber__black.svg" alt="Uber">
-    <img src="assets/images/logo/logo-air-bnb__black.svg" alt="Airbnb">
-    <img src="assets/images/logo/logo-american-apparel.svg" alt="American Apparel">
-    <img src="assets/images/logo/logo-american-apparel__black.svg" alt="American Apparel Black">
-    <img src="assets/images/logo/logo-apple.svg" alt="Apple">
-    <img src="assets/images/logo/logo-google__black.svg" alt="Google">
-    <img src="assets/images/logo/logo-ibm.svg" alt="IBM">
-    <img src="assets/images/logo/logo-invision.svg" alt="InVision">
-    <img src="assets/images/logo/logo-microsoft.svg" alt="Microsoft">
-    <img src="assets/images/logo/logo-youtube.svg" alt="YouTube">
-    <img src="assets/images/logo/logo-netflix.svg" alt="Netflix">
+    <img src="assets/images/institutions/iit-bombay.svg" alt="IIT Bombay">
+    <img src="assets/images/institutions/iit-delhi.svg" alt="IIT Delhi">
+    <img src="assets/images/institutions/iit-madras.svg" alt="IIT Madras">
+    <img src="assets/images/institutions/iit-kanpur.svg" alt="IIT Kanpur">
+    <img src="assets/images/institutions/iisc-bengaluru.svg" alt="Indian Institute of Science Bengaluru">
+    <img src="assets/images/institutions/iim-ahmedabad.svg" alt="IIM Ahmedabad">
+    <img src="assets/images/institutions/iim-bangalore.svg" alt="IIM Bangalore">
+    <img src="assets/images/institutions/aiims-delhi.svg" alt="AIIMS New Delhi">
+    <img src="assets/images/institutions/du.svg" alt="University of Delhi">
+    <img src="assets/images/institutions/jnu.svg" alt="Jawaharlal Nehru University">
+    <img src="assets/images/institutions/nit-trichy.svg" alt="NIT Tiruchirappalli">
+    <img src="assets/images/institutions/nit-warangal.svg" alt="NIT Warangal">
+    <img src="assets/images/institutions/nid-ahmedabad.svg" alt="National Institute of Design Ahmedabad">
   </div>
 </div>
+
 
 
 
@@ -484,123 +759,329 @@
 
 
 
-<!-- ======= Placement Support Section (Continuous Marquee) ======= -->
-<section class="section bg-light py-5" id="placement">
-  <div class="container-fluid px-0">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-    <!-- Section Heading -->
-    <div class="text-center mb-5 px-3">
-      <span class="text-uppercase text-primary fw-semibold fs-6">Placement Support & Hiring Network</span>
-      <h2 class="fw-bold">Top Core Companies Hiring Our Trained Students</h2>
-      <p class="text-muted small">We proudly collaborate with 100+ industry-leading organizations to support student placements across India.</p>
-    </div>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-    <!-- Continuous Marquee Track -->
-    <div class="marquee-container-full">
-      <div class="marquee-track-wrapper">
-        <div class="marquee-track text-dark fw-semibold small">
-          <span class="mx-4">Tata Technologies</span>
-          <span class="mx-4">L&T Technology Services</span>
-          <span class="mx-4">Mahindra & Mahindra</span>
-          <span class="mx-4">Ashok Leyland</span>
-          <span class="mx-4">Maruti Suzuki</span>
-          <span class="mx-4">TVS Motor</span>
-          <span class="mx-4">Hero MotoCorp</span>
-          <span class="mx-4">ISRO</span>
-          <span class="mx-4">DRDO</span>
-          <span class="mx-4">HAL</span>
-          <span class="mx-4">Bosch</span>
-          <span class="mx-4">Siemens</span>
-          <span class="mx-4">John Deere</span>
-          <span class="mx-4">JCB</span>
-          <span class="mx-4">Altair</span>
-          <span class="mx-4">Dassault</span>
-          <span class="mx-4">HCL</span>
-          <span class="mx-4">Ather Energy</span>
-          <span class="mx-4">Ola Electric</span>
-          <span class="mx-4">WABCO</span>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+    overflow-x: hidden;
+  }
 
-          <!-- Repeat for seamless loop -->
-          <span class="mx-4">Tata Technologies</span>
-          <span class="mx-4">L&T Technology Services</span>
-          <span class="mx-4">Mahindra & Mahindra</span>
-          <span class="mx-4">Ashok Leyland</span>
-          <span class="mx-4">Maruti Suzuki</span>
-          <span class="mx-4">TVS Motor</span>
-          <span class="mx-4">Hero MotoCorp</span>
-          <span class="mx-4">ISRO</span>
-          <span class="mx-4">DRDO</span>
-          <span class="mx-4">HAL</span>
-          <span class="mx-4">Bosch</span>
-          <span class="mx-4">Siemens</span>
-          <span class="mx-4">John Deere</span>
-          <span class="mx-4">JCB</span>
-          <span class="mx-4">Altair</span>
-          <span class="mx-4">Dassault</span>
-          <span class="mx-4">HCL</span>
-          <span class="mx-4">Ather Energy</span>
-          <span class="mx-4">Ola Electric</span>
-          <span class="mx-4">WABCO</span>
+  section {
+    padding: 60px 20px;
+  }
+
+  .text-center {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .text-primary {
+    color: #1E447F;
+  }
+
+  .fw-bold {
+    font-weight: bold;
+  }
+
+  .fw-semibold {
+    font-weight: 600;
+  }
+
+  .bg-light {
+    background-color: #fff;
+  }
+
+  /* PLACEMENT MARQUEE */
+  .marquee-container-full {
+    width: 100vw;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+
+  .marquee-track-wrapper {
+    width: 200%;
+    display: flex;
+    animation: scroll-left 80s linear infinite;
+  }
+
+  .marquee-track {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1E447F;
+  }
+
+  .marquee-track span {
+    margin: 0 30px;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* TESTIMONIALS */
+  .testimonials__v2 {
+    background-color: #fff;
+  }
+
+  .swiper {
+    padding: 40px 0;
+  }
+
+  .swiper-slide {
+    background: #f1f1f1;
+    padding: 25px 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    opacity: 0.5;
+    transform: scale(0.9);
+    color: #333;
+  }
+
+  .swiper-slide-active {
+    background-color: #1E447F;
+    color: #fff;
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .swiper-slide blockquote {
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-author {
+    text-align: right;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .testimonial-role {
+    font-weight: normal;
+    font-size: 13px;
+  }
+
+  .swiper-pagination-bullet {
+    background: #1E447F;
+    opacity: 0.6;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .swiper-slide {
+      max-width: 90%;
+    }
+
+    .marquee-track span {
+      margin: 0 20px;
+      font-size: 14px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <!-- Placement Support Section -->
+  <section class="section bg-light" id="placement">
+    <div class="container-fluid px-0">
+      <div class="text-center px-3">
+        <span class="text-uppercase text-primary fw-semibold fs-6">Placement Support & Hiring Network</span>
+        <h2 class="fw-bold">Top Core Companies Hiring Our Trained Employees</h2>
+        <p class="text-muted small">We collaborate with 100+ industry-leading organizations to support career growth
+          across India.</p>
+      </div>
+
+      <div class="marquee-container-full">
+        <div class="marquee-track-wrapper">
+          <div class="marquee-track">
+            <span>Tata Technologies</span>
+            <span>L&T Technology Services</span>
+            <span>Mahindra & Mahindra</span>
+            <span>Ashok Leyland</span>
+            <span>Maruti Suzuki</span>
+            <span>TVS Motor</span>
+            <span>Hero MotoCorp</span>
+            <span>ISRO</span>
+            <span>DRDO</span>
+            <span>HAL</span>
+            <span>Bosch</span>
+            <span>Siemens</span>
+            <span>John Deere</span>
+            <span>JCB</span>
+            <span>Altair</span>
+            <span>Dassault</span>
+            <span>HCL</span>
+            <span>Ather Energy</span>
+            <span>Ola Electric</span>
+            <span>WABCO</span>
+            <!-- Repeat -->
+            <span>Tata Technologies</span>
+            <span>L&T Technology Services</span>
+            <span>Mahindra & Mahindra</span>
+            <span>Ashok Leyland</span>
+            <span>Maruti Suzuki</span>
+            <span>TVS Motor</span>
+            <span>Hero MotoCorp</span>
+            <span>ISRO</span>
+            <span>DRDO</span>
+            <span>HAL</span>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Testimonials Section -->
+  <section class="testimonials__v2" id="testimonial">
+    <div class="container">
+      <div class="text-center">
+        <span class="text-uppercase text-primary fw-semibold fs-6">Testimonials</span>
+        <h2 class="fw-bold">What Our Employees Say</h2>
+        <p class="text-muted small">Real voices from our engineering and design team.</p>
+      </div>
 
-<style>
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+      <!-- Swiper Carousel -->
+      <div class="swiper testimonialSwiper">
+        <div class="swiper-wrapper">
 
-.marquee-container-full {
-  width: 100vw;
-  background-color: #ffffff;
-  overflow: hidden;
-  position: relative;
-}
+          <div class="swiper-slide">
+            <blockquote>"Working on SolidWorks projects helped me build real-world skills quickly."</blockquote>
+            <div class="testimonial-author">Shoban<br><span class="testimonial-role">Design Engineer</span></div>
+          </div>
 
-.marquee-track-wrapper {
-  width: 200%;
-  display: flex;
-  animation: scroll-left 1200s linear infinite;
-}
+          <div class="swiper-slide">
+            <blockquote>"I started with no CAD experience. Now I’m handling client projects confidently."</blockquote>
+            <div class="testimonial-author">Priyanka<br><span class="testimonial-role">Junior CAD Engineer</span></div>
+          </div>
 
-.marquee-track {
-  display: flex;
-  white-space: nowrap;
-  font-size: 1.1rem;
-  align-items: center;
-}
+          <div class="swiper-slide">
+            <blockquote>"Creo training here gave me an edge in core design work. Great environment!"</blockquote>
+            <div class="testimonial-author">Dayanand<br><span class="testimonial-role">Product Designer</span></div>
+          </div>
 
-.marquee-track span {
-  display: inline-block;
-  padding: 0 24px;
-  color: #010016;
-}
+          <div class="swiper-slide">
+            <blockquote>"With AutoCAD and Revit, I handle architectural plans with complete confidence."</blockquote>
+            <div class="testimonial-author">Shweta<br><span class="testimonial-role">Civil Engineer</span></div>
+          </div>
 
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-</style>
+          <div class="swiper-slide">
+            <blockquote>"Industrial CAD sessions were impactful. Very well structured."</blockquote>
+            <div class="testimonial-author">Nilesh<br><span class="testimonial-role">Training Manager</span></div>
+          </div>
 
-       
+          <div class="swiper-slide">
+            <blockquote>"The CATIA program opened doors and got me hired fast."</blockquote>
+            <div class="testimonial-author">Somya<br><span class="testimonial-role">Design Engineer Trainee</span></div>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote>"Great mentors and real-time projects. I'm a better engineer now."</blockquote>
+            <div class="testimonial-author">Ravi<br><span class="testimonial-role">Mechanical Engineer</span></div>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote>"The Revit training transformed the way I approach design tasks."</blockquote>
+            <div class="testimonial-author">Pooja<br><span class="testimonial-role">Architectural Designer</span></div>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote>"The support team is amazing and the exposure is unmatched."</blockquote>
+            <div class="testimonial-author">Amit<br><span class="testimonial-role">CAD Analyst</span></div>
+          </div>
+
+          <div class="swiper-slide">
+            <blockquote>"Clear goals, great tools, and a team that pushes you to excel."</blockquote>
+            <div class="testimonial-author">Divya<br><span class="testimonial-role">Design Intern</span></div>
+          </div>
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper(".testimonialSwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+
+
 <!-- ======= Footer =======-->
 <style>
+  .footer {
+     background: linear-gradient(135deg, #0a0c1d, #1E447F) !important;
+    /* Airbus Blue */
+    color: white;
+  }
+
   .footer h3 {
-    font-size: 1.5rem; /* Adjust size if needed */
-    font-weight: 1000;    /* Bold */
+    font-size: 1.5rem;
+    font-weight: 1000;
+  }
+
+  .footer a {
+    color: white;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+  }
+
+  .footer hr {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .footer .bi {
+    vertical-align: middle;
   }
 </style>
 
-<footer class="footer pt-5 pb-5 bg-primary text-white">
+<footer class="footer pt-5 pb-5 text-white">
   <div class="container">
 
     <!-- Main Footer Content -->
@@ -610,13 +1091,17 @@ body, html {
       <div class="col-md-4 mb-5 mb-lg-0">
         <h3 class="mb-3">About</h3>
         <hr>
-        <p>Harness our tools to transform ideas into impactful designs. Create with ease and share your vision effortlessly.</p>
+        <p>Harness our tools to transform ideas into impactful designs. Create with ease and share your vision
+          effortlessly.</p>
         <!-- Social Media Icons -->
         <div class="d-flex gap-3 mt-4">
-          <a href="https://www.linkedin.com" target="_blank" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.instagram.com" target="_blank" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.facebook.com" target="_blank" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.youtube.com" target="_blank" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" class="fs-5"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com" target="_blank" class="fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank" class="fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.youtube.com" target="_blank" class="fs-5"><i class="bi bi-youtube"></i></a>
+          <a href="https://twitter.com" target="_blank" class="fs-5"><i class="bi bi-twitter"></i></a>
+          <a href="https://github.com" target="_blank" class="fs-5"><i class="bi bi-github"></i></a>
+
         </div>
       </div>
 
@@ -629,11 +1114,11 @@ body, html {
             <h3 class="mb-3">Company</h3>
             <hr>
             <ul class="list-unstyled">
-              <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
-              <li><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
-              <li><a href="#contact" class="text-white text-decoration-none">Contact Us</a></li>
-              <li><a href="page-terms-conditions.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
-              <li><a href="page-privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+              <li><a href="#about" class="text-decoration-none">About Us</a></li>
+              <li><a href="#courses" class="text-decoration-none">Courses</a></li>
+              <li><a href="#contact" class="text-decoration-none">Contact Us</a></li>
+              <li><a href="page-terms-conditions.html" class="text-decoration-none">Terms & Conditions</a></li>
+              <li><a href="page-privacy-policy.html" class="text-decoration-none">Privacy Policy</a></li>
             </ul>
           </div>
 
@@ -642,8 +1127,8 @@ body, html {
             <h3 class="mb-3">Accounts</h3>
             <hr>
             <ul class="list-unstyled">
-              <li><a href="page-signup.html" class="text-white text-decoration-none">Register</a></li>
-              <li><a href="loginRegister.html" class="text-white text-decoration-none">Sign In</a></li>
+              <li><a href="page-signup.html" class="text-decoration-none">Register</a></li>
+              <li><a href="loginRegister.html" class="text-decoration-none">Sign In</a></li>
             </ul>
           </div>
 
@@ -652,11 +1137,13 @@ body, html {
             <h3 class="mb-3">Contact</h3>
             <hr>
             <p class="d-flex mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Jaraka, Jajpur, Odisha,<br>755050, India</p>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cdtc.edu@gmail.com" target="_blank"
-                  class="d-flex mb-2 text-white text-decoration-none">
-                  <i class="bi bi-envelope-fill me-2"></i>cdtc.edu@gmail.com
-                </a>            
-              <a href="tel:+917735791012" class="d-flex text-white text-decoration-none"><i class="bi bi-telephone-fill me-2"></i>+91 77 357 91012</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cdtc.edu@gmail.com" target="_blank"
+              class="d-flex mb-2 text-decoration-none">
+              <i class="bi bi-envelope-fill me-2"></i>cdtc.edu@gmail.com
+            </a>
+            <a href="tel:+917735791012" class="d-flex text-decoration-none">
+              <i class="bi bi-telephone-fill me-2"></i>+91 77 357 91012
+            </a>
           </div>
         </div>
       </div>
@@ -665,13 +1152,15 @@ body, html {
     <!-- Footer Bottom -->
     <div class="row border-top border-light pt-4">
       <div class="col-12 text-center">
-        &copy; <script>document.write(new Date().getFullYear());</script> CDTC. All rights reserved.
+        &copy;
+        <script>document.write(new Date().getFullYear());</script> CDTC. All rights reserved.
       </div>
     </div>
 
   </div>
 </footer>
 <!-- End Footer -->
+
 
 
 
