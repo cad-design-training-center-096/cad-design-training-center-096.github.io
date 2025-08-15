@@ -328,9 +328,50 @@ h6 {
     padding-bottom: 0;
   }
 }
-.fbs__net-navbar > .container {
-  position: relative;
+
+/* Fix side gap on smaller screen */
+@media (max-width: 576px) {
+  .fbs__net-navbar>.container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /* Reduce logo left margin on small devices */
+  .fbs__net-navbar .navbar-brand img {
+    margin-left: 10px !important;
+    width: auto;
+    height: 50px;
+  }
 }
+
+/* Offcanvas menu width adjustment */
+.offcanvas.w-75 {
+  max-width: 75vw !important;
+  width: 75vw !important;
+}
+
+@media (max-width: 576px) {
+  .offcanvas.w-75 {
+    max-width: 100vw !important;
+    width: 100vw !important;
+  }
+}
+
+/* Prevent horizontal scrolling on body when offcanvas active */
+body.offcanvas-active {
+  overflow-x: hidden !important;
+}
+
+
+.fbs__net-navbar>.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 .fbs__net-navbar.relative {
   position: absolute;
 }
@@ -355,7 +396,6 @@ h6 {
   color: rgba(var(--bs-white-rgb), 1);
   -webkit-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  position: relative;
 }
 @media (max-width: 991.98px) {
   .fbs__net-navbar .navbar-nav > li > .nav-link {
