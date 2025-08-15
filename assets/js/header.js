@@ -8,7 +8,7 @@ window.addEventListener('scroll', function () {
 });
   
 window.addEventListener('DOMContentLoaded', function () {
-  if (window.innerWidth <= 767.98) {
+  if (window.innerWidth <= 989.98) {
     document.body.classList.add('scrolled');
   }
 });

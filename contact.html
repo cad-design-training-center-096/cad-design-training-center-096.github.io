@@ -141,23 +141,27 @@
 
 </main>
 
-<script>
-  fetch('header.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('header-placeholder').innerHTML = html;
-    })
-    .catch(err => console.warn('Failed to load header:', err));
-</script>
+    <!-- Server side to load header section -->
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('header-placeholder').innerHTML = html;
+            })
+            .catch(err => console.warn('Failed to load header:', err));
+    </script>
 
-<script>
-  fetch('footer.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    })
-    .catch(err => console.error('Failed to load footer:', err));
-</script>
+    <!-- Server side to load footer section -->
+    <script>
+        fetch('footer.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+                // Now set the year dynamically
+                document.getElementById('current-year').textContent = new Date().getFullYear();
+            })
+            .catch(err => console.error('Failed to load footer:', err));
+    </script>
         </main>
     </div>
 
