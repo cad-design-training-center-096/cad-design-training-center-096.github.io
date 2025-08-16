@@ -17,6 +17,7 @@
     <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- End Styles-->
     
     <!-- ======= Theme Style =======-->
@@ -52,7 +53,7 @@
   <!-- Background Video -->
   <video id="hero-bg-video" autoplay muted loop playsinline 
          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background-color: #000; z-index: -1;">
-    <source src="assets/video/4.mp4" type="video/mp4">
+    <source src="assets/video/main.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -67,7 +68,7 @@
 
   <!-- Hero Content: Centered horizontally, aligned to bottom -->
   <div class="container h-100 d-flex flex-column justify-content-end align-items-center text-center text-white" 
-       style="position: relative; z-index: 1; padding-bottom: 60px;">
+       style="position: relative; z-index: 1;">
     <div>
       <h1 class="display-4 fw-bold mb-4" style="color: #ffffff; text-shadow: 
         -1px -1px 0 #000,  
@@ -80,30 +81,20 @@
         </div>
       </h1>
 
-      <a href="#contact" class="btn btn-light me-2">Get Started</a>
-      <a href="#about" class="btn btn-outline-light">Learn More</a>
+      <a href="./assets/pages/quotation.html" class="btn btn-light me-2">Buy Now</a>
+      <a href="./assets/pages/quotation.html" class="btn btn-outline-light">Quotation</a>
     </div>
   </div>
 
   <!-- Left and Right Buttons -->
-  <button id="prev-video" style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); z-index: 2; background-color: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-size: 18px;">&#8592;</button>
-  <button id="next-video" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); z-index: 2; background-color: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-size: 18px;">&#8594;</button>
+  <!-- <button id="prev-video" style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); z-index: 2; background-color: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-size: 18px;">&#8592;</button>
+  <button id="next-video" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); z-index: 2; background-color: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-size: 18px;">&#8594;</button> -->
 </section>
 <!-- End Hero -->
 
 <script>
   const videos = [
-    "assets/video/4.mp4",
-    "assets/video/10.mp4",
-    "assets/video/11.mp4",
-    "assets/video/12.mp4",
-    "assets/video/13.mp4",
-    "assets/video/14.mp4",
-    "assets/video/15.mp4",
-    "assets/video/16.mp4",
-    "assets/video/17.mp4",
-    "assets/video/18.mp4",
-    "assets/video/19.mp4"
+    "assets/video/main.mp4",
   ];
 
   let currentVideo = 0;
@@ -118,35 +109,35 @@
   }
 
   // Automatic video scroll every 5 seconds
-  let autoScroll = setInterval(() => {
-    currentVideo = (currentVideo + 1) % videos.length;
-    playVideo(currentVideo);
-  }, 5000);
+  //let autoScroll = setInterval(() => {
+  //  currentVideo = (currentVideo + 1) % videos.length;
+ //   playVideo(currentVideo);
+//  }, 5000);
 
   // Previous and Next button handlers
-  document.getElementById("prev-video").addEventListener("click", () => {
-    currentVideo = (currentVideo - 1 + videos.length) % videos.length;
-    playVideo(currentVideo);
+  ////document.getElementById("prev-video").addEventListener("click", () => {
+  //  currentVideo = (currentVideo - 1 + videos.length) % videos.length;
+ //   playVideo(currentVideo);
 
     // Reset automatic scroll timer
-    clearInterval(autoScroll);
-    autoScroll = setInterval(() => {
-      currentVideo = (currentVideo + 1) % videos.length;
-      playVideo(currentVideo);
-    }, 5000);
-  });
+//    clearInterval(autoScroll);
+//    autoScroll = setInterval(() => {
+//      currentVideo = (currentVideo + 1) % videos.length;
+//      playVideo(currentVideo);
+//    }, 5000);
+//  });
 
-  document.getElementById("next-video").addEventListener("click", () => {
-    currentVideo = (currentVideo + 1) % videos.length;
-    playVideo(currentVideo);
+//  document.getElementById("next-video").addEventListener("click", () => {
+  //  currentVideo = (currentVideo + 1) % videos.length;
+ //   playVideo(currentVideo);
 
     // Reset automatic scroll timer
-    clearInterval(autoScroll);
-    autoScroll = setInterval(() => {
-      currentVideo = (currentVideo + 1) % videos.length;
-      playVideo(currentVideo);
-    }, 5000);
-  });
+  //  clearInterval(autoScroll);
+  //  autoScroll = setInterval(() => {
+  //    currentVideo = (currentVideo + 1) % videos.length;
+  //    playVideo(currentVideo);
+   // }, 5000);
+  //});
 </script>
 
 <!-- End Hero -->
@@ -163,8 +154,8 @@
           
           <!-- Background Video -->
     <video id="about-video" autoplay muted loop playsinline
-      style="width: 100%; height: 100%; border-radius: 1rem; display: block; object-fit: cover; aspect-ratio: 4 / 3">
-      <source src="assets/video/avatar_IV.mp4" type="video/mp4" />
+      style="width: 100%; height: 100%; border-radius: 1rem; display: block; object-fit: cover; aspect-ratio: 4 / 2.8">
+      <source src="assets/video/cdtc.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
@@ -172,12 +163,33 @@
 
 
           <!-- Mute/Unmute Button always visible -->
-          <div style="position: absolute; bottom: 15px; right: 15px; z-index: 2;">
+          <!-- <div style="position: absolute; bottom: 15px; right: 15px; z-index: 2;">
             <button id="mute-toggle" 
                     style="background-color: #000; border: none; color: #fff; padding: 12px 18px; border-radius: 0.5rem; cursor: pointer; font-weight: bold; font-size: 16px;">
               Unmute Video
             </button>
+          </div> -->
+
+          <!-- Icon Button (Bottom Left) -->
+          <div style="position: absolute; bottom: 15px; left: 15px; z-index: 2;">
+            <button id="mute-toggle" style="background: none; border: none; cursor: pointer; font-size: 24px; color: #ffffff;"
+              aria-label="Toggle mute" title="Toggle mute">
+              <i class="fas fa-volume-mute" id="mute-icon" aria-hidden="true"></i>
+            </button>
           </div>
+
+          <!-- Toggle Script -->
+          <script>
+            const muteToggle = document.getElementById('mute-toggle');
+            const muteIcon = document.getElementById('mute-icon');
+            let isMuted = false;
+
+            muteToggle.addEventListener('click', () => {
+              isMuted = !isMuted;
+              muteIcon.className = isMuted ? 'fas fa-volume-up' : 'fas fa-volume-mute';
+            });
+          </script>
+                    
 
           <!-- Mission & Vision commented out for now -->
           <!--
@@ -236,7 +248,7 @@
 
   muteBtn.addEventListener("click", () => {
     video.muted = !video.muted;
-    muteBtn.textContent = video.muted ? "Unmute Video" : "Mute Video";
+   // muteBtn.textContent = video.muted ? "Unmute Video" : "Mute Video";
   });
 </script>
 
@@ -256,14 +268,14 @@
                             <div class="pricing_box" style="padding:25px 15px;"> <!-- Reduced box size -->
                                 
                                 <h5 class="cloud_text">4-Day CAD Master Program</h5>
-                                <h1 class="dolor_text">₹71,000</h1>
+                                <h1 class="dolor_text">₹71,800</h1>
                                 <h3 class="monthly_text">PER BATCH (Incl. GST)</h3>
                                 <p class="band_text">
                                     AutoCAD, SolidWorks, CATIA, NX, Creo<br>
                                     Certificates & job assistance<br>
                                     Max 65 students per batch
                                 </p>
-                              <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Book Now</a>
+                              <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Buy Now</a>
                             </div>
                         </div>
                         <!-- Plan 2 -->
@@ -271,14 +283,14 @@
                             <div class="pricing_box" style="padding:25px 15px;"> <!-- Reduced box size -->
                                 
                                 <h5 class="cloud_text">Annual Training Partnership</h5>
-                                <h1 class="dolor_text">₹2,50,000+</h1>
-                                <h3 class="monthly_text">YEARLY</h3>
+                                <h1 class="dolor_text">₹2,54,000+</h1>
+                                <h3 class="monthly_text">PER BATCH (Incl. GST) </h3>
                                 <p class="band_text">
                                     Multiple batches throughout the year<br>
                                     Discounted pricing for bulk sessions<br>
                                     Dedicated account manager
                                 </p>
-                                <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Get Started</a>
+                                <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Buy Now</a>
                             </div>
                         </div>
                     </div>
@@ -286,7 +298,7 @@
             </div>
 
             <!-- Right side - 3D Model Viewer -->
-            <div class="col-lg-6 text-center" style="display:flex; justify-content:flex-end; padding-right:40px;">
+          <div class="col-lg-6" style="display:flex; justify-content:flex-end;">
                 <model-viewer 
                     src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
                     alt="3D Astronaut Model" 
@@ -496,7 +508,7 @@
 <!-- Section Heading -->
 <div class="text-center mb-5">
   <span class="text-uppercase fw-semibold fs-6">Trusted By Industry Leaders</span>
-  <h2 class="fw-bold">Our Partner Institutions</h2>
+  <h2 class="fw-bold title_black">Our Partner Institutions</h2>
 </div>
 
 <!-- Seamless Scrolling Logo Marquee -->
@@ -545,8 +557,8 @@
     <div class="row mb-5">
       <div class="col-12 text-center">
               <span class="text-uppercase text-primary fw-semibold fs-6">How it Works</span>
-        <h2 class="fw-bold mb-3" data-aos="fade-up" data-aos-delay="100">Your Journey to Certification & Placement</h2>
-        <p class="text-muted" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="fw-bold mb-3 title_black" data-aos="fade-up" data-aos-delay="100">Your Journey to Certification & Placement</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
           Whether you're a student or a working professional, our process is easy to follow and result-oriented.
         </p>
       </div>
@@ -559,7 +571,7 @@
           <img class="arch-line" src="assets/images/arch-line.svg" alt="line">
           <span class="step-number rounded-circle fw-bold mb-4 mx-auto">1</span>
           <h3 class="fs-5 mb-3">Register Online</h3>
-          <p class="small text-muted">Choose a CAD course (AutoCAD, SolidWorks, etc.) and register via our website or app.</p>
+          <p class="small ">Choose a CAD course (AutoCAD, SolidWorks, etc.) and register via our website or app.</p>
         </div>
       </div>
 
@@ -569,7 +581,7 @@
           <img class="arch-line reverse" src="assets/images/arch-line-reverse.svg" alt="line">
           <span class="step-number rounded-circle fw-bold mb-4 mx-auto">2</span>
           <h3 class="fs-5 mb-3">Attend Training</h3>
-          <p class="small text-muted">Join our expert-led 4-day session, complete assignments & practical design tasks.</p>
+          <p class="small">Join our expert-led 4-day session, complete assignments & practical design tasks.</p>
         </div>
       </div>
 
@@ -579,7 +591,7 @@
           <img class="arch-line" src="assets/images/arch-line.svg" alt="line">
           <span class="step-number rounded-circle fw-bold mb-4 mx-auto">3</span>
           <h3 class="fs-5 mb-3">Get Certified</h3>
-          <p class="small text-muted">After successful completion, get your industry-recognized certificate for your resume.</p>
+          <p class="small">After successful completion, get your industry-recognized certificate for your resume.</p>
         </div>
       </div>
 
@@ -588,7 +600,7 @@
         <div class="step-card last text-center h-100 d-flex flex-column justify-content-start position-relative" data-aos="fade-up" data-aos-delay="900">
           <span class="step-number rounded-circle fw-bold mb-4 mx-auto">4</span>
           <h3 class="fs-5 mb-3">Get Placed</h3>
-          <p class="small text-muted">Our placement team refers you to top companies across India for core CAD roles.</p>
+          <p class="small">Our placement team refers you to top companies across India for core CAD roles.</p>
         </div>
       </div>
     </div>
@@ -831,7 +843,7 @@
     <div class="container-fluid px-0">
       <div class="text-center px-3">
         <span class="text-uppercase text-primary fw-semibold fs-6">Placement Support & Hiring Network</span>
-        <h2 class="fw-bold">Top Core Companies Hiring Our Trained Employees</h2>
+        <h2 class="fw-bold title_black">Top Core Companies Hiring Our Trained Employees</h2>
         <p class="text-muted small">We collaborate with 100+ industry-leading organizations to support career growth
           across India.</p>
       </div>
@@ -881,7 +893,7 @@
     <div class="container">
       <div class="text-center">
         <span class="text-uppercase text-primary fw-semibold fs-6">Testimonials</span>
-        <h2 class="fw-bold">What Our Employees Say</h2>
+        <h2 class="fw-bold title_black">What Our Employees Say</h2>
         <p class="text-muted small">Real voices from our engineering and design team.</p>
       </div>
 
@@ -891,52 +903,52 @@
 
           <div class="swiper-slide">
             <blockquote>"Working on SolidWorks projects helped me build real-world skills quickly."</blockquote>
-            <div class="testimonial-author">Shoban<br><span class="testimonial-role">Design Engineer</span></div>
+            <!-- <div class="testimonial-author">Shoban<br><span class="testimonial-role">Design Engineer</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"I started with no CAD experience. Now I’m handling client projects confidently."</blockquote>
-            <div class="testimonial-author">Priyanka<br><span class="testimonial-role">Junior CAD Engineer</span></div>
+            <!-- <div class="testimonial-author">Priyanka<br><span class="testimonial-role">Junior CAD Engineer</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"Creo training here gave me an edge in core design work. Great environment!"</blockquote>
-            <div class="testimonial-author">Dayanand<br><span class="testimonial-role">Product Designer</span></div>
+            <!-- <div class="testimonial-author">Dayanand<br><span class="testimonial-role">Product Designer</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"With AutoCAD and Revit, I handle architectural plans with complete confidence."</blockquote>
-            <div class="testimonial-author">Shweta<br><span class="testimonial-role">Civil Engineer</span></div>
+            <!-- <div class="testimonial-author">Shweta<br><span class="testimonial-role">Civil Engineer</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"Industrial CAD sessions were impactful. Very well structured."</blockquote>
-            <div class="testimonial-author">Nilesh<br><span class="testimonial-role">Training Manager</span></div>
+            <!-- <div class="testimonial-author">Nilesh<br><span class="testimonial-role">Training Manager</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"The CATIA program opened doors and got me hired fast."</blockquote>
-            <div class="testimonial-author">Somya<br><span class="testimonial-role">Design Engineer Trainee</span></div>
+            <!-- <div class="testimonial-author">Somya<br><span class="testimonial-role">Design Engineer Trainee</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"Great mentors and real-time projects. I'm a better engineer now."</blockquote>
-            <div class="testimonial-author">Ravi<br><span class="testimonial-role">Mechanical Engineer</span></div>
+            <!-- <div class="testimonial-author">Ravi<br><span class="testimonial-role">Mechanical Engineer</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"The Revit training transformed the way I approach design tasks."</blockquote>
-            <div class="testimonial-author">Pooja<br><span class="testimonial-role">Architectural Designer</span></div>
+            <!-- <div class="testimonial-author">Pooja<br><span class="testimonial-role">Architectural Designer</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"The support team is amazing and the exposure is unmatched."</blockquote>
-            <div class="testimonial-author">Amit<br><span class="testimonial-role">CAD Analyst</span></div>
+            <!-- <div class="testimonial-author">Amit<br><span class="testimonial-role">CAD Analyst</span></div> -->
           </div>
 
           <div class="swiper-slide">
             <blockquote>"Clear goals, great tools, and a team that pushes you to excel."</blockquote>
-            <div class="testimonial-author">Divya<br><span class="testimonial-role">Design Intern</span></div>
+            <!-- <div class="testimonial-author">Divya<br><span class="testimonial-role">Design Intern</span></div> -->
           </div>
 
         </div>
