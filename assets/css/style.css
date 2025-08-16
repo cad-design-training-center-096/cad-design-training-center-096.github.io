@@ -8,6 +8,9 @@ Buy Pro
 /* Ensure navbar and toggle button stay fully inside the viewport */
 /* Prevent horizontal scroll globally */
 /* Prevent horizontal scroll globally */
+.title_black{
+  color: black !important
+}
 html,
 body {
   overflow-x: hidden !important;
