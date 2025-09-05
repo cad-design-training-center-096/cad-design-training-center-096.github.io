@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> CDTC Official </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> CDTC Official </title>
 
-  <!-- ======= Google Font =======-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
-  <!-- End Google Font-->
+<!-- ======= Google Font =======-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+<!-- End Google Font-->
 
-  <!-- ======= Styles =======-->
-  <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendors/aos/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- End Styles-->
+<!-- ======= Styles =======-->
+<link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link href="assets/vendors/aos/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<!-- End Styles-->
+
+<!-- ======= Theme Style =======-->
+<link href="assets/css/style.css" rel="stylesheet">
+<!-- End Theme Style-->
+
+
+
+<!-- ======= Apply theme =======-->
+<script>
+  // Apply the theme as early as possible to avoid flicker
+  (function () {
+    const storedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-bs-theme', storedTheme);
+  })();
+</script>
+
   <style>
     :root {
       /* Use a similar-but-not-identical blue palette (original, not Airbus’s exact brand colors) */
@@ -49,24 +63,7 @@
       color: var(--text);
       background: linear-gradient(180deg, #f9fbff 0%, #f4f7ff 100%);
     }
-
-    /* Header */
-    .topbar {
-      background: var(--bg);
-      color: #c7d3ff;
-      font-size: 13px;
-      padding: 8px 16px;
-      text-align: center;
-    }
-
-    .header {
-      position: sticky; top: 0; z-index: 1000;
-      backdrop-filter: saturate(180%) blur(8px);
-      background: rgba(255,255,255,.82);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav { max-width: var(--maxw); margin: 0 auto; padding: 14px 20px; display: grid; grid-template-columns: 200px 1fr 160px; gap: 16px; align-items: center; }
+    
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .brand-logo {
       width: 44px; height: 44px; border-radius: 12px;
@@ -75,9 +72,7 @@
     }
     .brand-title { font-weight: 800; font-size: 20px; letter-spacing: .3px; color: var(--ink); }
 
-    .menu { display: flex; gap: 20px; align-items: center; justify-content: center; }
-    .menu a { text-decoration: none; color: #1f2b48; font-weight: 600; padding: 10px 12px; border-radius: 10px; }
-    .menu a.active, .menu a:hover { background: var(--card); color: var(--primary); }
+
 
     .cta { display: flex; justify-content: end; }
     .btn {
@@ -178,14 +173,14 @@
     }
   </style>
 </head>
-<body>
+<body class="home-page">
 
-
+  <div id="header-placeholder"></div>
   <section class="hero">
     <div class="hero-inner">
       
-      <h1>About CDTC</h1>
-      <p>We empower institutions and learners with hands‑on CAD, CAM, and CAE education—bridging fundamentals with industry practice. Our mission: make world‑class design literacy accessible, practical, and career‑defining.</p>
+      <h2>About CDTC</h2>
+      <p>We empower institutions and learners with hands-on CAD, CAM, and CAE education bridging fundamentals with industry practice. Our mission: make world-class design literacy accessible, practical, and career-defining.</p>
     </div>
   </section>
 
@@ -193,17 +188,16 @@
     <section id="about" class="section">
       <div class="grid-3" aria-label="Intro highlights">
         <article class="card">
-          <!-- <div class="icon"></div> -->
+
           <h3>Mission</h3>
           <p>To provide real-world CAD training to B.Tech, Diploma, and 12th-grade students, delivered by trainers from Dassault, Siemens, and DRDO, ensuring industry-level knowledge and practical exposure.</p>
         </article>
         <article class="card">
-          <!-- <div class="icon"></div> -->
+
           <h3>What We Do</h3>
           <p>Short‑format, high‑impact programs across AutoCAD, SolidWorks, CATIA, NX/UG, and Creo—plus drafting to manufacturing workflows.</p>
         </article>
         <article class="card">
-          <!-- <div class="icon"></div> -->
           <h3>Who We Serve</h3>
           <p>Colleges, diploma institutions, and schools seeking B2B training solutions with certification and job assistance.</p>
         </article>
@@ -229,7 +223,6 @@
 
       <div class="section" style="padding-top: 42px;">
         <div class="feature">
-          <!-- <div class="media">Responsive image/video area</div> -->
           <div class="img-wrap position-relative">
           <img src="assets/images/videoframe_4240.png" alt="CAD Training" class="img-fluid rounded-4 shadow-sm">
           </div>
@@ -375,6 +368,81 @@
       margin-left: 20px;
     }
   }
+
+  leader-layout {
+  display: flex;
+  gap: 32px;
+}
+
+.leader-card {
+  flex: 0 0 250px;
+  background: linear-gradient(135deg, #dee8ff, #eef2ff);
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-1);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+.ph.ceo-photo {
+  width: 180px;
+  height: 180px;
+  background: #cfdfff;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Text Section */
+.leader-text {
+  flex: 1;
+}
+
+.leader-text .name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.leader-text .role {
+  font-size: 15px;
+  color: #5a6b8f;
+  margin-bottom: 18px;
+}
+
+.leader-text p {
+  font-size: 15px;
+  color: #42537a;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+@media (min-width: 992px) {
+  .message {
+    text-align: justify;
+    color: #000000 !important
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .leader-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leader-card {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+  .leader-text {
+    text-align: center;
+  }
+}
 </style>
 
 <script>
@@ -395,39 +463,37 @@
 </script>
 
 
-    <section id="leadership" class="section">
-      <h2 style="margin-top: 0">Leadership</h2>
-      <div class="leaders">
-        <article class="leader">
-          <div class="ph"></div>
-          <div class="meta">
-            <div class="name">Ankit (CEO)</div>
-            <div class="role">Chief Executive Officer</div>
-          </div>
-        </article>
-        <article class="leader">
-          <div class="ph"></div>
-          <div class="meta">
-            <div class="name">Ankit</div>
-            <div class="role">Financial Manager & Compliance</div>
-          </div>
-        </article>
-        <article class="leader">
-          <div class="ph"></div>
-          <div class="meta">
-            <div class="name">Ankit</div>
-            <div class="role">Authorized Signatory, Board of Council</div>
-          </div>
-        </article>
-        <article class="leader">
-          <div class="ph"></div>
-          <div class="meta">
-            <div class="name">Ankit</div>
-            <div class="role">Co‑founders, Board of Council</div>
-          </div>
-        </article>
-      </div>
-    </section>
+<section id="leadership" class="section">
+  <h2 style="margin-top: 0; text-align: center; font-size: 34px; font-weight: 800; color: #003399;">
+    Leadership
+  </h2>
+
+  <div class="leader-layout">
+    <!-- Left: Card -->
+    <!-- <div class="leader-card">
+      <div class="ph ceo-photo"></div>
+    </div> -->
+
+    <div class="leader-text">
+      <div class="name">Ankit Panigrahi</div>
+      <div class="role">Founder & CEO</div>
+      <p class="message">When I began my journey as a young mechanical engineer, I saw many talented classmates graduate without the
+        practical design skills industries actually expect. I experienced the same challenge - until I immersed myself in
+        advanced CAD training and discovered how the right guidance can transform a career.</p>
+      <p class="message">CDTC was born to close that gap. We believe core-engineering students deserve affordable, world-class design
+        education that makes them truly job-ready.</p>
+      <p class="message">In just four intensive days, we bring real-world practices into the classroom, certify students, and help them
+        see that engineering isn't just theory — it's innovation, creativity, and opportunity.</p>
+      <p class="message">Over the next five years, CDTC aims to partner with hundreds of institutions across India and eventually take
+        our
+        training model worldwide. We are driven by a single vision: to make every aspiring engineer an industry-ready
+        engineer.</p>
+    </div>
+  </div>
+</section>
+
+
+    
 
     <section id="values" class="section">
       
@@ -600,6 +666,7 @@
     <script src="assets/vendors/purecounter/purecounter.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="./assets/js/contactEmail.js"></script>
+    <script src="./assets/js/header.js"></script>
     <!-- End JavaScripts-->
 </body>
 
