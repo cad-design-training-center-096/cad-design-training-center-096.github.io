@@ -85,10 +85,6 @@
       <a href="quotation.html" class="btn btn-outline-light">Quotation</a>
     </div>
   </div>
-
-  <!-- Left and Right Buttons -->
-  <!-- <button id="prev-video" style="position: absolute; top: 50%; left: 20px; transform: translateY(-50%); z-index: 2; background-color: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-size: 18px;">&#8592;</button>
-  <button id="next-video" style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); z-index: 2; background-color: rgba(0,0,0,0.5); color: #fff; border: none; padding: 10px 20px; cursor: pointer; font-size: 18px;">&#8594;</button> -->
 </section>
 <!-- End Hero -->
 
@@ -107,37 +103,6 @@
     videoElement.load();
     videoElement.play();
   }
-
-  // Automatic video scroll every 5 seconds
-  //let autoScroll = setInterval(() => {
-  //  currentVideo = (currentVideo + 1) % videos.length;
- //   playVideo(currentVideo);
-//  }, 5000);
-
-  // Previous and Next button handlers
-  ////document.getElementById("prev-video").addEventListener("click", () => {
-  //  currentVideo = (currentVideo - 1 + videos.length) % videos.length;
- //   playVideo(currentVideo);
-
-    // Reset automatic scroll timer
-//    clearInterval(autoScroll);
-//    autoScroll = setInterval(() => {
-//      currentVideo = (currentVideo + 1) % videos.length;
-//      playVideo(currentVideo);
-//    }, 5000);
-//  });
-
-//  document.getElementById("next-video").addEventListener("click", () => {
-  //  currentVideo = (currentVideo + 1) % videos.length;
- //   playVideo(currentVideo);
-
-    // Reset automatic scroll timer
-  //  clearInterval(autoScroll);
-  //  autoScroll = setInterval(() => {
-  //    currentVideo = (currentVideo + 1) % videos.length;
-  //    playVideo(currentVideo);
-   // }, 5000);
-  //});
 </script>
 
 <!-- End Hero -->
@@ -158,17 +123,6 @@
       <source src="assets/video/cdtc.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
-
-
-
-
-          <!-- Mute/Unmute Button always visible -->
-          <!-- <div style="position: absolute; bottom: 15px; right: 15px; z-index: 2;">
-            <button id="mute-toggle" 
-                    style="background-color: #000; border: none; color: #fff; padding: 12px 18px; border-radius: 0.5rem; cursor: pointer; font-weight: bold; font-size: 16px;">
-              Unmute Video
-            </button>
-          </div> -->
 
           <!-- Icon Button (Bottom Left) -->
           <div style="position: absolute; bottom: 15px; left: 15px; z-index: 2;">
@@ -191,12 +145,6 @@
           </script>
                     
 
-          <!-- Mission & Vision commented out for now -->
-          <!--
-          <div class="d-flex flex-column gap-3 mt-4 position-relative" style="z-index: 1;">
-            ...
-          </div>
-          -->
 
         </div>
       </div>
@@ -248,7 +196,6 @@
 
   muteBtn.addEventListener("click", () => {
     video.muted = !video.muted;
-   // muteBtn.textContent = video.muted ? "Unmute Video" : "Mute Video";
   });
 </script>
 
