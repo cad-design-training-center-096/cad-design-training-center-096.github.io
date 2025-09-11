@@ -220,7 +220,7 @@
                                 <p class="band_text">
                                     AutoCAD, SolidWorks, CATIA, NX, Creo<br>
                                     Certificates & job assistance<br>
-                                    Max 65 students per batch
+                                    Max 55 students per batch
                                 </p>
                               <a class="btn btn-primary py-2" href="quotation.html">Buy Now</a>
                             </div>
@@ -229,14 +229,16 @@
                         <div class="col-md-12 mb-4">
                             <div class="pricing_box" style="padding:25px 15px;"> <!-- Reduced box size -->
                                 
-                                <h5 style=" margin-top: 0; font-size:34px; font-weight:400;color:#f1f1f1">Annual Training Partnership</h5>
+                                <h5 style=" margin-top: 0; font-size:34px; font-weight:400;color:#f1f1f1">20-Day CAD Master Program</h5>
                                 <h1 class="dolor_text">₹4,24,999</h1>
                                 <h3 class="monthly_text">PER BATCH (Incl. GST) </h3>
                                 <p class="band_text">
-                                    Multiple batches throughout the year<br>
-                                    Discounted pricing for bulk sessions<br>
-                                    Dedicated account manager
+                                      AutoCAD, SolidWorks, CATIA, NX, 
+                                      Creo (In-depth Training)<br>
+                                    Certificates & Job Assistance<br>
+                                    Max 55 Students per Batch
                                 </p>
+
                                 <a class="btn btn-primary py-2" href="quotation.html">Buy Now</a>
                             </div>
                         </div>
@@ -244,32 +246,39 @@
                 </div>
             </div>
 
-            <!-- Right side - 3D Model Viewer -->
+          <!-- Load model-viewer -->
+          <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+          
           <div class="col-lg-6" style="display:flex; justify-content:flex-end;">
-                <model-viewer 
-                    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb" 
-                    alt="3D Astronaut Model" 
-                    camera-controls 
-                    auto-rotate 
-                    rotation-per-second="30deg"
-                    shadow-intensity="1"
-                    disable-zoom
-                    camera-orbit="90deg 75deg 5m"
-                    field-of-view="25deg"
-                    style="width:100%; max-width:600px; height:700px;">
-                </model-viewer>
-            </div>
+            <model-viewer id="astronautModel" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+              alt="3D Astronaut Model" 
+              camera-controls interaction-policy="none"
+              shadow-intensity="1"
+              disable-zoom
+              camera-orbit="90deg 75deg 5m"
+           
+              interaction-policy="none"
+              style="width:150%; max-width:400px; height:700px;">
+            </model-viewer>
+          </div>
+          
+          <script>
+            const modelViewer = document.getElementById('astronautModel');
 
+            modelViewer.addEventListener('click', () => {
+              if (!modelViewer.hasAttribute('auto-rotate')) {
+                modelViewer.setAttribute('auto-rotate', '');
+                modelViewer.setAttribute('interaction-policy', 'always'); // Enable interaction after click
+              }
+            });
+          </script>
+            
         </div>
     </div>
 </div>
 <!-- pricing section end -->
 
 
-
-
-<!-- Include model-viewer script -->
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 <!-- ======= Custom Styling ======= -->
 <style>
