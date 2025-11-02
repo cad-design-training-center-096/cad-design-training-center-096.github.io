@@ -146,7 +146,11 @@
 </main>
 
   <!-- Server side to load header section -->
-  <script>
+   <script 
+  disable-select = "true"
+  disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+
+  
     fetch('header.html')
       .then(response => response.text())
       .then(html => {
