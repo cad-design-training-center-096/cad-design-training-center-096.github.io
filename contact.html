@@ -136,17 +136,15 @@
 </main>
 
     <!-- Server side to load header section -->
-     <script 
-  disable-select = "true"
-  disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+     <script >
 
   
-        fetch('header.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('header-placeholder').innerHTML = html;
-            })
-            .catch(err => console.warn('Failed to load header:', err));
+    fetch('header.html')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('header-placeholder').innerHTML = html;
+        })
+        .catch(err => console.warn('Failed to load header:', err));
     </script>
 
     <!-- Server side to load footer section -->
@@ -160,6 +158,13 @@
             })
             .catch(err => console.error('Failed to load footer:', err));
     </script>
+
+    <!-- disable Inspect Element -->
+<script
+    disable-select = "true"
+    disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+</script>
+
         </main>
     </div>
 
