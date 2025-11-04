@@ -332,33 +332,34 @@
   </main>
   
   <div id="footer-placeholder"></div>
-
-  <!-- Server side to load header section -->
-   <script 
-  disable-select = "true"
-  disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
-
   
-    fetch('header.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-      })
-      .catch(err => console.warn('Failed to load header:', err));
-  </script>
+<!-- Server side to load header section -->
+ <script >
+  fetch('header.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('header-placeholder').innerHTML = html;
+    })
+    .catch(err => console.warn('Failed to load header:', err));
+</script>
 
-  <!-- Server side to load footer section -->
-  <script>
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-        // Now set the year dynamically
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-      })
-      .catch(err => console.error('Failed to load footer:', err));
-  </script>
+<!-- Server side to load footer section -->
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+      // Now set the year dynamically
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    })
+    .catch(err => console.error('Failed to load footer:', err));
+</script>
 
+<!-- disable Inspect Element -->
+<script
+    disable-select = "true"
+    disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+</script>
   </main>
   </div>
 

@@ -253,9 +253,7 @@
 </script>
 
 <!-- Server side to load footer section -->
- <script 
-  disable-select = "true"
-  disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+ <script>
   fetch('footer.html')
     .then(res => res.text())
     .then(data => {
@@ -264,6 +262,12 @@
       document.getElementById('current-year').textContent = new Date().getFullYear();
     })
     .catch(err => console.error('Failed to load footer:', err));
+</script>
+
+<!-- disable Inspect Element -->
+<script
+    disable-select = "true"
+    disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
 </script>
 
 </main>
