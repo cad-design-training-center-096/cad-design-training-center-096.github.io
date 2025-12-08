@@ -157,7 +157,7 @@
       <!-- Right: About Content -->
       <div class="col-lg-6" data-aos="fade-left">
         <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">Master 5 CAD Tools in Just 20 Days</h2>
-        <p class="mb-3">We offer a structured and intensive CAD training program tailored for engineering and diploma students, with practical exposure to top CAD platforms used across the industry.</p>
+        <p class="mb-3">We offer a structured and intensive CAD training program tailored for s.s industry, with practical exposure to top CAD platforms used across the industry.</p>
 
         <div class="row gy-3">
           <div class="col-sm-6 d-flex align-items-start gap-2">
@@ -182,7 +182,7 @@
           </div>
           <div class="col-sm-6 d-flex align-items-start gap-2">
             <i class="bi bi-award-fill text-primary"></i>
-            <span>Certified Course with Job Assistance</span>
+            <span>Job Assistance</span>
           </div>
         </div>
 
@@ -220,10 +220,10 @@
                                 
                                 <h5 style="margin-top: 0; font-size:34px; font-weight:400;color:#f1f1f1">4-Day CAD Master Program</h5>
                                 <h1 class="dolor_text">₹84,999</h1>
-                                <h3 class="monthly_text">PER BATCH (Incl. GST)</h3>
+                                <h3 class="monthly_text">PER BATCH </h3>
                                 <p class="band_text">
                                     AutoCAD, SolidWorks, CATIA, NX, Creo<br>
-                                    Certificates & job assistance<br>
+                                    Certificates & Job Assistance<br>
                                     Max 55 students per batch
                                 </p>
                               <a class="btn btn-primary py-2" href="quotation.html">Buy Now</a>
@@ -235,7 +235,7 @@
                                 
                                 <h5 style=" margin-top: 0; font-size:34px; font-weight:400;color:#f1f1f1">20-Day CAD Master Program</h5>
                                 <h1 class="dolor_text">₹4,24,999</h1>
-                                <h3 class="monthly_text">PER BATCH (Incl. GST) </h3>
+                                <h3 class="monthly_text">PER BATCH </h3>
                                 <p class="band_text">
                                       AutoCAD, SolidWorks, CATIA, NX, 
                                       Creo (In-depth Training)<br>
@@ -250,32 +250,52 @@
                 </div>
             </div>
 
-          <!-- Load model-viewer -->
-          <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-          
-          <div class="col-lg-6" style="display:flex; justify-content:flex-end;">
-            <model-viewer id="astronautModel" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-              alt="3D Astronaut Model" 
-              camera-controls interaction-policy="none"
-              shadow-intensity="1"
-              disable-zoom
-              camera-orbit="90deg 75deg 5m"
-           
-              interaction-policy="none"
-              style="width:150%; max-width:400px; height:700px;">
-            </model-viewer>
-          </div>
-          
-          <script>
-            const modelViewer = document.getElementById('astronautModel');
 
-            modelViewer.addEventListener('click', () => {
-              if (!modelViewer.hasAttribute('auto-rotate')) {
-                modelViewer.setAttribute('auto-rotate', '');
-                modelViewer.setAttribute('interaction-policy', 'always'); // Enable interaction after click
-              }
-            });
-          </script>
+         <!-- Load model-viewer -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<div class="col-lg-6" style="display:flex; justify-content:flex-end;">
+  <model-viewer id="astronautModel"
+    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+    alt="3D Astronaut Model"
+    shadow-intensity="1"
+    disable-zoom
+    camera-orbit="90deg 75deg 5m"
+    style="width:150%; max-width:400px; height:700px;">
+  </model-viewer>
+</div>
+
+<script>
+  const modelViewer = document.getElementById('astronautModel');
+
+  function updateInteraction() {
+    if (window.innerWidth <= 768) {
+      // Mobile: disable interaction
+      modelViewer.removeAttribute('camera-controls');
+      modelViewer.setAttribute('interaction-policy', 'none');
+    } else {
+      // Desktop: enable interaction
+      modelViewer.setAttribute('camera-controls', '');
+      modelViewer.setAttribute('interaction-policy', 'auto');
+
+      // Add click-to-rotate only on desktop
+      modelViewer.addEventListener('click', () => {
+        if (!modelViewer.hasAttribute('auto-rotate')) {
+          modelViewer.setAttribute('auto-rotate', '');
+          modelViewer.setAttribute('interaction-policy', 'always'); // Enable interaction after click
+        }
+      }, { once: true }); // ensures listener only fires once
+    }
+  }
+
+  // Initial check
+  updateInteraction();
+
+  // Update on window resize
+  window.addEventListener('resize', updateInteraction);
+</script>
+
+
             
         </div>
     </div>
@@ -532,7 +552,7 @@
     <div class="one-line-text-wrapper">
       <p class="one-line-text">
         Our <span class="fw-semibold text-black">20-day CAD training program</span> prepares students for real-world scenarios with
-        <strong class="text-primary">industry-relevant tools</strong> and <strong class="text-primary">hands-on practice</strong>.
+        <strong class="text-primary">industry-relevant tools.</strong>
       </p>
     </div>
 
@@ -916,7 +936,7 @@
           </div>
 
           <div class="swiper-slide">
-            <blockquote>"I started with no CAD experience. Now I’m handling client projects confidently."</blockquote>
+            <blockquote>"I started with no CAD experience. Now I'm handling client projects confidently."</blockquote>
           </div>
 
           <div class="swiper-slide">
