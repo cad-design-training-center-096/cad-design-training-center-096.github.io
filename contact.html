@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-   <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" type="image/png">
-    <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" type="image/x-icon" >
+    <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
+  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon" >
   <title> CDTC Official </title>
 
   <!-- ======= Google Font =======-->
@@ -20,6 +20,7 @@
   <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendors/aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <!-- End Styles-->
 
   <!-- ======= Theme Style =======-->
@@ -69,10 +70,11 @@
                     <label for="message">Message<span class="text-danger">*</span></label>
                     <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
     
-                <button  type="submit" id="submitBtn">
+                <button type="submit" id="submitBtn" class="btn btn-primary">
                     <span id="spinner" class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
-                    Send Message
+                    <i class="fa fa-envelope me-2"></i> Send Message
                 </button>
+
 
                 </form>
                 <div class="mt-3 d-none alert alert-success" id="successMessage">Message sent successfully!</div>
