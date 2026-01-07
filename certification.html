@@ -38,6 +38,81 @@
   </script>
 </head>
 
+<style>
+    /* Container for the image and watermark */
+    .cert-img-wrapper {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 12px; /* Smoother corners */
+        background: #fff;
+        padding: 12px; /* Frame padding */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); /* Deeper, realistic shadow */
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* Professional Sample Watermark Overlay */
+    .cert-img-wrapper::after {
+        content: "OFFICIAL SAMPLE";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-30deg); /* Modern slant */
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: rgba(0, 51, 153, 0.08); /* Extremely subtle blue */
+        border: 4px solid rgba(0, 51, 153, 0.08);
+        padding: 8px 24px;
+        letter-spacing: 4px;
+        pointer-events: none;
+        z-index: 2;
+        white-space: nowrap;
+        user-select: none;
+        text-shadow: 1px 1px 0px rgba(255,255,255,0.5); /* Helps legibility on dark areas */
+    }
+
+    /* Refined Image Styling */
+    .cert-sample-img-certificate {
+        display: block;
+        width: 100%;
+        max-width: 380px;
+        border-radius: 4px;
+        filter: contrast(1.02); /* Slight pop to the colors */
+        transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    .cert-sample-img {
+        display: block;
+        width: 60%;
+        max-width: 380px;
+        margin: 0 auto;
+        border-radius: 4px;
+        filter: contrast(1.02);
+        transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    /* Hover Interaction */
+    .cert-img-wrapper:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0, 51, 153, 0.15);
+    }
+
+    .cert-img-wrapper:hover .cert-sample-img .cert-sample-img-certificate{
+        transform: scale(1.03);
+    }
+
+    /* Label enhancement */
+    .cert-sample-label {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: #003399;
+        margin-bottom: 1.5rem;
+        display: block;
+        opacity: 0.8;
+    }
+</style>
 <body>
 
 
@@ -51,141 +126,83 @@
     <main>
     <!-- ==================== Certification Description Section ==================== -->
 <section class="section" id="certification">
-  <div class="container  py-8">
-    <!-- Section Header -->
-    <div class="text-center mb-5">
-      <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">Industry-Recognized CAD Certification</h2>
-      <p class="text-muted">Validate your skills with CDTC's fast-track your career with proven expertise.</p>
+  <div class="container py-5">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <h2 style="margin-top: 0; font-size:38px; font-weight:800; color:#003399;">Industry-Recognized CAD Certification</h2>
+      <p class="text-muted mx-auto" style="max-width: 600px;">Validate your technical expertise with CDTC's credentials, designed to fast-track your career in modern engineering.</p>
     </div>
 
-    <!-- Certificate Cards -->
-    <div class="row g-4">
+    <div class="row cert-item-row g-lg-5">
+      <div class="col-lg-7" data-aos="fade-right">
+        <div class="p-5 rounded-4 shadow-sm cert-card h-100">
+          <i class="bi bi-patch-check cert-bg-icon"></i>
+          <h3 style="font-size:24px; font-weight:800; color:#003399; margin-bottom: 1rem;">Single Software Certificate</h3>
+          <p class="mb-4">Issued upon the successful completion of any individual CAD software module, including AutoCAD, SolidWorks, CATIA, NX, or Creo.</p>
+          <ul class="list-unstyled mb-0 text-start">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>CDTC Authorized Validation</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Available in Secure Digital & High-Quality Printed Formats</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-5 text-center" data-aos="fade-left">
+        <span class="cert-sample-label">Certificate Sample</span>
+        <div class="cert-img-wrapper">
+           
+                <img src="assets/images/Certification/21.jpg" alt="CDTC CAD Certificate Sample" class="cert-sample-img-certificate">
+            </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row cert-item-row g-lg-5">
+      <div class="col-lg-7 order-lg-1" data-aos="fade-right" data-aos-delay="100">
+        <div class="p-5 rounded-4 shadow-sm cert-card h-100">
+          <i class="bi bi-file-earmark-text cert-bg-icon"></i>
+          <h3 style="font-size:24px; font-weight:800; color:#003399; margin-bottom: 1rem;">Letter of Recommendation</h3>
+          <p class="mb-4">Reserved for students demonstrating exceptional technical proficiency and dedication during the complete CAD Mastery Program.</p>
+          <ul class="list-unstyled mb-0 text-start">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Detailed Comprehensive Skill Evaluation</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Endorsed by Leading Industry Mentors</li>
+          </ul>
+        </div>
+      </div>
+
+     <div class="col-lg-5 text-center order-lg-2" data-aos="fade-left" data-aos-delay="100">
+    <span class="cert-sample-label">Recommendation Sample</span>
+    <div class="cert-img-wrapper">
       
-      <!-- Single Software Certificate -->
-      <div class="col-md-6" data-aos="fade-up">
-        <div class="p-4 h-100 bg-light rounded shadow text-center">
-          <h3 style="text-align:center; margin-top: 0; font-size:20px; font-weight:800; color:#003399;">Single Software Certificate</h3>
-          <p>Issued after completion of any single CAD software (AutoCAD, SolidWorks, CATIA, NX, Creo) course.</p>
-          <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 300px;">
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>CDTC Authorized Certificate</li>
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Digital & Printed Versions</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Master Certification -->
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="p-4 h-100 bg-light rounded shadow text-center">
-          <h3 style="text-align:center; margin-top: 0; font-size:20px; font-weight:800; color:#003399;">Master CAD Certification</h3>
-          <p>Issued after successful completion of our full 5-software combo CAD training with guided projects.</p>
-          <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 300px;">
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>All 5 Softwares</li>
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>CDTC Validation & Job Support</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Recommendation Certification -->
-      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="p-4 h-100 bg-light rounded shadow text-center">
-          <h3 style="text-align:center; margin-top: 0; font-size:20px; font-weight:800; color:#003399;">Letter of
-            Recommendation</h3>
-          <p>Granted upon outstanding performance and dedication throughout the complete CAD Mastery Program, including all
-            guided projects.</p>
-          <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 300px;">
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Comprehensive Skill Evaluation</li>
-            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Recognized by Industry Mentors</li>
-          </ul>
-        </div>
-      </div>
-
-    <!-- Master Certification -->
-    <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-      <div class="p-4 h-100 bg-light rounded shadow text-center">
-        <h3 style="text-align:center; margin-top: 0; font-size:20px; font-weight:800; color:#003399;">Master Certification
-        </h3>
-        <p>Awarded upon completion of the full CAD Mastery Program, covering 5 industry-standard software tools and hands-on
-          projects.</p>
-        <ul class="list-unstyled mb-4 text-start mx-auto" style="max-width: 300px;">
-          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Certified in 5 Key CAD Software</li>
-          <li><i class="bi bi-check-circle-fill text-success me-2"></i>Includes Job Support</li>
-        </ul>
-      </div>
+            <img src="assets/images/Certification/Letter of Recommendation.png" alt="Recommendation Sample" class="cert-sample-img">
+        </a>
     </div>
+</div>
 
     </div>
+    <div class="row cert-item-row g-lg-5">
+      <div class="col-lg-7" data-aos="fade-right" data-aos-delay="200">
+        <div class="p-5 rounded-4 shadow-sm cert-card h-100">
+          <i class="bi bi-award cert-bg-icon"></i>
+          <h3 style="font-size:24px; font-weight:800; color:#003399; margin-bottom: 1rem;">Internship Letter</h3>
+          <p class="mb-4">Provided upon the conclusion of our full-stack training, documenting your hands-on project experience across 5 industry-standard tools.</p>
+          <ul class="list-unstyled mb-0 text-start">
+            <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Verification of 5 Key CAD Software Mastery</li>
+            <li><i class="bi bi-check-circle-fill text-success me-2"></i>Direct Pathway to Job Placement Support</li>
+          </ul>
+        </div>
+      </div>
+     <div class="col-lg-5 text-center" data-aos="fade-left" data-aos-delay="200">
+    <span class="cert-sample-label">Internship Letter Sample</span>
+    <div class="cert-img-wrapper">
+        
+            <img src="assets/images/Certification/Internship Letter.png" alt="Internship Letter Sample" class="cert-sample-img">
+        </a>
+    </div>
+</div>
+    </div>
+
   </div>
 </section>
-
-<!-- ======= Trusted by Industry Leaders Section ======= -->
-<!-- <section class="bg-white py-5">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="text-uppercase text-primary fw-semibold fs-6">Trusted By Industry Leaders</span>
-      <h2 class="fw-bold">Our Valuable Collaborators</h2>
-    </div>
-  </div>
-
-
-  <style>
-    .marquee-container {
-      width: 100%;
-      overflow: hidden;
-      background-color: #fff;
-      padding: 20px 0;
-    }
-
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: scroll-marquee 30s linear infinite;
-    }
-
-    .marquee-track img {
-      height: 50px;
-      margin: 0 30px;
-      object-fit: contain;
-    }
-
-    @keyframes scroll-marquee {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-  </style>
-
-  <div class="marquee-container">
-    <div class="marquee-track">
-   
-      <img src="assets/images/logo/logo-uber__black.svg" alt="Uber">
-      <img src="assets/images/logo/logo-air-bnb__black.svg" alt="Airbnb">
-      <img src="assets/images/logo/logo-american-apparel.svg" alt="American Apparel">
-      <img src="assets/images/logo/logo-apple.svg" alt="Apple">
-      <img src="assets/images/logo/logo-google__black.svg" alt="Google">
-      <img src="assets/images/logo/logo-ibm.svg" alt="IBM">
-      <img src="assets/images/logo/logo-invision.svg" alt="InVision">
-      <img src="assets/images/logo/logo-microsoft.svg" alt="Microsoft">
-      <img src="assets/images/logo/logo-youtube.svg" alt="YouTube">
-      <img src="assets/images/logo/logo-netflix.svg" alt="Netflix">
-    
-      <img src="assets/images/logo/logo-uber__black.svg" alt="Uber">
-      <img src="assets/images/logo/logo-air-bnb__black.svg" alt="Airbnb">
-      <img src="assets/images/logo/logo-american-apparel.svg" alt="American Apparel">
-      <img src="assets/images/logo/logo-apple.svg" alt="Apple">
-      <img src="assets/images/logo/logo-google__black.svg" alt="Google">
-      <img src="assets/images/logo/logo-ibm.svg" alt="IBM">
-      <img src="assets/images/logo/logo-invision.svg" alt="InVision">
-      <img src="assets/images/logo/logo-microsoft.svg" alt="Microsoft">
-      <img src="assets/images/logo/logo-youtube.svg" alt="YouTube">
-      <img src="assets/images/logo/logo-netflix.svg" alt="Netflix">
-    </div>
-  </div>
-</section> -->
-         
-
 
 <div id="footer-placeholder"></div>
 
