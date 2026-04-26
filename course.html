@@ -3,34 +3,50 @@
 
 <head>
   <meta charset="utf-8">
-    <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
-  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon" >
+  <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
+  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon">
   <title> CDTC Official </title>
 
-  <!-- ======= Google Font =======-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
-  <!-- End Google Font-->
 
-  <!-- ======= Styles =======-->
   <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendors/aos/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <!-- End Styles-->
-
-  <!-- ======= Theme Style =======-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="assets/css/style.css" rel="stylesheet">
-  <!-- End Theme Style-->
 
+  <style>
+    /* Tab Styling */
+    .nav-pills .nav-link {
+      color: #003399;
+      font-weight: 600;
+      border: 1px solid #003399;
+      margin: 5px;
+      border-radius: 50px;
+      padding: 8px 20px;
+      transition: all 0.3s ease;
+    }
 
+    .nav-pills .nav-link.active {
+      background-color: #003399 !important;
+      color: white !important;
+    }
 
-  <!-- ======= Apply theme =======-->
+    .course-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+  </style>
+
   <script>
-    // Apply the theme as early as possible to avoid flicker
     (function () {
       const storedTheme = localStorage.getItem('theme') || 'light';
       document.documentElement.setAttribute('data-bs-theme', storedTheme);
@@ -38,164 +54,279 @@
   </script>
 </head>
 
-<body >
-
+<body>
 
   <div class="site-wrap">
-  <div id="header-placeholder"></div>
+    <div id="header-placeholder"></div>
 
-<main>
+    <main>
+      <section class="section bg-light courses-background" id="course">
+        <div class="container py-8">
+          <div class="text-center mb-5">
+            <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">
+              Build Future-Ready Technology Skills
+            </h2>
+            <p>Structured on-campus training programs designed to help students gain practical knowledge, certification, and real-world technology exposure.</p>
+          </div>
 
-<section class="section bg-light courses-background" id="course">
-  <div class="container py-8 ">
-    <div class="text-center mb-5 ">
-     
-      <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">Build Future-Ready Design Experts</h2>
-      <p>On-campus 20-days CAD training with certification & job guidance. Choose from single software or full combo plans.</p>
-    </div>
+          <ul class="nav nav-pills justify-content-center mb-5" id="courseTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#coding-pane" type="button" role="tab">Programming</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#ai-pane" type="button" role="tab">AI & ML</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#office-pane" type="button" role="tab">Office & Productivity</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#cad-pane" type="button" role="tab">CAD/Engineering</button>
+            </li>
+          </ul>
 
-    <div class="row justify-content-center g-4 text-center">
+          <div class="tab-content" id="courseTabsContent">
 
-      <!-- All -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/all.png" alt="All" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">All Courses</h5>
-          <p class="small">CAD Foundation Course | Certificate Included | Job-Ready Skills</p>
-          <span style="color: #0a1833; font-size: 1.5rem;font-weight: bold;">₹4,24,995</span>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="quotation.html" class="btn btn-outline-primary btn-sm w-100">Buy Now</a>
+            <div class="tab-pane fade show active" id="coding-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Python Programming</h5>
+                    <p class="small">Beginner-friendly programming for automation, data handling, and real-world applications.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Java Programming</h5>
+                    <p class="small">Object-oriented programming used for enterprise applications and modern software systems.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">C / C++ Programming</h5>
+                    <p class="small">Core programming fundamentals widely used in system software and engineering applications.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Web Development</h5>
+                    <p class="small">Build modern websites using HTML, CSS, and JavaScript fundamentals.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/devicon/devicon-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Coding Combo Program</h5>
+                    <p class="small">Comprehensive programming program covering multiple coding languages and development skills.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="ai-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-cpu-fill mb-3 text-primary" style="font-size:60px;"></i>
+                    <h5 class="fw-bold">AI Fundamentals</h5>
+                    <p class="small">Introduction to Artificial Intelligence, how machines learn, and real-world AI applications.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-diagram-3-fill mb-3 text-primary" style="font-size:60px;"></i>
+                    <h5 class="fw-bold">Machine Learning Introduction</h5>
+                    <p class="small">Learn the basics of how machines analyze data and make predictions.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-robot mb-3 text-primary" style="font-size:60px;"></i>
+                    <h5 class="fw-bold">AI in Real Industries</h5>
+                    <p class="small">Explore how AI is used in healthcare, finance, manufacturing, and technology.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-lightbulb-fill mb-3 text-primary" style="font-size:60px;"></i>
+                    <h5 class="fw-bold">Complete AI Program</h5>
+                    <p class="small">Comprehensive AI learning program covering fundamentals, ML basics, and real-world AI applications.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-pencil-square mb-3 text-primary" style="font-size:60px;"></i>
+                    <h5 class="fw-bold">AI Content Creation</h5>
+                    <p class="small">Use AI tools for writing, presentations, visuals, and digital content creation.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-search mb-3 text-primary" style="font-size:60px;"></i>
+                    <h5 class="fw-bold">AI Research Tools</h5>
+                    <p class="small">Use AI for fast research, data summarization, and knowledge discovery.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-stars mb-3 text-primary" style="font-size:60px;"></i>
+                    <h5 class="fw-bold">Complete AI Integration Program</h5>
+                    <p class="small">Integrate AI tools into study, research, business, and professional workflows.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="office-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/microsoft-word-2019.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Microsoft Word</h5>
+                    <p class="small">Professional document creation, formatting, and reporting skills.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/microsoft-excel-2019.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Microsoft Excel</h5>
+                    <p class="small">Data analysis, formulas, charts, and productivity tools for business and academics.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/microsoft-powerpoint-2019.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Microsoft PowerPoint</h5>
+                    <p class="small">Create professional presentations for business, education, and communication.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/microsoft-office-2019.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Advanced Office Program</h5>
+                    <p class="small">Complete training covering Word, Excel, and PowerPoint for professional productivity.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <i class="bi bi-lightning-charge-fill mb-3 text-primary" style="font-size:60px;"></i>
+                    <h5 class="fw-bold">AI Productivity Tools</h5>
+                    <p class="small">Learn modern AI tools that improve efficiency in daily work and learning.</p>
+                    <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane fade" id="cad-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+                <div class="col-md-4 d-flex align-items-stretch">
+                    <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                      <img src="assets/images/logo/all.png" alt="All" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                      <h5 class="fw-bold">CAD Foundation Course</h5>
+                      <p class="small">2 Courses Included | Certificate | Skill Development</p>
+                      <span class="d-block mb-3 fw-bold" style="color: #0a1833; font-size: 1.5rem;">₹1,09,999</span>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm mt-auto">Quotation</a>
+                    </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/autocad.png" alt="AutoCAD" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">AutoCAD</h5>
+                    <p class="small">2D + Drafting training | Certification | Skill Development</p>
+                    <span class="d-block mb-3 fw-bold" style="color: #0a1833; font-size: 1.5rem;">₹74,999</span>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <a href="AutoCAD.html" class="btn btn-outline-primary btn-sm">Details</a>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/solidworks.png" alt="SolidWorks" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">SolidWorks</h5>
+                    <p class="small">3D parametric modeling | Real world design focus</p>
+                    <span class="d-block mb-3 fw-bold" style="color: #0a1833; font-size: 1.5rem;">₹79,999</span>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <a href="Solidworks.html" class="btn btn-outline-primary btn-sm">Details</a>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/catia.png" alt="CATIA" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">CATIA</h5>
+                    <p class="small">Surface modeling | Automotive & Aerospace focus</p>
+                    <span class="d-block mb-3 fw-bold" style="color: #0a1833; font-size: 1.5rem;">₹79,999</span>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <a href="Catia.html" class="btn btn-outline-primary btn-sm">Details</a>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/nx.png" alt="NX CAD" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">NX CAD</h5>
+                    <p class="small">Assemblies | Product development | Manufacturing</p>
+                    <span class="d-block mb-3 fw-bold" style="color: #0a1833; font-size: 1.5rem;">₹84,999</span>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <a href="NX.html" class="btn btn-outline-primary btn-m">Details</a>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/creo.png" alt="CREO" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">CREO</h5>
+                    <p class="small">Simulation | Parametric modeling | Product Visualization</p>
+                    <span class="d-block mb-3 fw-bold" style="color: #0a1833; font-size: 1.5rem;">₹84,999</span>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <a href="Creo.html" class="btn btn-outline-primary btn-sm">Details</a>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
+      </section>
 
-      <!-- AutoCAD -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/autocad.png" alt="AutoCAD" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">AutoCAD</h5>
-          <p class="small">2D + Basic 3D training | Certification | Job Support</p>
-          <span style="color: #0a1833; font-size: 1.5rem;font-weight: bold;">₹84,999</span>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="AutoCAD.html" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="quotation.html" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
+      <div id="footer-placeholder"></div>
+    </main>
 
-      <!-- SolidWorks -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/solidworks.png" alt="SolidWorks" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">SolidWorks</h5>
-          <p class="small">3D parametric modeling | Real-world design focus</p>
-          <span style="color: #0a1833; font-size: 1.5rem;font-weight: bold;">₹84,999</span>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="Solidworks.html" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="quotation.html" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- CATIA -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/catia.png" alt="CATIA" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">CATIA</h5>
-          <p class="small">Surface modeling | Automotive & Aerospace focus</p>
-        <span style="color: #0a1833; font-size: 1.5rem;font-weight: bold;">₹84,999</span>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="Catia.html" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="quotation.html" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- NX CAD -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/nx.png" alt="NX CAD" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">NX CAD</h5>
-          <p class="small">Assemblies | Drafting | Product development | Manufacturing</p>
-          <span style="color: #0a1833; font-size: 1.5rem;font-weight: bold;">₹84,999</span>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="NX.html" class="btn btn-outline-primary btn-m">Details</a>
-            <a href="quotation.html" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- CREO -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/creo.png" alt="CREO" class="mb-3 mx-auto" style="height: 60px; width: 60px;object-fit: contain;">
-          <h5 class="fw-bold">CREO</h5>
-          <p class="small">Simulation | Parametric modeling | Product Visualization</p>
-          <span style="color: #0a1833; font-size: 1.5rem;font-weight: bold;">₹84,999</span>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="Creo.html" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="quotation.html" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div id="footer-placeholder"></div>
-</main>
-
-  <!-- Server side to load header section -->
-   <script>
-
-  
-    fetch('header.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
-      })
-      .catch(err => console.warn('Failed to load header:', err));
-  </script>
-
-  <!-- Server side to load footer section -->
-  <script>
-    fetch('footer.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('footer-placeholder').innerHTML = data;
-        // Now set the year dynamically
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-      })
-      .catch(err => console.error('Failed to load footer:', err));
-  </script>
-
-
-  <!-- disable Inspect Element -->
-<script
-    disable-select = "true"
-    disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
-</script>
-
-</div>
-  </div>
-
-    <!-- ======= Back to Top =======-->
-    <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
-    <!-- End Back to top-->
-
-    <!-- ======= Javascripts =======-->
     <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/gsap/gsap.min.js"></script>
-    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
-    <script src="assets/vendors/glightbox/glightbox.min.js"></script>
-    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendors/aos/aos.js"></script>
-    <script src="assets/vendors/purecounter/purecounter.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="./assets/js/contactEmail.js"></script>
-    <!-- End JavaScripts-->
+    <script>
+      // Load header/footer scripts as you had them
+      fetch('header.html').then(r => r.text()).then(h => { document.getElementById('header-placeholder').innerHTML = h; });
+      fetch('footer.html').then(r => r.text()).then(d => { 
+          document.getElementById('footer-placeholder').innerHTML = d;
+          document.getElementById('current-year').textContent = new Date().getFullYear();
+      });
+    </script>
+  </div>
 </body>
-
 </html>
