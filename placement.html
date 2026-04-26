@@ -57,12 +57,12 @@
 
     <!-- Section Heading -->
     <div class="text-center mb-5 px-3 text-dark">
-      <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">Top Core Companies Hiring Our Trained Students</h2>
-      <p class="small">We proudly collaborate with industry-leading organizations for placements support across India.</p>
+      <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">Top Institutions Investing in Practical Skills & Training </h2>
+      <p class="small">We proudly collaborate with industry leading Institutions for Skill Developement support across India.</p>
     </div>
 
     <!-- Continuous Marquee Track -->
-    <div class="marquee-container-white">
+    <!-- <div class="marquee-container-white">
       <div class="marquee-track-wrapper">
         <div class="marquee-track">
           <span class="mx-4">Tata Technologies</span>
@@ -84,10 +84,10 @@
           <span class="mx-4">HCL</span>
           <span class="mx-4">Ather Energy</span>
           <span class="mx-4">Ola Electric</span>
-          <span class="mx-4">WABCO</span>
+          <span class="mx-4">WABCO</span> -->
 
           <!-- Repeated for loop effect -->
-          <span class="mx-4">Tata Technologies</span>
+          <!-- <span class="mx-4">Tata Technologies</span>
           <span class="mx-4">L&T Technology Services</span>
           <span class="mx-4">Mahindra & Mahindra</span>
           <span class="mx-4">Ashok Leyland</span>
@@ -112,9 +112,184 @@
     </div>
 
   </div>
-</section>
+</section> -->
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#ffffff;
+color:#212529;
+overflow-x:hidden;
+}
+
+section{
+padding:60px 20px;
+}
+
+.text-center{
+text-align:center;
+margin-bottom:40px;
+}
+
+.text-primary{
+color:#1E447F;
+}
+
+.fw-bold{
+font-weight:bold;
+}
+
+.fw-semibold{
+font-weight:600;
+}
+
+.bg-light{
+background:#ffffff;
+}
+
+
+/* =========================
+   INSTITUTION PARTNERS
+========================= */
+
+.marquee-container-full{
+width:100vw;
+overflow:hidden;
+background:#ffffff;
+padding:30px 0;
+}
+
+.marquee-track-wrapper{
+width:200%;
+display:flex;
+animation:scroll-left 60s linear infinite;
+}
+
+.marquee-track{
+display:flex;
+align-items:center;
+gap:70px; /* equal spacing between logos */
+}
+
+.marquee-track img{
+height:80px;       /* bigger logos */
+width:auto;
+object-fit:contain;
+display:block;
+filter:none;       /* keep original color */
+opacity:1;
+padding:10px 20px;
+background:#ffffff;
+border-radius:6px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+transition:transform .3s ease;
+}
+
+.marquee-track img:hover{
+transform:scale(1.1);
+}
+
+@keyframes scroll-left{
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+}
+
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.swiper-slide{
+max-width:90%;
+}
+
+.marquee-track{
+gap:40px;
+}
+
+.marquee-track img{
+height:60px;
+}
+
+}
+
+</style>
+
+<!-- =========================
+     INSTITUTION PARTNERS
+========================= -->
+
+<section class="section" id="partners">
+
+<div class="container-fluid px-0">
+
+<!-- <div class="text-center px-3">
+
+<h2 style="text-align:center; margin-top:0; font-size:34px; font-weight:800; color:#003399;">
+Trusted Institutional Partners
+</h2>
+
+<p class="text-muted small">
+CDTC collaborates with leading colleges and institutions to provide industry-focused CAD training.
+</p>
+
+</div> -->
+
+
+
+<div class="marquee-container-full">
+
+<div class="marquee-track-wrapper">
+
+<div class="marquee-track">
+
+<img src="assets/images/institutions/KPS.png" alt="KPS Institution">
+<img src="assets/images/institutions/LPS.png" alt="LPS Institution">
+<img src="assets/images/institutions/TS.png" alt="TS Institution">
+<img src="assets/images/institutions/BIMS.png" alt="BIMS Institution">
+<img src="assets/images/institutions/SEA.png" alt="SEA Institution">
+<img src="assets/images/institutions/AJPS.png" alt="AJPS Institution">
+<img src="assets/images/institutions/SAPC.png" alt="SAPC Institution">
+
+<!-- Repeat for smooth infinite scroll -->
+
+<img src="assets/images/institutions/KPS.png" alt="KPS Institution">
+<img src="assets/images/institutions/LPS.png" alt="LPS Institution">
+<img src="assets/images/institutions/TS.png" alt="TS Institution">
+<img src="assets/images/institutions/BIMS.png" alt="BIMS Institution">
+<img src="assets/images/institutions/SEA.png" alt="SEA Institution">
+<img src="assets/images/institutions/AJPS.png" alt="AJPS Institution">
+<img src="assets/images/institutions/SAPC.png" alt="SAPC Institution">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- <style>
 body, html {
   margin: 0;
   padding: 0;
@@ -156,7 +331,7 @@ body, html {
     transform: translateX(-50%);
   }
 }
-</style>
+</style> -->
 
 
 
