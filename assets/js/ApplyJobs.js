@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const backendUrl = 'https://script.google.com/macros/s/AKfycbxrTF5J4smgfaFYvsyNlFRF3bQ7JUsRwnYWba-JYMAbKFUabyJBRQIjVWdZo1MorQRqnA/exec';
+  const backendUrl = 'https://script.google.com/macros/s/AKfycbxXJ2vRV01Zne7Mc-9yvx3My-4gQnt405iicQ53_tjVt09Js1oduON5iPBzAtpIvfnz/exec';
   const form = document.getElementById('jobApplicationForm');
   const submitBtn = document.getElementById('submitBtn');
   const spinner = document.getElementById('spinner');
@@ -19,8 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         name: document.getElementById('userName').value,
         email: document.getElementById('userEmail').value,
         mobile: document.getElementById('userMobile').value,
-        location: document.getElementById('userLocation').value
+        location: document.getElementById('userLocation').value,
+        instituteName: document.getElementById('instituteName').value
       };
+
+      console.log('Submitting application with data:', data);
 
       try {
         const payload = new URLSearchParams();

@@ -121,6 +121,31 @@
                 </div>
               </div>
             </div>
+
+
+
+           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="career-card rounded-4 p-4">
+              <i class="bi bi-people career-icon"></i>
+              <h5 class="job-title">HR Manager</h5>
+              <p>Help us grow our team and manage talent acquisition for the CDTC ecosystem.</p>
+              <div class="job-meta">
+                <button class="btn btn-primary btn-sm w-100" onclick="setJob('HR Manager')">Apply Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="career-card rounded-4 p-4">
+            <i class="bi bi-mortarboard career-icon"></i>
+            <h5 class="job-title">Intern</h5>
+            <p>Kickstart your career and gain hands-on experience working with our expert team.</p>
+            <div class="job-meta">
+              <button class="btn btn-primary btn-sm w-100" onclick="setJob('Intern')">Apply Now</button>
+            </div>
+          </div>
+        </div>
+
           </div>
         </div>
       </section>
@@ -144,6 +169,8 @@
                     <option value="Marketing Executive">Marketing Executive</option>
                     <option value="Social Media Editor">Social Media Editor</option>
                     <option value="Social Media Influencer">Social Media Influencer</option>
+                    <option value="HR Manager">HR Manager</option>
+                    <option value="Intern">Intern</option>
                   </select>
                 </div>
                 <div class="mb-3">
@@ -158,10 +185,17 @@
                   <label class="form-label">Mobile <span class="text-danger">*</span></label>
                   <input type="tel" class="form-control" id="userMobile" required pattern="[0-9]{10}" placeholder="10 Digit Number">
                 </div>
+
                 <div class="mb-3">
                   <label class="form-label">Location <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="userLocation" required placeholder="City, State">
                 </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Institute Name</label>
+                  <input type="text" class="form-control" id="instituteName" placeholder="Institute Name">
+                </div>
+
                 <div class="text-center mt-4">
                   <button type="submit" id="submitBtn" class="btn btn-primary w-100">
                     <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
