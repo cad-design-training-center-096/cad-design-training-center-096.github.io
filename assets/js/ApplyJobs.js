@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const backendUrl = 'https://script.google.com/macros/s/AKfycbxXJ2vRV01Zne7Mc-9yvx3My-4gQnt405iicQ53_tjVt09Js1oduON5iPBzAtpIvfnz/exec';
+  const backendUrl = 'https://script.google.com/macros/s/AKfycbxrTF5J4smgfaFYvsyNlFRF3bQ7JUsRwnYWba-JYMAbKFUabyJBRQIjVWdZo1MorQRqnA/exec';
   const form = document.getElementById('jobApplicationForm');
   const submitBtn = document.getElementById('submitBtn');
   const spinner = document.getElementById('spinner');
