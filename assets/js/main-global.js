@@ -48,12 +48,32 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(err => console.error('Failed to load footer:', err));
     }
 
-    // 3. Inject Anti-Inspect / Disable Devtool Script Dynamically
+    // 3. Inject Anti-Inspect / Disable Devtool Script Dynamically with Full Configuration
     if (!document.getElementById('disable-devtool-script')) {
         const devtoolScript = document.createElement('script');
         devtoolScript.id = 'disable-devtool-script';
+        // Pass parameters to disable selection, debugging, and shortcuts
+        devtoolScript.src = 'https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js';
         devtoolScript.setAttribute('disable-select', 'true');
-        devtoolScript.src = 'https://cdn.jsdelivr.net/npm/disable-devtool';
+        devtoolScript.setAttribute('disable-copy', 'true');
+        devtoolScript.setAttribute('url', 'about:blank'); // Redirect action when devtools open
         document.body.appendChild(devtoolScript);
     }
+
+    // 4. Native Fallbacks to Ensure Complete Protection against Inspect / Copy / Right-Click
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault(); // Disables Right-Click menu
+    });
+
+    document.addEventListener('keydown', function (e) {
+        // Block F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U (View Source), Ctrl+S (Save)
+        if (
+            e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j' || e.key === 'C' || e.key === 'c')) ||
+            (e.ctrlKey && (e.key === 'U' || e.key === 'u' || e.key === 'S' || e.key === 's'))
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
 });
