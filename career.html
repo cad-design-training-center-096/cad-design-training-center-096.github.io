@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
   <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon">
-  <title> Careers | CDTC Official </title>
+  <title>Careers | CDTC Official</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -43,6 +43,8 @@
 
 <body>
   <div class="site-wrap">
+    
+    <!-- Header Placeholder -->
     <div id="header-placeholder"></div>
 
     <main>
@@ -66,7 +68,6 @@
                 </div>
               </div>
             </div>
-            
 
             <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div class="career-card rounded-4 p-4">
@@ -134,34 +135,32 @@
               </div>
             </div>
 
-
-
-           <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="career-card rounded-4 p-4">
-              <i class="bi bi-people career-icon"></i>
-              <h5 class="job-title">Human Resource</h5>
-              <p>Help us grow our team and manage talent acquisition for the CDTC ecosystem.</p>
-              <div class="job-meta">
-                <button class="btn btn-primary btn-sm w-100" onclick="setJob('Human Resource')">Apply Now</button>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="career-card rounded-4 p-4">
+                <i class="bi bi-people career-icon"></i>
+                <h5 class="job-title">Human Resource</h5>
+                <p>Help us grow our team and manage talent acquisition for the CDTC ecosystem.</p>
+                <div class="job-meta">
+                  <button class="btn btn-primary btn-sm w-100" onclick="setJob('Human Resource')">Apply Now</button>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="career-card rounded-4 p-4">
-            <i class="bi bi-mortarboard career-icon"></i>
-            <h5 class="job-title">Intern</h5>
-            <p>Kickstart your career and gain hands-on experience working with our expert team.</p>
-            <div class="job-meta">
-              <button class="btn btn-primary btn-sm w-100" onclick="setJob('Intern')">Apply Now</button>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="career-card rounded-4 p-4">
+                <i class="bi bi-mortarboard career-icon"></i>
+                <h5 class="job-title">Intern</h5>
+                <p>Kickstart your career and gain hands-on experience working with our expert team.</p>
+                <div class="job-meta">
+                  <button class="btn btn-primary btn-sm w-100" onclick="setJob('Intern')">Apply Now</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
           </div>
         </div>
       </section>
 
+      <!-- Job Application Modal -->
       <div class="modal fade" id="applyModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content border-0 shadow">
@@ -198,17 +197,14 @@
                   <label class="form-label">Mobile <span class="text-danger">*</span></label>
                   <input type="tel" class="form-control" id="userMobile" required pattern="[0-9]{10}" placeholder="10 Digit Number">
                 </div>
-
                 <div class="mb-3">
                   <label class="form-label">Location <span class="text-danger">*</span></label>
                   <input type="text" class="form-control" id="userLocation" required placeholder="City, State">
                 </div>
-
                 <div class="mb-3">
                   <label class="form-label">Institute Name</label>
                   <input type="text" class="form-control" id="instituteName" placeholder="Institute Name">
                 </div>
-
                 <div class="text-center mt-4">
                   <button type="submit" id="submitBtn" class="btn btn-primary w-100">
                     <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status"></span>
@@ -220,15 +216,28 @@
           </div>
         </div>
       </div>
-      <div id="footer-placeholder"></div>
     </main>
 
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+  </div><!-- /.site-wrap -->
+
+  <!-- ======= Javascripts =======-->
   <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="assets/vendors/aos/aos.js"></script>
-        <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
-  <script src="assets/js/main-global.js"></script>
-  <script src="assets/js/ApplyJobs.js"></script>
+  <script>
+    AOS.init();
     
-  </div>
+    function setJob(jobName) {
+      const jobSelect = document.getElementById('jobSelect');
+      jobSelect.value = jobName;
+      new bootstrap.Modal(document.getElementById('applyModal')).show();
+    }
+  </script>
+  <script src="assets/js/ApplyJobs.js"></script>
+
+  <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
+  <script src="assets/js/main-global.js"></script>
 </body>
 </html>

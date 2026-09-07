@@ -1,46 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+  <meta charset="utf-8">
   <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
-  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon" >
-  <title> CDTC Official </title>
+  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon">
+  <title>About Us | CDTC Official</title>
 
-<!-- ======= Google Font =======-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
-<!-- End Google Font-->
+  <!-- ======= Google Font =======-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+  <!-- End Google Font-->
 
-<!-- ======= Styles =======-->
-<link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
-<link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-<link href="assets/vendors/aos/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<!-- End Styles-->
+  <!-- ======= Styles =======-->
+  <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- End Styles-->
 
-<!-- ======= Theme Style =======-->
-<link href="assets/css/style.css" rel="stylesheet">
-<!-- End Theme Style-->
+  <!-- ======= Theme Style =======-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- End Theme Style-->
 
-
-
-<!-- ======= Apply theme =======-->
-<script>
-  // Apply the theme as early as possible to avoid flicker
-  (function () {
-    const storedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-bs-theme', storedTheme);
-  })();
-</script>
+  <!-- ======= Apply theme =======-->
+  <script>
+    (function () {
+      const storedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-bs-theme', storedTheme);
+    })();
+  </script>
 
   <style>
     :root {
-      /* Use a similar-but-not-identical blue palette (original, not Airbus’s exact brand colors) */
-      --bg: #0a1833;            /* deep navy */
-      --primary: #123a8c;       /* rich blue */
-      --primary-600: #1a4db5;   /* brighter for accents */
+      --bg: #0a1833;
+      --primary: #123a8c;
+      --primary-600: #1a4db5;
       --primary-300: #6d8fe6;
       --ink: #0b1020;
       --muted: #62708a;
@@ -64,7 +62,7 @@
       color: var(--text);
       background: linear-gradient(180deg, #f9fbff 0%, #f4f7ff 100%);
     }
-    
+
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
     .brand-logo {
       width: 44px; height: 44px; border-radius: 12px;
@@ -72,8 +70,6 @@
       box-shadow: var(--shadow-1);
     }
     .brand-title { font-weight: 800; font-size: 20px; letter-spacing: .3px; color: var(--ink); }
-
-
 
     .cta { display: flex; justify-content: end; }
     .btn {
@@ -86,8 +82,8 @@
     .hero {
       position: relative; overflow: hidden; color: white; margin-bottom: 10px;
       background: radial-gradient(1000px 380px at 70% -50%, rgba(18,58,140,.4), transparent 60%),
-                  radial-gradient(800px 300px at 20% -30%, rgba(26,77,181,.45), transparent 60%),
-                  linear-gradient(180deg, var(--bg) 0%, #0d1e45 85%);
+                radial-gradient(800px 300px at 20% -30%, rgba(26,77,181,.45), transparent 60%),
+                linear-gradient(180deg, var(--bg) 0%, #0d1e45 85%);
     }
     .hero-inner { max-width: var(--maxw); margin: 0 auto; padding: 70px 0px 64px; }
     .breadcrumbs { font-size: 13px; color: #d4dcff; margin-bottom: 16px; }
@@ -104,7 +100,6 @@
     .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-xl); padding: 22px; box-shadow: var(--shadow-1); }
     .card h3 { margin: 6px 0 8px; font-size: 18px; }
     .card p { color: #415275; font-size: 14.5px; line-height: 1.6; }
-    .icon { width: 40px; height: 40px; border-radius: 12px; background: linear-gradient(135deg, #e8efff, #f4f8ff); border: 1px solid var(--line); }
 
     /* Stats */
     .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
@@ -114,25 +109,19 @@
 
     /* Feature band */
     .feature { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 28px; align-items: center; }
-    .feature .media { background: #e9eefb; height: 320px; border-radius: var(--radius-2xl); border: 1px solid var(--line); box-shadow: var(--shadow-2); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #36529a; }
     .feature h2 { margin: 0 0 10px; }
     .feature p { color: #42537a; }
 
     /* Timeline */
-    .timeline { position: relative; padding-left: 24px; }
-    .timeline::before { content: ""; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: linear-gradient(var(--primary-300), var(--primary)); border-radius: 2px; }
-    .t-item { position: relative; margin: 0 0 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px 16px 18px; box-shadow: var(--shadow-1); }
-    .t-item::before { content: ""; position: absolute; left: -6px; top: 18px; width: 12px; height: 12px; border-radius: 50%; background: var(--primary); box-shadow: 0 0 0 3px #eef3ff; }
-    .t-item h4 { margin: 0 0 6px; }
-    .t-item p { margin: 0; color: #42537a; }
-
-    /* Leadership */
-    .leaders { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-    .leader { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow-1); }
-    .leader .ph { height: 160px; background: linear-gradient(135deg, #dee8ff, #eef2ff); border-bottom: 1px solid var(--line); }
-    .leader .meta { padding: 14px 16px 18px; }
-    .leader .name { font-weight: 700; }
-    .leader .role { color: #5a6b8f; font-size: 13px; }
+    .timeline { position: relative; max-width: 900px; margin: 50px auto; padding: 20px; }
+    .timeline::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 6px; background: linear-gradient(180deg, #003399, #0099ff); transform: translateX(-50%); border-radius: 3px; }
+    .milestone { display: flex; align-items: center; margin: 40px 0; position: relative; opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+    .milestone:nth-child(odd) { flex-direction: row-reverse; text-align: right; }
+    .circle { width: 70px; height: 70px; background: white; border: 5px solid #003399; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: bold; color: #003399; position: relative; z-index: 2; transition: 0.4s; }
+    .milestone:hover .circle { background: #003399; color: #fff; transform: scale(1.2); box-shadow: 0 0 20px rgba(0,0,0,0.3); }
+    .content { background: #f8faff; padding: 20px; border-radius: 12px; width: 40%; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 0 20px; transition: 0.4s; }
+    .content h4 { margin-top: 0; color: #003399; }
+    .milestone.visible { opacity: 1; transform: translateY(0); }
 
     /* Values grid */
     .values { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
@@ -141,552 +130,237 @@
     .value p { margin: 0; color: #45567b; }
 
     /* CTA band */
-    .cta-band { background: linear-gradient(180deg, #0d1e45, #0a1833); color: white; border-radius: 26px; padding: 34px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 18px; box-shadow: var(--shadow-2);
-      border: 1px solid rgba(255,255,255,.1);
-    }
+    .cta-band { background: linear-gradient(180deg, #0d1e45, #0a1833); color: white; border-radius: 26px; padding: 34px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 18px; box-shadow: var(--shadow-2); border: 1px solid rgba(255,255,255,.1); }
     .cta-band h3 { margin: 0 0 6px; font-size: 26px; }
     .cta-band p { margin: 0; opacity: .9; }
-    .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,.6); }
-    .btn-outline:hover { border-color: white; }
-
-    /* Footer */
-    .footer { background: #0a1128; color: #dbe4ff; margin-top: 50px; }
-    .f-wrap { max-width: var(--maxw); margin: 0 auto; padding: 48px 20px; display: grid; grid-template-columns: 1.2fr repeat(3, 1fr); gap: 24px; }
-    .f-wrap h5 { margin: 0 0 10px; color: white; }
-    .f-wrap a { display: block; color: #cdd7ff; text-decoration: none; padding: 6px 0; font-size: 14px; opacity: .9; }
-    .f-bottom { border-top: 1px solid rgba(255,255,255,.1); padding: 16px 20px; text-align: center; font-size: 13px; color: #b8c5ff; }
+    .btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,.6); padding: 10px 20px; border-radius: 30px; transition: all 0.3s ease; }
+    .btn-outline:hover { background: #007bff; border-color: #007bff; color: #fff; }
 
     /* Responsive */
     @media (max-width: 1100px) {
       .grid-3 { grid-template-columns: 1fr 1fr; }
       .stats { grid-template-columns: 1fr 1fr; }
       .feature { grid-template-columns: 1fr; }
-      .leaders { grid-template-columns: 1fr 1fr; }
       .values { grid-template-columns: 1fr 1fr; }
-      .nav { grid-template-columns: 1fr auto; }
-      .brand-title { font-size: 18px; }
-      .cta { display: none; }
     }
-    @media (max-width: 680px) {
-      .grid-3, .leaders, .values, .stats { grid-template-columns: 1fr; }
-      .hero-inner {  padding: 0 40px 44px; margin-top: 5rem;}
+    @media (max-width: 768px) {
+      .grid-3, .values, .stats { grid-template-columns: 1fr; }
+      .hero-inner { padding: 0 40px 44px; margin-top: 5rem; }
       .section { padding: 44px 18px; }
+      .timeline::before { left: 30px; }
+      .milestone { flex-direction: row !important; text-align: left !important; }
+      .circle { width: 50px; height: 50px; font-size: 22px; }
+      .content { width: 80%; margin-left: 20px; }
     }
-
   </style>
 </head>
+
 <body class="home-page">
 
-  <div id="header-placeholder"></div>
-  <section class="hero">
-    <div class="hero-inner">
-      <h3>About CDTC</h3>
-      <p>Harness our training to turn raw talent into skills-savvy students. Transform ideas into impactful designs. Create with
-      ease, share your vision effortlessly - because at CDTC, Skills beyond engineering isn't just a tagline, it's what we do
-      every day.</p>
-    </div>
-  </section>
+  <!-- ======= Site Wrap =======-->
+  <div class="site-wrap">
 
-  <main>
-    <section id="about" class="section">
-      <div class="grid-3" aria-label="Intro highlights">
-        <article class="card">
-          <h3>Mission</h3>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <h3>About CDTC</h3>
+        <p>Harness our training to turn raw talent into skills-savvy students. Transform ideas into impactful designs. Create with ease, share your vision effortlessly - because at CDTC, Skills beyond engineering isn't just a tagline, it's what we do every day.</p>
+      </div>
+    </section>
+
+    <!-- ======= Main =======-->
+    <main>
+      <section id="about" class="section">
+        <div class="grid-3" aria-label="Intro highlights">
+          <article class="card">
+            <h3>Mission</h3>
             <p>To provide students with practical, industry-relevant technology training that bridges the gap between academic learning and real-world skills, enabling them to confidently step into modern digital and engineering environments.</p>
-        </article>
+          </article>
 
-        <article class="card">
-          <h3>Vision</h3>
-  <p>To become one of India's most trusted technology training platforms, recognized for developing future-ready students equipped with practical knowledge, digital skills, and industry awareness.</p>
-        </article>
+          <article class="card">
+            <h3>Vision</h3>
+            <p>To become one of India's most trusted technology training platforms, recognized for developing future-ready students equipped with practical knowledge, digital skills, and industry awareness.</p>
+          </article>
 
-        <article class="card">
-          <h3>Who We Serve</h3>
-  <p>Schools, colleges, diploma institutions, and organizations seeking structured technology training programs that enhance student skills and prepare them for evolving industry demands.</p>
-        </article>
-      </div>
+          <article class="card">
+            <h3>Who We Serve</h3>
+            <p>Schools, colleges, diploma institutions, and organizations seeking structured technology training programs that enhance student skills and prepare them for evolving industry demands.</p>
+          </article>
+        </div>
 
-      <div class="section" style="padding-top: 32px; padding-bottom: 0;">
-  <div class="stats">
-    <div class="stat">
-      <div class="num">5+</div>
-      <div class="label">Technology Domains</div>
-    </div>
-
-    <div class="stat">
-      <div class="num">6 - 12</div>
-      <div class="label">Student Grade Levels</div>
-    </div>
-
-    <div class="stat">
-      <div class="num">B2B</div>
-      <div class="label">Institution Model</div>
-    </div>
-
-    <div class="stat">
-      <div class="num">40</div>
-      <div class="label">Students Per Batch</div>
-    </div>
-  </div>
-</div>
-
-
-<div class="section" style="padding-top: 32px; padding-bottom: 0;">
-  <div class="stats">
-    <div class="stat">
-      <div class="num">STEM Education</div>
-      <div class="label">Focused Curriculum</div>
-    </div>
-
-    <div class="stat">
-      <div class="num">Practical</div>
-      <div class="label">Hands-On Training</div>
-    </div>
-
-    <div class="stat">
-      <div class="num">Certificates</div>
-      <div class="label">Program Completion</div>
-    </div>
-
-    <div class="stat">
-      <div class="num">Custom</div>
-      <div class="label">Training Duration</div>
-    </div>
-  </div>
-</div>
-
-      <div class="section" style="padding-top: 42px;">
-        <div class="feature">
-          <div class="img-wrap position-relative">
-          <img src="assets/images/videoframe_4240.png" alt="CAD Training" class="img-fluid rounded-4 shadow-sm">
+        <div class="section" style="padding-top: 32px; padding-bottom: 0;">
+          <div class="stats">
+            <div class="stat">
+              <div class="num">5+</div>
+              <div class="label">Technology Domains</div>
+            </div>
+            <div class="stat">
+              <div class="num">6 - 12</div>
+              <div class="label">Student Grade Levels</div>
+            </div>
+            <div class="stat">
+              <div class="num">B2B</div>
+              <div class="label">Institution Model</div>
+            </div>
+            <div class="stat">
+              <div class="num">40</div>
+              <div class="label">Students Per Batch</div>
+            </div>
           </div>
-<div>
-  <h2>Skills Beyond Traditional Learning</h2>
-
-  <p>CDTC helps students develop creativity, problem-solving ability, and digital thinking through simple and engaging technology-based learning.</p>
-
-  <p>Our programs introduce students to modern tools and practical concepts, helping them understand how real-world technologies and digital systems work.</p>
-</div>
         </div>
-      </div>
-    </section>
 
+        <div class="section" style="padding-top: 32px; padding-bottom: 0;">
+          <div class="stats">
+            <div class="stat">
+              <div class="num">STEM Education</div>
+              <div class="label">Focused Curriculum</div>
+            </div>
+            <div class="stat">
+              <div class="num">Practical</div>
+              <div class="label">Hands-On Training</div>
+            </div>
+            <div class="stat">
+              <div class="num">Certificates</div>
+              <div class="label">Program Completion</div>
+            </div>
+            <div class="stat">
+              <div class="num">Custom</div>
+              <div class="label">Training Duration</div>
+            </div>
+          </div>
+        </div>
 
-<section id="impact" class="section">
+        <div class="section" style="padding-top: 42px;">
+          <div class="feature">
+            <div class="img-wrap position-relative">
+              <img src="assets/images/videoframe_4240.png" alt="CAD Training" class="img-fluid rounded-4 shadow-sm">
+            </div>
+            <div>
+              <h2>Skills Beyond Traditional Learning</h2>
+              <p>CDTC helps students develop creativity, problem-solving ability, and digital thinking through simple and engaging technology-based learning.</p>
+              <p>Our programs introduce students to modern tools and practical concepts, helping them understand how real-world technologies and digital systems work.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<h2 style="text-align:center; margin-top:0; font-size:34px; font-weight:800; color:#003399;">
-Our Journey
-</h2>
+      <section id="impact" class="section">
+        <h2 style="text-align:center; margin-top:0; font-size:34px; font-weight:800; color:#003399;">
+          Our Journey
+        </h2>
+        <div class="timeline">
+          <div class="milestone">
+            <div class="circle">🚀</div>
+            <div class="content">
+              <h4>The Beginning</h4>
+              <p>CDTC was founded with a simple vision—to bridge the gap between academic learning and real-world industry skills through practical technology education.</p>
+            </div>
+          </div>
+          <div class="milestone">
+            <div class="circle">📚</div>
+            <div class="content">
+              <h4>Developing Skill-Based Programs</h4>
+              <p>We started by introducing industry-oriented training programs that help students understand modern tools, technologies, and real-world workflows.</p>
+            </div>
+          </div>
+          <div class="milestone">
+            <div class="circle">🏫</div>
+            <div class="content">
+              <h4>Expanding Across Institutions</h4>
+              <p>Today, CDTC collaborates with schools, diploma institutions, and colleges to deliver structured technology training programs that build practical skills and future-ready knowledge.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-<div class="timeline">
+      <script>
+        // reveal animation on scroll
+        const milestones = document.querySelectorAll(".milestone");
+        function showMilestones() {
+          milestones.forEach(m => {
+            const top = m.getBoundingClientRect().top;
+            if (top < window.innerHeight - 100) {
+              m.classList.add("visible");
+            }
+          });
+        }
+        window.addEventListener("scroll", showMilestones);
+        showMilestones();
+      </script>
 
-<div class="milestone">
-<div class="circle">🚀</div>
-<div class="content">
-<h4>The Beginning</h4>
-<p>CDTC was founded with a simple vision—to bridge the gap between academic learning and real-world industry skills through practical technology education.</p>
-</div>
-</div>
+      <section id="leadership" class="section">
+        <h2 style="margin-top: 0; text-align: center; font-size: 34px; font-weight: 800; color: #003399;">
+          Leadership
+        </h2>
+        <div class="leader-layout" style="max-width: 800px; margin: 0 auto;">
+          <div class="leader-text">
+            <div class="role" style="font-weight: 600; font-size: 16px; margin-bottom: 12px; color: #123a8c;">Founder & CEO</div>
+            <p class="message" style="line-height: 1.7; color: #42537a; margin-bottom: 15px;">When I began my journey as a young mechanical engineer, I saw many talented classmates graduate without the practical design skills industries actually expect. I experienced the same challenge - until I immersed myself in advanced CAD training and discovered how the right guidance can transform a career.</p>
+            <p class="message" style="line-height: 1.7; color: #42537a; margin-bottom: 15px;">CDTC was born to close that gap. We believe core-engineering students deserve affordable, world-class design education that makes them truly job-ready.</p>
+            <p class="message" style="line-height: 1.7; color: #42537a; margin-bottom: 15px;">In just four intensive days, we bring real-world practices into the classroom, certify students, and help them see that engineering isn't just theory — it's innovation, creativity, and opportunity.</p>
+            <p class="message" style="line-height: 1.7; color: #42537a; margin-bottom: 15px;">Over the next five years, CDTC aims to partner with hundreds of institutions across India and eventually take our training model worldwide. We are driven by a single vision: to make every aspiring engineer an industry-ready engineer.</p>
+          </div>
+        </div>
+      </section>
 
-<div class="milestone">
-<div class="circle">📚</div>
-<div class="content">
-<h4>Developing Skill-Based Programs</h4>
-<p>We started by introducing industry-oriented training programs that help students understand modern tools, technologies, and real-world workflows.</p>
-</div>
-</div>
-
-<div class="milestone">
-<div class="circle">🏫</div>
-<div class="content">
-<h4>Expanding Across Institutions</h4>
-<p>Today, CDTC collaborates with schools, diploma institutions, and colleges to deliver structured technology training programs that build practical skills and future-ready knowledge.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-<style>
-  .timeline {
-    position: relative;
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-  }
-
-  /* vertical line */
-  .timeline::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 6px;
-    background: linear-gradient(180deg, #003399, #0099ff);
-    transform: translateX(-50%);
-    border-radius: 3px;
-  }
-
-  .milestone {
-    display: flex;
-    align-items: center;
-    margin: 40px 0;
-    position: relative;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease-out;
-  }
-
-  /* alternate left-right */
-  .milestone:nth-child(odd) {
-    flex-direction: row-reverse;
-    text-align: right;
-  }
-
-  .circle {
-    width: 70px;
-    height: 70px;
-    background: white;
-    border: 5px solid #003399;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    font-weight: bold;
-    color: #003399;
-    position: relative;
-    z-index: 2;
-    transition: 0.4s;
-  }
-
-  .milestone:hover .circle {
-    background: #003399;
-    color: #fff;
-    transform: scale(1.2);
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  }
-
-  .content {
-    background: #f8faff;
-    padding: 20px;
-    border-radius: 12px;
-    width: 40%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin: 0 20px;
-    transition: 0.4s;
-  }
-
-  .content h4 {
-    margin-top: 0;
-    color: #003399;
-  }
-
-  /* when visible on scroll */
-  .milestone.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* mobile */
-  @media screen and (max-width: 768px) {
-    .timeline::before {
-      left: 30px;
-    }
-    .milestone {
-      flex-direction: row !important;
-      text-align: left !important;
-    }
-    .circle {
-      width: 50px;
-      height: 50px;
-      font-size: 22px;
-    }
-    .content {
-      width: 80%;
-      margin-left: 20px;
-    }
-  }
-
-  leader-layout {
-  display: flex;
-  gap: 32px;
-}
-
-.leader-card {
-  flex: 0 0 250px;
-  background: linear-gradient(135deg, #dee8ff, #eef2ff);
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: var(--shadow-1);
-  border: 1px solid var(--line);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 250px;
-}
-
-.ph.ceo-photo {
-  width: 180px;
-  height: 180px;
-  background: #cfdfff;
-  border-radius: 12px;
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.08);
-}
-
-/* Text Section */
-.leader-text {
-  flex: 1;
-}
-
-.leader-text .name {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--ink);
-  margin-bottom: 4px;
-}
-
-.leader-text .role {
-  font-size: 15px;
-  color: #5a6b8f;
-  margin-bottom: 18px;
-}
-
-.leader-text p {
-  font-size: 15px;
-  color: #42537a;
-  line-height: 1.6;
-  margin-bottom: 14px;
-}
-
-@media (min-width: 992px) {
-  .message {
-    text-align: justify;
-    color: #000000 !important
-  }
-}
-
-/* Responsive layout */
-@media (max-width: 768px) {
-  .leader-layout {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .leader-card {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-  }
-  .leader-text {
-    text-align: center;
-  }
-}
-</style>
-
-<script>
-  // reveal animation on scroll
-  const milestones = document.querySelectorAll(".milestone");
-
-  function showMilestones() {
-    milestones.forEach(m => {
-      const top = m.getBoundingClientRect().top;
-      if (top < window.innerHeight - 100) {
-        m.classList.add("visible");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", showMilestones);
-  showMilestones();
-</script>
-
-
-<section id="leadership" class="section">
-  <h2 style="margin-top: 0; text-align: center; font-size: 34px; font-weight: 800; color: #003399;">
-    Leadership
-  </h2>
-
-  <div class="leader-layout">
-    <!-- Left: Card -->
-    <!-- <div class="leader-card">
-      <div class="ph ceo-photo"></div>
-    </div> -->
-
-    <div class="leader-text">
-      <!-- <div class="name">Ankit Panigrahi</div> -->
-      <div class="role">Founder & CEO</div>
-      <p class="message">When I began my journey as a young mechanical engineer, I saw many talented classmates graduate without the
-        practical design skills industries actually expect. I experienced the same challenge - until I immersed myself in
-        advanced CAD training and discovered how the right guidance can transform a career.</p>
-      <p class="message">CDTC was born to close that gap. We believe core-engineering students deserve affordable, world-class design
-        education that makes them truly job-ready.</p>
-      <p class="message">In just four intensive days, we bring real-world practices into the classroom, certify students, and help them
-        see that engineering isn't just theory — it's innovation, creativity, and opportunity.</p>
-      <p class="message">Over the next five years, CDTC aims to partner with hundreds of institutions across India and eventually take
-        our
-        training model worldwide. We are driven by a single vision: to make every aspiring engineer an industry-ready
-        engineer.</p>
-    </div>
-  </div>
-</section>
-
-
-    
-
-    <section id="values" class="section">
-      
+      <section id="values" class="section">
         <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">
-    Our Values
-  </h2>
-      <div class="values">
-        <div class="value">
-          <h4>Hands-On First</h4>
-          <p>Students learn by doing—projects, constraints, and iteration.</p>
+          Our Values
+        </h2>
+        <div class="values">
+          <div class="value">
+            <h4>Hands-On First</h4>
+            <p>Students learn by doing—projects, constraints, and iteration.</p>
+          </div>
+          <div class="value">
+            <h4>Clarity & Speed</h4>
+            <p>Short cycles, strong outcomes, super speed and zero fluff.</p>
+          </div>
+          <div class="value">
+            <h4>Partnership</h4>
+            <p>We enable institutions to deliver more, not compete with them.</p>
+          </div>
         </div>
-        <div class="value">
-          <h4>Clarity & Speed</h4>
-          <p>Short cycles, strong outcomes,super speed and zero fluff.</p>
+      </section>
+
+      <section class="section">
+        <div class="cta-band">
+          <div>
+            <h3>STEM EDUCATION</h3>
+            <p>Let's tailor a specialized program for your students - Robotics (Arduino), Agentic AI, CAD Design, Advanced Office, or Coding & Programming.</p>
+          </div>
+          <a href="https://wa.me/918093075096" class="btn btn-outline">Talk to Sales</a>
         </div>
-        <div class="value">
-          <h4>Partnership</h4>
-          <p>We enable institutions to deliver more, not compete with them.</p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-<!-- ======= CTA Section with Trusted by Industry Leaders ======= -->
-<!-- <section class="section">
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
 
+  </div><!-- /.site-wrap -->
 
-  <div class="container mt-5">
-    <div class="text-center mb-4">
-      <span class="text-uppercase text-primary fw-semibold fs-6">Trusted By Industry Leaders</span>
-      
-        <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">
-    Our Valuable Collaborators
-  </h2>
-    </div>
+  <!-- ======= Back to Top =======-->
+  <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
+  <!-- End Back to top-->
 
-    <div class="marquee-container">
-      <div class="marquee-track">
-    
-        <img src="assets/images/logo/logo-uber__black.svg" alt="Uber">
-        <img src="assets/images/logo/logo-air-bnb__black.svg" alt="Airbnb">
-        <img src="assets/images/logo/logo-american-apparel.svg" alt="American Apparel">
-        <img src="assets/images/logo/logo-apple.svg" alt="Apple">
-        <img src="assets/images/logo/logo-google__black.svg" alt="Google">
-        <img src="assets/images/logo/logo-ibm.svg" alt="IBM">
-        <img src="assets/images/logo/logo-invision.svg" alt="InVision">
-        <img src="assets/images/logo/logo-microsoft.svg" alt="Microsoft">
-        <img src="assets/images/logo/logo-youtube.svg" alt="YouTube">
-        <img src="assets/images/logo/logo-netflix.svg" alt="Netflix">
-       
-        <img src="assets/images/logo/logo-uber__black.svg" alt="Uber">
-        <img src="assets/images/logo/logo-air-bnb__black.svg" alt="Airbnb">
-        <img src="assets/images/logo/logo-american-apparel.svg" alt="American Apparel">
-        <img src="assets/images/logo/logo-apple.svg" alt="Apple">
-        <img src="assets/images/logo/logo-google__black.svg" alt="Google">
-        <img src="assets/images/logo/logo-ibm.svg" alt="IBM">
-        <img src="assets/images/logo/logo-invision.svg" alt="InVision">
-        <img src="assets/images/logo/logo-microsoft.svg" alt="Microsoft">
-        <img src="assets/images/logo/logo-youtube.svg" alt="YouTube">
-        <img src="assets/images/logo/logo-netflix.svg" alt="Netflix">
-      </div>
-    </div>
-  </div>
-</section> -->
+  <!-- ======= Javascripts =======-->
+  <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendors/gsap/gsap.min.js"></script>
+  <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
+  <script src="assets/vendors/glightbox/glightbox.min.js"></script>
+  <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendors/aos/aos.js"></script>
+  <script src="assets/vendors/purecounter/purecounter.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="./assets/js/contactEmail.js"></script>
+  <script src="./assets/js/header.js"></script>
 
-<!-- Styles (keep only once in your stylesheet) -->
-<style>
-  .section {
-    padding: 60px 0;
-    text-align: center;
-  }
-
-
-  .btn.btn-outline {
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    background: transparent;
-  }
-
-  .btn.btn-outline:hover {
-    background: #007bff;
-    color: #fff;
-  }
-
-  .marquee-container {
-    width: 100%;
-    overflow: hidden;
-    background-color: #fff;
-    padding: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  }
-
-  .marquee-track {
-    display: flex;
-    width: max-content;
-    animation: scroll-marquee 30s linear infinite;
-  }
-
-  .marquee-track img {
-    height: 50px;
-    margin: 0 30px;
-    object-fit: contain;
-  }
-
-  @keyframes scroll-marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-</style>
-
-    
-    <section class="section">
-      <div class="cta-band">
-        <div>
-          <h3>STEM EDUCATION</h3>
-          <p>Let's tailor a specialized program for your students-Robotics (Arduino), Agentic AI , CAD Design, Advanced Office, or Coding & Programming.</p>
-        </div>
-        <a href="https://wa.me/918093075096" class="btn btn-outline">Talk to Sales</a>
-      </div>
-    </section>
-    
-<div id="footer-placeholder"></div>
-</main>
-</div>
-
-    <!-- ======= Back to Top =======-->
-    <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
-    <!-- End Back to top-->
-
-    <!-- ======= Javascripts =======-->
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/gsap/gsap.min.js"></script>
-    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
-    <script src="assets/vendors/glightbox/glightbox.min.js"></script>
-    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendors/aos/aos.js"></script>
-    <script src="assets/vendors/purecounter/purecounter.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="./assets/js/contactEmail.js"></script>
-    <script src="./assets/js/header.js"></script>
-
-    <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
-    <script src="assets/js/main-global.js"></script>
-    
-    <!-- End JavaScripts-->
+  <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
+  <script src="assets/js/main-global.js"></script>
+  <!-- End JavaScripts-->
 </body>
 
 </html>

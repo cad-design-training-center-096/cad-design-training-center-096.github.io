@@ -1,336 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
-  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon" >
-<title> CDTC Official </title>
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
+  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon">
+  <title>SolidWorks Training | CDTC Official</title>
 
-<!-- ======= Google Font =======-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
-<!-- End Google Font-->
+  <!-- ======= Google Font =======-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+  <!-- End Google Font-->
 
-<!-- ======= Styles =======-->
-<link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
-<link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
-<link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-<link href="assets/vendors/aos/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<!-- End Styles-->
+  <!-- ======= Styles =======-->
+  <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- End Styles-->
 
-<!-- ======= Theme Style =======-->
-<link href="assets/css/style.css" rel="stylesheet">
-<!-- End Theme Style-->
+  <!-- ======= Theme Style =======-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- End Theme Style-->
 
+  <!-- ======= Apply theme =======-->
+  <script>
+    (function () {
+      const storedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-bs-theme', storedTheme);
+    })();
+  </script>
 
+  <style>
+    :root {
+      --airbus-blue: #0a1833;
+      --accent: #00a1e0;
+      --bg: #f6f8fb;
+      --card: #fff;
+      --ink: #0b1320;
+      --muted: #5e6b7a;
+      --radius: 16px;
+    }
 
-<!-- ======= Apply theme =======-->
-<script>
-  // Apply the theme as early as possible to avoid flicker
-  (function () {
-    const storedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-bs-theme', storedTheme);
-  })();
-</script>
+    * { box-sizing: border-box; }
 
-<style>
-  :root {
-    --airbus-blue:#0a1833;
-    --accent: #00a1e0;
-    --bg: #f6f8fb;
-    --card: #fff;
-    --ink: #0b1320;
-    --muted: #5e6b7a;
-    --radius: 16px;
-  }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      color: var(--ink);
+      background: var(--bg);
+    }
 
-  * {
-    box-sizing: border-box
-  }
+    a { color: var(--accent); text-decoration: none; }
 
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-    color: var(--ink);
-    background: var(--bg)
-  }
+    .main-container {
+      margin-top: 5rem;
+      padding: 0 150px 44px;
+    }
 
-  a {
-    color: var(--accent);
-    text-decoration: none
-  }
-
-  .main-container {
-    margin-top: 5rem;
-     padding: 0 150px 44px;
-  }
-
-.hero {
+    .hero {
       position: relative; overflow: hidden; color: white; margin-bottom: 10px;
       background: radial-gradient(1000px 380px at 70% -50%, rgba(18,58,140,.4), transparent 60%),
                   radial-gradient(800px 300px at 20% -30%, rgba(26,77,181,.45), transparent 60%),
                   linear-gradient(180deg, var(--airbus-blue) 0%, #0d1e45 85%);
     }
 
-  .pill {
-    display: inline-block;
-    background: #e9f6fd;
-    color: #084562;
-    padding: .35rem .75rem;
-    border-radius: 999px;
-    font-weight: 700
-  }
-
-  h1 {
-    margin: .5rem 0;
-    font-size: clamp(1.6rem, 2.6vw, 2.4rem)
-  }
-
-  p.lead {
-    max-width: 72ch;
-    opacity: .95
-  }
-
-  .grid {
-    display: grid;
-    gap: 18px
-  }
-
-  .grid.f3 {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr))
-  }
-
-  .card {
-    background: var(--card);
-    padding: 18px;
-    border-radius: var(--radius);
-    border: 1px solid #e7eaf0;
-    box-shadow: 0 6px 18px rgba(2, 20, 43, .04)
-  }
-
-  .btn {
-    border: none;
-    padding: 10px 16px;
-    border-radius: 12px;
-    font-weight: 700;
-    cursor: pointer
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: #00203a
-  }
-
-  .muted {
-    color: var(--muted)
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #e6eaef
-  }
-
-  th,
-  td {
-    padding: 12px 14px;
-    border-bottom: 1px solid #eef2f6;
-    text-align: left
-  }
-
-  th {
-    background: #f7f9fc
-  }
-
-  details {
-    background: #fff;
-    border: 1px solid #dfe5ee;
-    border-radius: 10px;
-    padding: 12px
-  }
-
-  footer {
-    padding: 28px 0;
-    color: var(--muted)
-  }
-
-  .sticky {
-    position: sticky;
-    bottom: 0;
-    background: rgba(255, 255, 255, .92);
-    backdrop-filter: blur(6px);
-    border-top: 1px solid #e6edf5
-  }
-    @media (max-width: 680px) {
-  .main-container{
-    margin-top: 5rem;
-    padding: 0 40px 44px;
+    .pill {
+      display: inline-block; background: #e9f6fd; color: #084562; padding: .35rem .75rem; border-radius: 999px; font-weight: 700;
     }
-  }
-</style>
+
+    h1 { margin: .5rem 0; font-size: clamp(1.6rem, 2.6vw, 2.4rem); }
+
+    p.lead {
+      max-width: 90ch;
+      font-size: clamp(1rem, 1.2vw, 1.15rem);
+      line-height: 1.6;
+      opacity: .95;
+    }
+
+    .grid { display: grid; gap: 18px; }
+    .grid.f3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+    .card {
+      background: var(--card); padding: 18px; border-radius: var(--radius); border: 1px solid #e7eaf0; box-shadow: 0 6px 18px rgba(2, 20, 43, .04);
+    }
+
+    .btn { border: none; padding: 10px 16px; border-radius: 12px; font-weight: 700; cursor: pointer; }
+    .btn-primary { background: var(--accent); color: #00203a; }
+    .muted { color: var(--muted); }
+
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e6eaef; }
+    th, td { padding: 12px 14px; border-bottom: 1px solid #eef2f6; text-align: left; }
+    th { background: #f7f9fc; }
+
+    details { background: #fff; border: 1px solid #dfe5ee; border-radius: 10px; padding: 12px; }
+
+    @media (max-width: 680px) {
+      .main-container {
+        margin-top: 5rem;
+        padding: 0 20px 44px;
+      }
+    }
+  </style>
 </head>
 
-<body class="home-page">
-  <div id="header-placeholder"></div>
-  
-  <section class="hero">
-    <div class="main-container">
-      <h2>SolidWorks Training - CDTC</h2>
-      <p class="lead">“Unlock the power of parametric 3D design using SolidWorks - cover part modelling, assemblies, drawing generation and simulation workflows. Perfect for product designers, mechanical engineers and prototyping teams.”</p>
+<body>
 
-    </div>
-  </section>
+  <!-- ======= Site Wrap =======-->
+  <div class="site-wrap">
 
-  <main class="main-container">
-    <section class="grid f3" style="margin-top:20px">
-      <div class="card">
-        <h3>Skills Covered</h3>
-        <ul>
-          <li>Parametric part modelling and design intent</li>
-          <li>Advanced assembly techniques, mates &amp; configurations</li>
-          <li>Detail drawings with balloons, BOMs and revision control</li>
-          <li>Sheet metal design, weldments, and hole tables</li>
-          <li>Surface modelling, lofts, sweeps &amp; surfacing strategies</li>
-          <li>Intro to Simulation (FEA) and Motion studies</li>
-        </ul>
-      </div>
-  
-      <div class="card">
-        <h3>Who should enroll?</h3>
-        <ul>
-          <li>Mechanical engineering students (B.Tech / Diploma)</li>
-          <li>Designers moving from 2D to 3D workflows</li>
-          <li>Manufacturing, R&amp;D, and product development teams</li>
-        </ul>
-      </div>
-  
-      <div class="card">
-        <h3>Why CDTC?</h3>
-        <ul>
-          <li>Project-based training with industry examples</li>
-          <li>Faculty with hands-on CAD/CAM experience</li>
-          <li>Certificate &amp; placement support</li>
-        </ul>
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <section class="hero">
+      <div class="main-container">
+        <h2>SolidWorks Training - CDTC</h2>
+        <p class="lead">“Unlock the power of parametric 3D design using SolidWorks - cover part modelling, assemblies, drawing generation and simulation workflows. Perfect for product designers, mechanical engineers and prototyping teams.”</p>
       </div>
     </section>
-  
-    <section id="syllabus" style="margin-top:28px">
-      <h2>Syllabus Snapshot</h2>
-      <p class="muted">Tailored per institute; below is a typical module breakdown.</p>
-      <div class="grid" style="margin-top:12px">
-        <details>
-          <summary><strong>Module 1 — SolidWorks Fundamentals</strong></summary>
-          <ul>
-            <li>Interface, sketching best practices, relations &amp; constraints</li>
-            <li>Part modelling basics: extrude, revolve, hole wizard, fillets</li>
-            <li>Design intent &amp; parametric practices</li>
-          </ul>
-        </details>
-  
-        <details>
-          <summary><strong>Module 2 - Assemblies &amp; Design Management</strong></summary>
-          <ul>
-            <li>Top-down vs bottom-up modelling, smart mates, interference detection</li>
-            <li>Configurations, design tables &amp; large assembly tools</li>
-          </ul>
-        </details>
-  
-        <details>
-          <summary><strong>Module 3 - Drawings &amp; Documentation</strong></summary>
-          <ul>
-            <li>Drawing templates, views, section views, annotations &amp; BOMs</li>
-            <li>Revision management &amp; tolerance practices</li>
-          </ul>
-        </details>
-  
-        <details>
-          <summary><strong>Module 4 - Sheet Metal, Weldments &amp; Manufacturing</strong></summary>
-          <ul>
-            <li>Sheet metal features, flat patterns, bend tables</li>
-            <li>Weldment structural members, cut lists &amp; profiles</li>
-            <li>Basic CAM export workflows</li>
-          </ul>
-        </details>
-  
-        <!-- <details>
-          <summary><strong>Module 5 - Surfacing &amp; Advanced Modelling</strong></summary>
-          <ul>
-            <li>Surfaces: lofts, sweeps, knit, boundary and repair techniques</li>
-            <li>Complex shapes &amp; surfacing strategies for molds and consumer products</li>
-          </ul>
-        </details>
-  
-        <details>
-          <summary><strong>Module 6 - Simulation &amp; Motion</strong></summary>
-          <ul>
-            <li>Static study basics, fixtures, loads, result interpretation</li>
-            <li>Motion simulation for mechanism validation</li>
-          </ul>
-        </details> -->
-      </div>
-    </section>
-  
-    <section style="margin-top:28px">
-      <h2>Deliverables</h2>
-      <div class="card">
-        <table>
-          <thead>
-            <tr>
-              <th>Item</th>
-              <th>Details</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Hands-on Projects</td>
-              <td>Part, assembly and drawing projects; final capstone project</td>
-            </tr>
-            <tr>
-              <td>Resources</td>
-              <td>Practice files, templates, BOM examples and exercise sheets</td>
-            </tr>
-            <tr>
-              <td>Assessment</td>
-              <td>Module tasks, midterm and final evaluation</td>
-            </tr>
-            <tr>
-              <td>Certification</td>
-              <td>CDTC Course Completion Certificate &amp; portfolio review</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  
-    <section id="enroll" style="margin-top:28px">
-      <div class="grid f3">
-      
+
+    <!-- Main Content -->
+    <main class="main-container">
+      <section class="grid f3" style="margin-top:20px">
         <div class="card">
-          <h3>Course Includes</h3>
+          <h3>Skills Covered</h3>
           <ul>
-            <li>Live instruction + practice files</li>
-            <li>Industry-relevant examples and exercises</li>
-            <li>Templates, BOMs, and export workflows</li>
-            <li>Certificate &amp; placement guidance</li>
+            <li>Parametric part modelling and design intent</li>
+            <li>Advanced assembly techniques, mates &amp; configurations</li>
+            <li>Detail drawings with balloons, BOMs and revision control</li>
+            <li>Sheet metal design, weldments, and hole tables</li>
+            <li>Surface modelling, lofts, sweeps &amp; surfacing strategies</li>
+            <li>Intro to Simulation (FEA) and Motion studies</li>
           </ul>
         </div>
-  
-         <div class="card">
-        <h3>Prerequisites</h3>
+
+        <div class="card">
+          <h3>Who should enroll?</h3>
           <ul>
-            <li> A suitable CAD Lab/Classroom/Auditorium with projector and seating must be arranged.</li>
-            <li>The CAD Lab having licensed software (AutoCAD, SolidWorks,CATIA, Creo, NX/UG) will be an added advantage; however, the training program can be conducted smoothly even without it.</li>
+            <li>Mechanical engineering students (B.Tech / Diploma)</li>
+            <li>Designers moving from 2D to 3D workflows</li>
+            <li>Manufacturing, R&amp;D, and product development teams</li>
           </ul>
         </div>
-      </div>
-    </section>
-  
-  <div id="footer-placeholder"></div>
+
+        <div class="card">
+          <h3>Why CDTC?</h3>
+          <ul>
+            <li>Project-based training with industry examples</li>
+            <li>Faculty with hands-on CAD/CAM experience</li>
+            <li>Certificate &amp; placement support</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="syllabus" style="margin-top:28px">
+        <h2>Syllabus Snapshot</h2>
+        <p class="muted">Tailored per institute; below is a typical module breakdown.</p>
+        <div class="grid" style="margin-top:12px">
+          <details>
+            <summary><strong>Module 1 — SolidWorks Fundamentals</strong></summary>
+            <ul>
+              <li>Interface, sketching best practices, relations &amp; constraints</li>
+              <li>Part modelling basics: extrude, revolve, hole wizard, fillets</li>
+              <li>Design intent &amp; parametric practices</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Module 2 - Assemblies &amp; Design Management</strong></summary>
+            <ul>
+              <li>Top-down vs bottom-up modelling, smart mates, interference detection</li>
+              <li>Configurations, design tables &amp; large assembly tools</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Module 3 - Drawings &amp; Documentation</strong></summary>
+            <ul>
+              <li>Drawing templates, views, section views, annotations &amp; BOMs</li>
+              <li>Revision management &amp; tolerance practices</li>
+            </ul>
+          </details>
+
+          <details>
+            <summary><strong>Module 4 - Sheet Metal, Weldments &amp; Manufacturing</strong></summary>
+            <ul>
+              <li>Sheet metal features, flat patterns, bend tables</li>
+              <li>Weldment structural members, cut lists &amp; profiles</li>
+              <li>Basic CAM export workflows</li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <section style="margin-top:28px">
+        <h2>Deliverables</h2>
+        <div class="card" style="padding: 0;">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hands-on Projects</td>
+                <td>Part, assembly and drawing projects; final capstone project</td>
+              </tr>
+              <tr>
+                <td>Resources</td>
+                <td>Practice files, templates, BOM examples and exercise sheets</td>
+              </tr>
+              <tr>
+                <td>Assessment</td>
+                <td>Module tasks, midterm and final evaluation</td>
+              </tr>
+              <tr>
+                <td>Certification</td>
+                <td>CDTC Course Completion Certificate &amp; portfolio review</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="enroll" style="margin-top:28px; margin-bottom: 40px;">
+        <div class="grid f3">
+          <div class="card">
+            <h3>Course Includes</h3>
+            <ul>
+              <li>Live instruction + practice files</li>
+              <li>Industry-relevant examples and exercises</li>
+              <li>Templates, BOMs, and export workflows</li>
+              <li>Certificate &amp; placement guidance</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Prerequisites</h3>
+            <ul>
+              <li>A suitable CAD Lab/Classroom/Auditorium with projector and seating must be arranged.</li>
+              <li>The CAD Lab having licensed software (AutoCAD, SolidWorks, CATIA, Creo, NX/UG) will be an added advantage; however, the training program can be conducted smoothly even without it.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+  </div><!-- /.site-wrap -->
 
   <!-- ======= Back to Top =======-->
   <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
@@ -347,11 +271,9 @@
   <script src="assets/vendors/purecounter/purecounter.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="./assets/js/contactEmail.js"></script>
-  <script src="./assets/js/header.js"></script>
 
-  
-        <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
-    <script src="assets/js/main-global.js"></script>
+  <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
+  <script src="assets/js/main-global.js"></script>
   <!-- End JavaScripts-->
 </body>
 
