@@ -335,91 +335,8 @@ body, html {
 }
 </style>
 
-
-
-<!-- <section class="section pricing__v2 py-5" id="placement" style="background-color: #000; color: #fff;">
-    <div class="container">
-        
-        <div class="row mb-5">
-            <div class="col-md-6 mx-auto text-center">
-                
-                <h2 class="mb-3 text-white">Launch Your Design Career</h2>
-                <p class="text-white-50">We assist students in preparing for jobs in design, drafting, manufacturing, and quality fields across multiple engineering disciplines and software platforms.</p>
-            </div>
-        </div>
-
-        
-        <div class="row g-4">
-           
-            <div class="col-md-4">
-                <div class="text-center border-0 shadow-sm bg-dark text-white p-4 h-100 rounded-4">
-                    <img src="assets/images/Placement/97.png" alt="Engineering Disciplines and Industries" class="img-fluid mb-4" style="max-height: 120px;">
-                    <h5 class="fw-bold mb-3">Multiple Industries</h5>
-                    <p class="text-white-50">Opportunities in mechanical, civil, aeronautical, automobile, electronics, electrical, marine, shipbuilding, and other industries.</p>
-                </div>
-            </div>
-
-            
-            <div class="col-md-4">
-                <div class="text-center border-0 shadow-sm bg-dark text-white p-4 h-100 rounded-4">
-                    <img src="assets/images/Placement/96.png" alt="Software Tools" class="img-fluid mb-4" style="max-height: 120px;">
-                    <h5 class="fw-bold mb-3">Software Expertise</h5>
-                    <p class="text-white-50">We train on AutoCAD, SolidWorks, CATIA, NX, Creo, Ansys, HyperMesh, MATLAB, and more to make you industry-ready.</p>
-                </div>
-            </div>
-
-        
-            <div class="col-md-4">
-                <div class="text-center border-0 shadow-sm bg-dark text-white p-4 h-100 rounded-4">
-                    <img src="assets/images/Placement/98.png" alt="Career Support Services" class="img-fluid mb-4" style="max-height: 120px;">
-                    <h5 class="fw-bold mb-3">Career Support</h5>
-                    <p class="text-white-50">Resume building, interview preparation, mock interviews, job referrals, and continuous support after training completion.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-
 <div id="footer-placeholder"></div>
 
-</main>
-
-<!-- Server side to load header section -->
-<script >
-    fetch('header.html')
-        .then(response => response.text())
-        .then(html => {
-            document.getElementById('header-placeholder').innerHTML = html;
-            
-            // Re-initialize Bootstrap offcanvas functionality for the dynamically loaded header
-            var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'));
-            offcanvasElementList.map(function (offcanvasEl) {
-                return new bootstrap.Offcanvas(offcanvasEl);
-            });
-        })
-        .catch(err => console.warn('Failed to load header:', err));
-</script>
-
-<!-- Server side to load footer section -->
-<script>
-  fetch('footer.html')
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-      // Now set the year dynamically
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-    })
-    .catch(err => console.error('Failed to load footer:', err));
-</script>
-
-<!-- disable Inspect Element -->
-<script
-    disable-select = "true"
-    disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
-</script>
-        </main>
-    </div>
 
     <!-- ======= Back to Top =======-->
     <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
@@ -436,6 +353,1092 @@ body, html {
     <script src="assets/vendors/purecounter/purecounter.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="./assets/js/contactEmail.js"></script>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
+    <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon" >
+    
+    <!-- Exact matching Title for the main blue link -->
+    <title>Central Development & Training Center</title>
+    
+    <!-- Matching Open Graph tags for layout consistency -->
+    <meta property="og:site_name" content="Central Development & Training Center" />
+    <meta property="og:title" content="Central Development & Training Center" />
+     
+    <!-- ======= Google Font =======-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+    <!-- End Google Font-->
+    
+    <!-- ======= Styles =======-->
+    <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- End Styles-->
+    
+    <!-- ======= Theme Style =======-->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- End Theme Style-->
+
+    <!-- ======= Apply theme =======-->
+    <script>
+      (function() {
+      const storedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-bs-theme', storedTheme);
+      })();
+    </script>
+
+    <!-- ======= Structured Data / Exact Site Name Matching =======-->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Central Development & Training Center",
+        "alternateName": ["CDTC"],
+        "url": "https://cdtc.in/"
+      }
+    </script>
+  </head>
+
+  <body class="home-page">
+    
+    
+    <!-- ======= Site Wrap =======-->
+    <div class="site-wrap">
+      
+  <!-- header section to load dynamic -->
+    <div id="header-placeholder"></div>
+      
+<!-- ======= Main =======-->
+<main>     
+        
+<!-- ======= Hero with Video Background and Top Gradient Overlay ======= -->
+<section id="hero-video" style="position: relative; height: 100vh; overflow: hidden;">
+  <!-- Background Video -->
+  <video id="hero-bg-video" autoplay muted loop playsinline 
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background-color: #000; z-index: -1;">
+    <source src="assets/video/main.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Gradient Overlay: Black and Airbus Blue fade down -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 51, 141, 0.3) 30%, rgba(0, 51, 141, 0) 60%);
+    z-index: 0;">
+  </div>
+  <!-- Hero Content: Centered horizontally, aligned to bottom -->
+  <div class="container h-100 d-flex flex-column justify-content-end align-items-center text-center text-white" 
+       style="position: relative; z-index: 1;">
+    <div>
+      <h1 class="display-4 fw-bold mb-4" style="color: #ffffff; text-shadow: 
+        -1px -1px 0 #000000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;">
+        <div class="d-flex flex-column">
+          <p>CENTRAL DEVELOPMENT & TRAINING CENTER</p>
+          <p style="font-size: 25px;"> - Skills Beyond Engineering</p>
+        </div>
+      </h1>
+
+      <a href="https://drive.google.com/file/d/1LW2RVNLO0mGvOuRH1YUEFjM5E0BxACG3/view" class="btn btn-light me-2">Download Brochure</a>
+      <a href="quotation.html" class="btn btn-outline-light">Quotation</a>
+    </div>
+  </div>
+</section>
+<!-- End Hero -->
+
+<script>
+  const videos = [
+    "assets/video/main.mp4",
+  ];
+
+  let currentVideo = 0;
+  const videoElement = document.getElementById("hero-bg-video");
+
+  // Function to play a specific video
+  function playVideo(index) {
+    currentVideo = index;
+    videoElement.src = videos[currentVideo];
+    videoElement.load();
+    videoElement.play();
+  }
+</script>
+
+<!-- End Hero -->
+
+<!-- ======= About & Journey Timeline Section ======= -->
+
+<section class="about__v4 section bg-white py-6" id="about">
+  <div class="container">
+    <div class="row align-items-center gx-6">
+
+      <!-- Left: Image -->
+      <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+
+        <div class="video-wrap position-relative rounded-4 shadow-sm overflow-hidden" style="transition: transform 0.3s;">
+
+          <!-- Image -->
+          <img src="assets/images/videoframe_4240.png"
+               alt="CDTC Training"
+               style="width: 100%; height: 100%; border-radius: 1rem; display: block; object-fit: cover; aspect-ratio: 4 / 2.8;">
+
+        </div>
+
+      </div>
+
+
+      <!-- Right: About Content -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">Future-Ready, STEM Technology Skills with CDTC</h2>
+        <p class="mb-3">We provide structured technology training programs from school to master's level, focusing on practical learning and industry-relevant skills to prepare students for real-world digital and engineering environments.</p>
+ 
+        <div class="row gy-3">
+          <div class="col-sm-6 d-flex align-items-start gap-2">
+            <i class="bi bi-check-circle-fill text-primary"></i>
+            <span>Robotics</span>
+          </div>
+           
+          <div class="col-sm-6 d-flex align-items-start gap-2">
+            <i class="bi bi-check-circle-fill text-primary"></i>
+            <span>CAD Design</span>
+          </div>
+
+          <div class="col-sm-6 d-flex align-items-start gap-2">
+            <i class="bi bi-check-circle-fill text-primary"></i>
+            <span>Artificial Intelligence/Agentic AI</span>
+          </div>
+
+
+          <div class="col-sm-6 d-flex align-items-start gap-2">
+            <i class="bi bi-check-circle-fill text-primary"></i>
+            <span>Advanced Microsoft Office</span>
+          </div>
+
+          <div class="col-sm-6 d-flex align-items-start gap-2">
+            <i class="bi bi-check-circle-fill text-primary"></i>
+            <span>Coding/Programming</span>
+          </div>
+
+          <div class="col-sm-6 d-flex align-items-start gap-2">
+            <i class="bi bi-award-fill text-primary"></i>
+            <span>Certification</span>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <p class="small text-muted">* The training timeline <span class="text-primary fw-bold editable">is customizable for institutions.</span> Contact us for customized sessions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const video = document.getElementById("about-video");
+  const muteBtn = document.getElementById("mute-toggle");
+
+  muteBtn.addEventListener("click", () => {
+    video.muted = !video.muted;
+  });
+</script>
+
+
+
+<!-- pricing section start -->
+<div class="pricing_section layout_padding">
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <!-- Left side - Pricing Plans -->
+            <div class="col-lg-6" style="padding-right:30px;">
+                <div class="pricing_section_2">
+                    <div class="row">
+
+                        <!-- Program 1 -->
+                        <div class="col-md-12 mb-4">
+                            <div class="pricing_box" style="padding:25px 15px;">
+                                
+                                <h5 style="margin-top:0; font-size:34px; font-weight:400; color:#f1f1f1">
+                                    Robotics Skill Development Program
+                                </h5>
+
+                                <h1 class="dolor_text">Duration (6-9 Months)</h1>
+                                <h3 class="monthly_text">PER BATCH</h3>
+
+                                <p class="band_text">
+                                    Industry-Oriented Training Programs<br>
+                                    Practical Hands-on Learning<br>
+                                    Certificates Provided<br>
+                                    Batch Size: Up to 35 - 40 Students
+                                </p>
+
+                                <a class="btn btn-primary py-2" href="quotation.html">Request Quotation</a>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Program 2 -->
+                        <div class="col-md-12 mb-4">
+                            <div class="pricing_box" style="padding:25px 15px;">
+                                
+                                <h5 style="margin-top:0; font-size:34px; font-weight:400; color:#f1f1f1">
+                                    Agentic AI Institution Based Program
+                                </h5>
+
+                                <h1 class="dolor_text">Duration (3-6 Months)</h1>
+                                <h3 class="monthly_text">PER BATCH</h3>
+
+                                <p class="band_text">
+                                    Structured Learning Modules<br>
+                                    Industry-Relevant Technology Training<br>
+                                    Certification Included<br>
+                                    Batch Size: Up to 35 - 40 Students
+                                </p>
+
+                                <a class="btn btn-primary py-2" href="quotation.html">Request Quotation</a>
+
+                            </div>
+                        </div>
+                          <!-- Program 2 -->
+                        <div class="col-md-12 mb-4">
+                            <div class="pricing_box" style="padding:25px 15px;">
+                                
+                                <h5 style="margin-top:0; font-size:34px; font-weight:400; color:#f1f1f1">
+                                    CAD Design Institution Based Program
+                                </h5>
+
+                                <h1 class="dolor_text">Duration (3-6 Months)</h1>
+                                <h3 class="monthly_text">PER BATCH</h3>
+
+                                <p class="band_text">
+                                    Structured Learning Modules<br>
+                                    Industry-Relevant Technology Training<br>
+                                    Certification Included<br>
+                                    Batch Size: Up to 35 - 40 Students
+                                </p>
+
+                                <a class="btn btn-primary py-2" href="quotation.html">Request Quotation</a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+         <!-- Load model-viewer -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+<div class="col-lg-6" style="display:flex; justify-content:flex-end;">
+  <model-viewer id="astronautModel"
+    src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+    alt="3D Astronaut Model"
+    shadow-intensity="1"
+    disable-zoom
+    camera-orbit="90deg 75deg 5m"
+    style="width:150%; max-width:400px; height:700px;">
+  </model-viewer>
+</div>
+
+<script>
+  const modelViewer = document.getElementById('astronautModel');
+
+  function updateInteraction() {
+    if (window.innerWidth <= 768) {
+      // Mobile: disable interaction
+      modelViewer.removeAttribute('camera-controls');
+      modelViewer.setAttribute('interaction-policy', 'none');
+    } else {
+      // Desktop: enable interaction
+      modelViewer.setAttribute('camera-controls', '');
+      modelViewer.setAttribute('interaction-policy', 'auto');
+
+      // Add click-to-rotate only on desktop
+      modelViewer.addEventListener('click', () => {
+        if (!modelViewer.hasAttribute('auto-rotate')) {
+          modelViewer.setAttribute('auto-rotate', '');
+          modelViewer.setAttribute('interaction-policy', 'always'); // Enable interaction after click
+        }
+      }, { once: true }); // ensures listener only fires once
+    }
+  }
+
+  // Initial check
+  updateInteraction();
+
+  // Update on window resize
+  window.addEventListener('resize', updateInteraction);
+</script>
+
+
+            
+        </div>
+    </div>
+</div>
+<!-- pricing section end -->
+
+
+
+<!-- ======= Custom Styling ======= -->
+<style>
+    .pricing_section {
+        padding: 60px 0;
+        background: linear-gradient(135deg, #0a0c1d, #1E447F);
+    }
+    .pricing_taital {
+        font-size: 38px;
+        font-weight: 800;
+        margin-bottom: 15px;
+        color: #00c6ff;
+        letter-spacing: 1px;
+    }
+    .pricing_text {
+        max-width: 800px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: #cfd6e3;
+    }
+    .pricing_box {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 35px 20px;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(6px);
+        box-shadow: 0 0 15px rgba(0, 198, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+    .pricing_box::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), 
+                          linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+        background-size: 20px 20px;
+        pointer-events: none;
+        z-index: 0;
+    }
+    .pricing_box:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(0, 198, 255, 0.35);
+    }
+    .number_text {
+        font-size: 28px;
+        color: #00c6ff;
+        position: relative;
+        z-index: 1;
+    }
+    .cloud_text {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 15px 0;
+        color: #fff;
+        z-index: 1;
+        position: relative;
+    }
+    .dolor_text {
+        font-size: 34px;
+        color: #00ffb3;
+        font-weight: bold;
+        z-index: 1;
+        position: relative;
+    }
+    .monthly_text {
+        font-size: 14px;
+        font-weight: 600;
+        color: #cfd6e3;
+        margin-bottom: 15px;
+        z-index: 1;
+        position: relative;
+    }
+    .band_text {
+        font-size: 15px;
+        color: #e6e6e6;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        z-index: 1;
+        position: relative;
+    }
+    .signup_bt a {
+        display: inline-block;
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        transition: background 0.3s ease, transform 0.3s ease;
+        z-index: 1;
+        position: relative;
+    }
+    .signup_bt a:hover {
+        background: linear-gradient(135deg, #00ffb3, #00c6ff);
+        transform: scale(1.05);
+    }
+</style>
+
+
+
+
+
+
+<!-- ======= Trusted by Industry Leaders (India – Education) ======= -->
+<style>
+  :root {
+    --airbus-blue: #1E447F;
+  }
+
+  .marquee-container {
+    width: 100vw;
+    overflow: hidden;
+    background: #fff;
+    padding: 20px 0;
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: max-content;
+    animation: scroll-marquee 10s linear infinite;
+  }
+
+  .marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+  }
+
+  .marquee-track img {
+    height: 50px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.9;
+    transition: opacity 0.2s ease, filter 0.2s ease;
+  }
+
+  .marquee-track img:hover {
+    filter: none;
+    opacity: 1;
+  }
+
+  @keyframes scroll-marquee {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Optional: better spacing on small screens */
+  @media (max-width: 576px) {
+    .marquee-track {
+      gap: 20px;
+    }
+
+    .marquee-track img {
+      height: 40px;
+    }
+  }
+
+  /* Airbus blue color for heading & underline */
+  .text-center>span {
+    color: var(--airbus-blue);
+  }
+
+  .text-center>h2 {
+    color: var(--airbus-blue);
+    font-weight: 700;
+  }
+
+  .text-center hr {
+    border-color: var(--airbus-blue);
+  }
+</style>
+
+<!-- ======= How it Works Section (Full Width, Clean, No Icons) =======-->
+<section class="section howitworks__v1 bg-white py-5" id="how-it-works">
+  <div class="container-fluid px-lg-5">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+              <!-- <span class="text-uppercase text-primary fw-semibold fs-6">How it Works</span> -->
+        <h2 data-aos="fade-up" data-aos-delay="100" style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">Your Journey to Certification & Skill Development</h2>
+        <p data-aos="fade-up" data-aos-delay="200">
+          Designed for students, our process is easy to understand, simple to follow, and focused on effective Skill Development.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4 justify-content-center px-lg-5">
+      <!-- Step 1 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="step-card text-center h-100 d-flex flex-column justify-content-start position-relative" data-aos="fade-up" data-aos-delay="0">
+          <img class="arch-line" src="assets/images/arch-line.svg" alt="line">
+          <span class="step-number rounded-circle fw-bold mb-4 mx-auto">1</span>
+          <h3 class="fs-5 mb-3">Register Online</h3>
+          <p class="small ">Choose a training course and register via our website or app.</p>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="step-card reverse text-center h-100 d-flex flex-column justify-content-start position-relative" data-aos="fade-up" data-aos-delay="300">
+          <img class="arch-line reverse" src="assets/images/arch-line-reverse.svg" alt="line">
+          <span class="step-number rounded-circle fw-bold mb-4 mx-auto">2</span>
+          <h3 class="fs-5 mb-3">Attend Training</h3>
+          <p class="small">Join our expert led training session, complete Offline training & practical tasks at your Institution.</p>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="step-card text-center h-100 d-flex flex-column justify-content-start position-relative" data-aos="fade-up" data-aos-delay="600">
+          <img class="arch-line" src="assets/images/arch-line.svg" alt="line">
+          <span class="step-number rounded-circle fw-bold mb-4 mx-auto">3</span>
+          <h3 class="fs-5 mb-3">Get Certified</h3>
+          <p class="small">After successful completion, get your training & certificate.</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="col-md-6 col-lg-3">
+        <div class="step-card last text-center h-100 d-flex flex-column justify-content-start position-relative" data-aos="fade-up" data-aos-delay="900">
+          <span class="step-number rounded-circle fw-bold mb-4 mx-auto">4</span>
+          <h3 class="fs-5 mb-3">Skill Development</h3>
+          <p class="small">Our team provides mentorship for connecting students with core opportunities across India.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- **************************************************************************************************************************************************************************************       -->
+
+<!-- ======= Features Section ======= -->
+<section class="py-4 white" id="features">
+  <div class="container text-center">
+
+    <!-- Section Title -->
+    <h2 style="text-align:center; margin-top:0; font-size:34px; font-weight:800; color:#003399;">
+      Why Choose CDTC
+    </h2>
+
+    <!-- Description -->
+    <div class="one-line-text-wrapper">
+      <p class="one-line-text">
+        Our <span class="fw-semibold text-black">technology training programs</span> help students
+        build <strong class="text-primary">practical industry-ready skills</strong> through structured learning and hands-on exposure.
+      </p>
+    </div>
+
+<style>
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:28px;
+margin-top:50px;
+}
+
+.card{
+background:#ffffff;
+padding:28px;
+border-radius:10px;
+border:1px solid #e4e7ec;
+box-shadow:0 4px 14px rgba(0,0,0,0.04);
+transition:all .25s ease;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
+}
+
+.card::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+height:100%;
+width:4px;
+background:#0b5ed7;
+border-radius:10px 0 0 10px;
+}
+
+.card h3{
+font-size:20px;
+font-weight:600;
+margin-bottom:10px;
+color:#1d2939;
+}
+
+.card p{
+font-size:15px;
+line-height:1.6;
+color:#475467;
+}
+
+details{
+margin-top:14px;
+padding-top:12px;
+border-top:1px solid #e4e7ec;
+}
+
+summary{
+cursor:pointer;
+font-weight:600;
+color:#0b5ed7;
+font-size:14px;
+list-style:none;
+}
+
+summary::-webkit-details-marker{
+display:none;
+}
+
+details p{
+margin-top:8px;
+font-size:14px;
+color:#475467;
+}
+
+</style>
+
+<section class="grid">
+
+<div class="card">
+<h3>Industry-Oriented Training</h3>
+<p>Our programs focus on practical learning aligned with modern industry technologies.</p>
+
+<details>
+<summary>More Details</summary>
+<p>Students gain exposure to real-world tools, digital workflows, and practical applications used across modern industries.</p>
+</details>
+</div>
+
+
+<div class="card">
+<h3>Modern Technology Curriculum</h3>
+<p>Programs are designed around emerging technologies and future industry demands.</p>
+
+<details>
+<summary>More Details</summary>
+<p>The curriculum introduces students to digital skills, design thinking, and modern technology concepts used in professional environments.</p>
+</details>
+</div>
+
+
+<div class="card">
+<h3>Certification & Career Guidance</h3>
+<p>Students receive certification along with guidance to help them build future-ready skills.</p>
+
+<details>
+<summary>More Details</summary>
+<p>Our programs help students understand industry expectations, career pathways, and technology-driven opportunities.</p>
+</details>
+</div>
+
+</section>
+
+</div>
+</section>
+<!-- **************************************************************************************************************************************************************************************  -->
+<!-- ======= Custom Styling ======= -->
+<style>
+  #features {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: white !important;
+  }
+
+  .black-background-wrapper {
+    background-color: #000;
+    padding: 20px 0;
+    width: 100%;
+  }
+
+  .image-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .image-inner img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+  }
+</style>
+
+
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, sans-serif;
+background:#ffffff;
+color:#212529;
+overflow-x:hidden;
+}
+
+section{
+padding:60px 20px;
+}
+
+.text-center{
+text-align:center;
+margin-bottom:40px;
+}
+
+.text-primary{
+color:#1E447F;
+}
+
+.fw-bold{
+font-weight:bold;
+}
+
+.fw-semibold{
+font-weight:600;
+}
+
+.bg-light{
+background:#ffffff;
+}
+
+
+/* =========================
+   INSTITUTION PARTNERS
+========================= */
+
+.marquee-container-full{
+width:100vw;
+overflow:hidden;
+background:#ffffff;
+padding:30px 0;
+}
+
+.marquee-track-wrapper{
+width:200%;
+display:flex;
+animation:scroll-left 60s linear infinite;
+}
+
+.marquee-track{
+display:flex;
+align-items:center;
+gap:70px; /* equal spacing between logos */
+}
+
+.marquee-track img{
+height:80px;       /* bigger logos */
+width:auto;
+object-fit:contain;
+display:block;
+filter:none;       /* keep original color */
+opacity:1;
+padding:10px 20px;
+background:#ffffff;
+border-radius:6px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+transition:transform .3s ease;
+}
+
+.marquee-track img:hover{
+transform:scale(1.1);
+}
+
+@keyframes scroll-left{
+0%{
+transform:translateX(0);
+}
+
+100%{
+transform:translateX(-50%);
+}
+}
+
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonials__v2{
+background:#fff;
+}
+
+.swiper{
+padding:40px 0;
+}
+
+.swiper-slide{
+background:#f1f1f1;
+padding:25px 20px;
+border-radius:10px;
+max-width:500px;
+margin:0 auto;
+transition:transform .3s ease, background-color .3s ease, color .3s ease;
+opacity:0.5;
+transform:scale(0.9);
+color:#333;
+}
+
+.swiper-slide-active{
+background:#1E447F;
+color:#fff;
+opacity:1;
+transform:scale(1.05);
+box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.swiper-slide blockquote{
+font-style:italic;
+margin-bottom:15px;
+}
+
+.testimonial-author{
+text-align:right;
+font-weight:bold;
+font-size:14px;
+}
+
+.testimonial-role{
+font-weight:normal;
+font-size:13px;
+}
+
+.swiper-pagination-bullet{
+background:#1E447F;
+opacity:0.6;
+}
+
+.swiper-pagination-bullet-active{
+opacity:1;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.swiper-slide{
+max-width:90%;
+}
+
+.marquee-track{
+gap:40px;
+}
+
+.marquee-track img{
+height:60px;
+}
+
+}
+
+</style>
+
+
+
+<!-- =========================
+     INSTITUTION PARTNERS
+========================= -->
+
+<section class="section" id="partners">
+
+<div class="container-fluid px-0">
+
+<div class="text-center px-3">
+
+<h2 style="text-align:center; margin-top:0; font-size:34px; font-weight:800; color:#003399;">
+Trusted Institutional Partners
+</h2>
+
+<p class="text-muted small">
+CDTC collaborates with leading colleges and institutions to provide industry-focused training programme.
+</p>
+
+</div>
+
+
+
+<div class="marquee-container-full">
+
+<div class="marquee-track-wrapper">
+
+<div class="marquee-track">
+
+<img src="assets/images/institutions/KPS.png" alt="KPS Institution">
+<img src="assets/images/institutions/LPS.png" alt="LPS Institution">
+<img src="assets/images/institutions/TS.png" alt="TS Institution">
+<img src="assets/images/institutions/BIMS.png" alt="BIMS Institution">
+<!-- <img src="assets/images/institutions/SEA.png" alt="SEA Institution"> -->
+<!-- <img src="assets/images/institutions/AJPS.png" alt="AJPS Institution"> -->
+<img src="assets/images/institutions/IE.png" alt="IE Institution">
+<img src="assets/images/institutions/SAPC.png" alt="SAPC Institution">
+<img src="assets/images/institutions/joseph.jpeg" alt="SAPC Institution">
+
+<!-- Repeat for smooth infinite scroll -->
+
+<img src="assets/images/institutions/KPS.png" alt="KPS Institution">
+<img src="assets/images/institutions/LPS.png" alt="LPS Institution">
+<img src="assets/images/institutions/TS.png" alt="TS Institution">
+<img src="assets/images/institutions/BIMS.png" alt="BIMS Institution">
+<!-- <img src="assets/images/institutions/SEA.png" alt="SEA Institution"> -->
+<!-- <img src="assets/images/institutions/AJPS.png" alt="AJPS Institution"> -->
+<img src="assets/images/institutions/SAPC.png" alt="SAPC Institution">
+<img src="assets/images/institutions/IE.png" alt="IE Institution">
+<img src="assets/images/institutions/joseph.jpeg" alt="SAPC Institution">
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- Testimonials Section -->
+<section class="testimonials__v2" id="testimonial">
+  <div class="container">
+    <div class="text-center">
+      <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">What Our Team Says to Young Learners</h2>
+      <p class="text-muted small">Encouraging words from our mentors who guide students every day.</p>
+    </div>
+
+    <!-- Swiper Carousel -->
+    <div class="swiper testimonialSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <blockquote>"At CDTC, we make learning simple and enjoyable so every child can understand new concepts with confidence."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"We believe every student has the potential to learn amazing skills when given the right guidance."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"Our goal is to help children explore creativity, problem-solving, and technology step by step."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"We encourage students to ask questions, try new ideas, and grow their confidence every day."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"Learning should never feel difficult. Our mentors make every topic clear, practical, and interesting."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"At CDTC, children learn skills that prepare them for the future while enjoying the learning journey."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"Our team supports every student personally so they feel motivated and confident while learning."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"We focus on building curiosity and creativity in every young learner."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"With the right guidance, every child can develop strong skills and a bright future."</blockquote>
+        </div>
+
+        <div class="swiper-slide">
+          <blockquote>"At CDTC, we believe learning should inspire students to dream bigger and achieve more."</blockquote>
+        </div>
+
+      </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    const swiper = new Swiper(".testimonialSwiper", {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      centeredSlides: true,
+      slidesPerView: "auto",
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+
+
+
+<!-- Footer section to load dynamic -->
+  <div id="footer-placeholder"></div>
+
+    
+    <!-- ======= Back to Top =======-->
+    <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
+    <!-- End Back to top-->
+    
+    <!-- ======= Javascripts =======-->
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendors/gsap/gsap.min.js"></script>
+    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/vendors/glightbox/glightbox.min.js"></script>
+    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendors/aos/aos.js"></script>
+    <script src="assets/vendors/purecounter/purecounter.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="./assets/js/contactEmail.js"></script>
+    <script src="./assets/js/header.js"></script>
+
+        <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
+    <script src="assets/js/main-global.js"></script>
+    <!-- End JavaScripts-->
+  </body>
+</html>
     <!-- End JavaScripts-->
 </body>
 
