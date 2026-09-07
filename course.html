@@ -1,372 +1,1519 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> CDTC Official </title>
-     
-    <!-- ======= Google Font =======-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
-    <!-- End Google Font-->
-    
-    <!-- ======= Styles =======-->
-    <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/vendors/aos/aos.css" rel="stylesheet">
-    <!-- End Styles-->
-    
-    <!-- ======= Theme Style =======-->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- End Theme Style-->
 
-  
-    
-    <!-- ======= Apply theme =======-->
-    <script>
-      // Apply the theme as early as possible to avoid flicker
-      (function() {
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
+  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon">
+  <title> CDTC Official </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .nav-pills .nav-link {
+      color: #003399;
+      font-weight: 600;
+      border: 1px solid #003399;
+      margin: 5px;
+      border-radius: 50px;
+      padding: 8px 20px;
+      transition: all 0.3s ease;
+    }
+    .nav-pills .nav-link.active {
+      background-color: #003399 !important;
+      color: white !important;
+    }
+    .course-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+    }
+
+    /* Modal Styling */
+    .modal-header {
+      background: linear-gradient(135deg, #003399, #0055cc);
+      color: white;
+      border-radius: 12px 12px 0 0;
+    }
+    .modal-header .btn-close {
+      filter: invert(1);
+    }
+    .modal-content {
+      border-radius: 12px;
+      border: none;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    }
+    .modal-icon {
+      height: 60px;
+      object-fit: contain;
+    }
+    .detail-badge {
+      background: #e8f0ff;
+      color: #003399;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-block;
+      margin: 3px;
+    }
+    .module-item {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.9rem;
+    }
+    .module-item:last-child { border-bottom: none; }
+    .module-item i { color: #003399; margin-right: 8px; }
+    .detail-section-title {
+      font-weight: 700;
+      color: #003399;
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .highlight-box {
+      background: #f4f7ff;
+      border-left: 4px solid #003399;
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 0.88rem;
+      color: #333;
+    }
+  </style>
+
+  <script>
+    (function () {
       const storedTheme = localStorage.getItem('theme') || 'light';
       document.documentElement.setAttribute('data-bs-theme', storedTheme);
-      })();
-    </script>
-  </head>
-  <body>
-    
-    
-    <!-- ======= Site Wrap =======-->
-    <div class="site-wrap">
-      
-      
-      <!-- ======= Header =======-->
-<header class="fbs__net-navbar navbar navbar-expand-lg fixed-top bg-white shadow-sm" aria-label="freebootstrap.net navbar">
-  <div class="container d-flex align-items-center justify-content-between">
-    
-    <!-- Start Logo-->
-    <a class="navbar-brand w-auto" href="index.html">
-      <!-- Uncomment to use a text logo -->
-      <!-- Vertex --> 
-      
-      <!-- 
-      <img class="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder"> 
-      <img class="logo light img-fluid" src="assets/images/logo-light.svg" alt="FreeBootstrap.net image placeholder"> 
-      -->
-    </a>
-    <!-- End Logo-->
+    })();
+  </script>
+</head>
 
-    <!-- Start offcanvas-->
-    <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1" aria-labelledby="fbs__net-navbarsLabel">
-      
-      <div class="offcanvas-header">
-        <div class="offcanvas-header-logo">
-          <a class="logo-link" id="fbs__net-navbarsLabel" href="index.html">
-            <!-- logo dark -->
-            <!-- <img class="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder">  -->
-            <!-- logo light -->
-            <img class="logo light img-fluid" src="assets/images/logo-light.svg" alt="FreeBootstrap.net image placeholder">
-          </a>
+<body>
+
+  <div class="site-wrap">
+    <div id="header-placeholder"></div>
+
+    <main>
+      <section class="section bg-light courses-background" id="course">
+        <div class="container py-8">
+          <div class="text-center mb-5">
+            <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;">Future-Ready, STEM Technology Skills with CDTC</h2>
+            <p>Structured on-campus training programs designed to help students gain practical knowledge, certification, and real-world technology exposure.</p>
+          </div>
+
+          <ul class="nav nav-pills justify-content-center mb-5" id="courseTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#robotics-pane" type="button" role="tab">Robotics</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#ai-pane" type="button" role="tab">Agentic AI</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#cad-pane" type="button" role="tab">CAD Design</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#office-pane" type="button" role="tab">Advance Microsoft Office</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" data-bs-toggle="pill" data-bs-target="#coding-pane" type="button" role="tab">Coding / Programming</button>
+            </li>
+          </ul>
+
+          <div class="tab-content" id="courseTabsContent">
+
+            <!-- ======== ROBOTICS TAB ======== -->
+            <div class="tab-pane fade show active" id="robotics-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/robot-2.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Robotics Fundamentals</h5>
+                    <p class="small">Introduction to robotics concepts, components, sensors, and basic robot mechanics for beginners.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-rob-fund">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/arduino.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Arduino & Microcontrollers</h5>
+                    <p class="small">Build and program Arduino-based robots and automation projects with hands-on hardware experience.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-arduino">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/code.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Robot Programming</h5>
+                    <p class="small">Learn to program robotic movements, sensors integration, and automated task execution.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-rob-prog">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/factory.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Industrial Robotics</h5>
+                    <p class="small">Explore how robots are deployed in manufacturing, logistics, and industrial automation.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ind-rob">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/artificial-intelligence.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Complete Robotics Program</h5>
+                    <p class="small">End-to-end robotics training covering fundamentals, programming, hardware, and real-world projects.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-rob-complete">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ======== AGENTIC AI TAB ======== -->
+            <div class="tab-pane fade" id="ai-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/artificial-intelligence.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">AI Fundamentals</h5>
+                    <p class="small">Introduction to Artificial Intelligence, how machines learn, and real-world AI applications.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ai-fund">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/workflow.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Machine Learning Introduction</h5>
+                    <p class="small">Learn the basics of how machines analyze data and make predictions.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ml">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/factory.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">AI in Real Industries</h5>
+                    <p class="small">Explore how AI is used in healthcare, finance, manufacturing, and technology.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ai-industry">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/idea.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Complete AI Program</h5>
+                    <p class="small">Comprehensive AI learning program covering fundamentals, ML basics, and real-world AI applications.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ai-complete">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/content.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">AI Content Creation</h5>
+                    <p class="small">Use AI tools for writing, presentations, visuals, and digital content creation.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ai-content">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/search.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">AI Research Tools</h5>
+                    <p class="small">Use AI for fast research, data summarization, and knowledge discovery.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ai-research">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/workflow.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Complete AI Integration Program</h5>
+                    <p class="small">Integrate AI tools into study, research, business, and professional workflows.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ai-integration">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ======== CAD DESIGN TAB ======== -->
+            <div class="tab-pane fade" id="cad-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+                                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/onshape.jpg" alt="ONSHAPE" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">ONSHAPE</h5>
+                    <p class="small">Simulation | Parametric modeling | Product Visualization</p>
+                    
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-onshape">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/autocad.png" alt="AutoCAD" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">AutoCAD</h5>
+                    <p class="small">2D + Drafting training | Certification | Skill Development</p>
+                    
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-autocad">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/solidworks.png" alt="SolidWorks" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">SolidWorks</h5>
+                    <p class="small">3D parametric modeling | Real world design focus</p>
+                    
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-solidworks">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/catia.png" alt="CATIA" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">CATIA</h5>
+                    <p class="small">Surface modeling | Automotive & Aerospace focus</p>
+                    
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-catia">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/nx.png" alt="NX CAD" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">NX CAD</h5>
+                    <p class="small">Assemblies | Product development | Manufacturing</p>
+                    
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-nxcad">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+
+                                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="assets/images/logo/all.png" alt="All" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
+                    <h5 class="fw-bold">CAD Foundation Course</h5>
+                    <p class="small">2 Courses Included | Certificate | Skill Development</p>
+                    
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-cad-found">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ======== OFFICE TAB ======== -->
+            <div class="tab-pane fade" id="office-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/microsoft-word-2019.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Microsoft Word</h5>
+                    <p class="small">Professional document creation, formatting, and reporting skills.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-word">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/microsoft-excel-2019.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Microsoft Excel</h5>
+                    <p class="small">Data analysis, formulas, charts, and productivity tools for business and academics.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-excel">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/microsoft-powerpoint-2019.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Microsoft PowerPoint</h5>
+                    <p class="small">Create professional presentations for business, education, and communication.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-ppt">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/microsoft-office-2019.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Advanced Office Program</h5>
+                    <p class="small">Complete training covering Word, Excel, and PowerPoint for professional productivity.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-office-adv">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ======== CODING TAB ======== -->
+            <div class="tab-pane fade" id="coding-pane" role="tabpanel">
+              <div class="row justify-content-center g-4 text-center">
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Python Programming</h5>
+                    <p class="small">Beginner-friendly programming for automation, data handling, and real-world applications.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-python">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Java Programming</h5>
+                    <p class="small">Object-oriented programming used for enterprise applications and modern software systems.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-java">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">C / C++ Programming</h5>
+                    <p class="small">Core programming fundamentals widely used in system software and engineering applications.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-cpp">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Web Development</h5>
+                    <p class="small">Build modern websites using HTML, CSS, and JavaScript fundamentals.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-webdev">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 d-flex align-items-stretch">
+                  <div class="card course-card w-100 h-100 border-0 shadow-sm p-4">
+                    <img src="https://img.icons8.com/color/96/code.png" class="mb-3 mx-auto" style="height:60px;">
+                    <h5 class="fw-bold">Coding Combo Program</h5>
+                    <p class="small">Comprehensive programming program covering multiple coding languages and development skills.</p>
+                    <div class="d-flex justify-content-center gap-2 mt-auto">
+                      <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-combo">Details</button>
+                      <a href="quotation.html" class="btn btn-outline-primary btn-sm">Quotation</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
+      </section>
 
-      <div class="offcanvas-body align-items-lg-center">
-        <ul class="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link scroll-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="course.html">Courses</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="certification.html">Certification</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="placement.html">Placement</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="testimonial.html">Testimonial</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="faqs.html">FAQs</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="contact.html">Contact</a></li>
-        </ul>
+      <div id="footer-placeholder"></div>
+    </main>
+
+
+    <!-- ===================== ALL MODALS ===================== -->
+
+    <!-- ROBOTICS MODALS -->
+    <div class="modal fade" id="modal-rob-fund" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/robot-2.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Robotics Fundamentals</h5>
+                <small class="text-white-50">Beginner Level · Certificate Program</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Gain hands-on understanding of robotics systems, components, and basic mechanics — the perfect starting point for aspiring robotics engineers.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>6-9 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-building me-1"></i>On-Campus</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Introduction to Robotics — history, types, and applications</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Robot components — actuators, sensors, controllers</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Mechanical structures and basic motion principles</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Sensor types — ultrasonic, IR, gyroscope</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Hands-on assembly of basic robot kit</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Mini project — build a line-follower robot</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- End offcanvas-->
 
-    <div class="ms-auto w-auto">
-      <div class="header-social d-flex align-items-center gap-1">
-        <a class="btn btn-primary py-2" href="#">Buy Now</a>
-        <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Quotation</a>
-
-        <button class="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto" data-bs-toggle="offcanvas" data-bs-target="#fbs__net-navbars" aria-controls="fbs__net-navbars" aria-label="Toggle navigation" aria-expanded="false">
-          <svg class="fbs__net-icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="21" x2="3" y1="6" y2="6"></line>
-            <line x1="15" x2="3" y1="12" y2="12"></line>
-            <line x1="17" x2="3" y1="18" y2="18"></line>
-          </svg>
-          <svg class="fbs__net-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 6 6 18"></path>
-            <path d="m6 6 12 12"></path>
-          </svg>
-        </button>
+    <div class="modal fade" id="modal-arduino" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/arduino.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Arduino & Microcontrollers</h5>
+                <small class="text-white-50">Beginner–Intermediate · Hands-on Hardware</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Learn to wire circuits, write embedded code, and build real automation projects using Arduino and microcontroller platforms.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>6-9 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner+</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-tools me-1"></i>Hardware Kit</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Arduino IDE setup and C++ basics for embedded systems</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Digital & analog I/O, PWM, and serial communication</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Interfacing sensors — temperature, motion, light</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Motor drivers and servo control</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>LCD displays, buzzers, and LED matrix</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Capstone — Arduino-powered automation project</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="modal fade" id="modal-rob-prog" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/code.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Robot Programming</h5>
+                <small class="text-white-50">Intermediate · Software + Hardware</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Master programming robotic systems using Python and ROS-based workflows to automate tasks and integrate sensors intelligently.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>6-9 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Intermediate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-laptop me-1"></i>Python / ROS</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Python for robotics — loops, functions, libraries</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Motion planning and path algorithms</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Sensor fusion and data interpretation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Introduction to ROS (Robot Operating System)</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Simulation using Gazebo / Webots</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — autonomous navigation robot</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ind-rob" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/industry.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Industrial Robotics</h5>
+                <small class="text-white-50">Advanced · Industry-Focused</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Understand how industrial robots operate in real manufacturing plants — from robotic arms to conveyor automation and quality inspection systems.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>6-9 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Advanced</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-gear me-1"></i>Industry 4.0</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Types of industrial robots — SCARA, Delta, Articulated</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Robotic arm kinematics and workspace analysis</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>PLC basics and robot-PLC integration</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Robotic welding, painting, and pick-and-place</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Safety standards — ISO 10218 overview</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Industry 4.0 and smart factory concepts</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-rob-complete" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/artificial-intelligence.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Complete Robotics Program</h5>
+                <small class="text-white-50">All Levels · Full Stack Robotics</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">An end-to-end robotics program — from fundamentals to industrial deployment. Includes hardware, programming, and real-world project experience.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>6-9 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-star me-1"></i>4 Modules</span></div>
+            </div>
+            <p class="detail-section-title">Program Modules</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 1 — Robotics Fundamentals</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 2 — Arduino & Microcontrollers</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 3 — Robot Programming (Python + ROS)</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 4 — Industrial Robotics & Deployment</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Capstone — Design, build, and present a full robotics project</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGENTIC AI MODALS -->
+    <div class="modal fade" id="modal-ai-fund" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/artificial-intelligence.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">AI Fundamentals</h5>
+                <small class="text-white-50">Beginner Level · No Coding Required</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Understand how AI works, where it's applied, and how to use AI tools confidently — no prior technical knowledge needed.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3-6 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-laptop me-1"></i>Practical Tools</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>What is AI — types, history, and evolution</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>How machines learn — supervised, unsupervised learning</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>AI tools — ChatGPT, Gemini, Copilot overview</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Prompt engineering basics</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Ethics, bias, and responsible AI use</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Hands-on exercises with AI tools</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ml" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/workflow.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Machine Learning Introduction</h5>
+                <small class="text-white-50">Beginner–Intermediate · Python Based</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Learn how machines make intelligent predictions using data — build and test your first ML models with Python and real datasets.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner+</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-code me-1"></i>Python</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>ML concepts — regression, classification, clustering</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Data preprocessing and feature engineering</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>scikit-learn, pandas, and numpy basics</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Model training, testing, and evaluation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Overfitting, underfitting, and cross-validation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Mini project — build a prediction model</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ai-industry" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/factory.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">AI in Real Industries</h5>
+                <small class="text-white-50">All Levels · Industry Case Studies</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Explore live AI use cases across industries — from AI diagnostics in hospitals to fraud detection in banking and smart manufacturing on the factory floor.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-briefcase me-1"></i>Case Studies</span></div>
+            </div>
+            <p class="detail-section-title">Industries Covered</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Healthcare — AI diagnostics, drug discovery, medical imaging</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Finance — fraud detection, algorithmic trading, credit scoring</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Manufacturing — predictive maintenance, quality control</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Retail — recommendation engines, inventory management</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Education — personalized learning, AI tutors</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Agriculture — crop monitoring, yield prediction</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ai-complete" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/idea.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Complete AI Program</h5>
+                <small class="text-white-50">All Levels · 3-Module Bundle</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">The complete AI learning journey — AI fundamentals, machine learning basics, and real-world industry applications bundled in one comprehensive program.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-star me-1"></i>3 Modules</span></div>
+            </div>
+            <p class="detail-section-title">Program Modules</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 1 — AI Fundamentals & Tools</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 2 — Machine Learning Introduction</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 3 — AI in Real Industries</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Capstone — AI-powered mini project presentation</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ai-content" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/content.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">AI Content Creation</h5>
+                <small class="text-white-50">Beginner · Creative & Professional</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Use AI to create stunning written content, presentations, social media posts, and visuals — faster and smarter than ever before.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-pencil me-1"></i>No Coding</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>AI writing tools — ChatGPT, Jasper, Copy.ai</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Creating blogs, emails, and reports with AI</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>AI image generation — Midjourney, DALL·E, Canva AI</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>AI-powered presentation creation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Social media content automation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — create a full AI-generated content portfolio</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ai-research" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/search.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">AI Research Tools</h5>
+                <small class="text-white-50">Beginner · Academic & Professional</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Use AI tools to speed up research, summarize papers, discover insights, and produce well-structured reports in a fraction of the time.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-journal me-1"></i>Academic Focus</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>AI research assistants — Perplexity, Elicit, Consensus</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Summarizing research papers with AI</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Literature review automation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Data extraction and analysis with AI</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Citation management with AI tools</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — AI-assisted research report</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ai-integration" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/workflow.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Complete AI Integration Program</h5>
+                <small class="text-white-50">All Levels · 3-Module Bundle</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Integrate AI into every part of your professional and academic life — from research and writing to business workflows and daily productivity.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3-6 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-star me-1"></i>3 Modules</span></div>
+            </div>
+            <p class="detail-section-title">Program Modules</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 1 — AI Content Creation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 2 — AI Research Tools</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 3 — AI in Business Workflows & Automation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Capstone — Build a complete AI-powered workflow for your domain</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CAD MODALS -->
+    <div class="modal fade" id="modal-cad-found" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/logo/all.png" style="height:45px; object-fit:contain;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">CAD Foundation Course</h5>
+                <small class="text-white-50">2 Courses Included</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">The ideal starting package — combine two CAD tools at a bundled price. Get certified and job-ready faster.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3-6 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner+</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>2 Certificates</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-boxes me-1"></i>2 Software</span></div>
+            </div>
+            <p class="detail-section-title">Included Courses</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>AutoCAD — 2D drafting, layouts, dimensions, plotting</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>SolidWorks — 3D modeling, assemblies, and drawings</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Industry-standard file formats — DWG, DXF, SLDPRT</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Real-world design project for each software</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Certificate of completion for both courses</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-autocad" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/logo/autocad.png" style="height:45px; object-fit:contain;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">AutoCAD</h5>
+                <small class="text-white-50">2D Drafting & Design</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Master AutoCAD for 2D drafting and technical drawings — the most widely used CAD tool in architecture, civil, and mechanical engineering.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>2 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-rulers me-1"></i>2D Drafting</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>AutoCAD interface, workspace, and navigation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>2D drawing tools — lines, arcs, polylines, splines</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Layers, blocks, attributes, and annotation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Dimensioning, hatching, and text styles</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Layouts, viewports, and printing/plotting</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — complete technical drawing set</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-solidworks" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/logo/solidworks.png" style="height:45px; object-fit:contain;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">SolidWorks</h5>
+                <small class="text-white-50">3D Parametric Modeling</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Learn 3D parametric modeling in SolidWorks — design, assemble, and simulate mechanical parts used in product manufacturing and engineering.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner+</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-box me-1"></i>3D Modeling</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>SolidWorks interface and sketch environment</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Part modeling — extrude, revolve, sweep, loft</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Assembly design with mates and constraints</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Engineering drawings and BOM</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Sheet metal and weldment features</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — design a mechanical assembly</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-catia" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/logo/catia.png" style="height:45px; object-fit:contain;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">CATIA</h5>
+                <small class="text-white-50">Surface Modeling · Automotive & Aerospace</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">CATIA is the industry standard for automotive and aerospace design. Learn advanced surface modeling and complex product design used by top OEMs worldwide.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Intermediate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-car-front me-1"></i>Automotive</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>CATIA V5 interface and workbench navigation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Part design and solid modeling</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Generative Shape Design (GSD) — surfaces</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Assembly design and DMU</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Drafting and GD&T basics</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — automotive body panel design</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-nxcad" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/logo/nx.png" style="height:45px; object-fit:contain;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">NX CAD</h5>
+                <small class="text-white-50">Assemblies & Manufacturing</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Siemens NX is used in high-precision product development and manufacturing. Master assemblies, product engineering, and manufacturing-ready design.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Intermediate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-gear me-1"></i>Manufacturing</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>NX interface, roles, and modeling environment</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Sketching, feature modeling, and synchronous technology</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Assembly design — constraints, exploded views</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Drafting and GD&T annotations</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Introduction to NX CAM for manufacturing</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — full product design and drawing set</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-onshape" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="assets/images/logo/onshape.jpg" style="height:45px; object-fit:contain;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">ONSHAPE</h5>
+                <small class="text-white-50">Parametric Modeling & Simulation</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">PTC Onshape offers powerful parametric modeling and simulation tools. Learn to design, validate, and visualize products before physical prototyping.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Intermediate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-graph-up me-1"></i>Simulation</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Onshape interface and model tree</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Sketcher, part modeling, and feature operations</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Assembly modeling and motion simulation</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Detailed drawings and tolerancing</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Onshape Simulate — basic FEA analysis</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — product design with simulation report</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFFICE MODALS -->
+    <div class="modal fade" id="modal-word" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/microsoft-word-2019.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Microsoft Word</h5>
+                <small class="text-white-50">Beginner to Advanced · Document Mastery</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Go beyond basic typing — learn professional formatting, templates, mail merge, and advanced document features used in offices and institutions.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>1 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-file-word me-1"></i>MS Word</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Formatting — styles, headings, fonts, spacing</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Tables, images, SmartArt, and charts</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Table of contents, footnotes, and references</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Mail merge for bulk letters and labels</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Track changes, comments, and document review</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — create a professional formatted report</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-excel" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/microsoft-excel-2019.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Microsoft Excel</h5>
+                <small class="text-white-50">Beginner to Advanced · Data & Analysis</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Learn Excel from basics to advanced — formulas, pivot tables, dashboards, and data analysis tools used every day in business and academics.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>1 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-table me-1"></i>MS Excel</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Formulas — SUM, IF, VLOOKUP, INDEX-MATCH</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Data sorting, filtering, and conditional formatting</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Charts — bar, line, pie, and dynamic charts</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>PivotTables and PivotCharts</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Data validation and protection</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — interactive business dashboard</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ppt" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/microsoft-powerpoint-2019.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Microsoft PowerPoint</h5>
+                <small class="text-white-50">Beginner to Advanced · Presentation Design</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Create impactful, professional presentations with animations, custom designs, and storytelling techniques that make your slides stand out.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>1 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-easel me-1"></i>MS PowerPoint</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Slide design — layouts, themes, master slides</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Text, images, icons, SmartArt, and shapes</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Animations and slide transitions</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Charts, graphs, and data visualization in slides</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Presenter view, notes, and slide timing</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — design a complete business presentation</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-office-adv" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/microsoft-office-2019.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Advanced Office Program</h5>
+                <small class="text-white-50">All Levels · Word + Excel + PowerPoint Bundle</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">The complete Microsoft Office training — master Word, Excel, and PowerPoint together and become a highly productive professional.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Months</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-star me-1"></i>3 Apps</span></div>
+            </div>
+            <p class="detail-section-title">Program Modules</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Microsoft Word — documents, reports, mail merge</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Microsoft Excel — formulas, pivot tables, dashboards</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Microsoft PowerPoint — design, animation, storytelling</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Capstone — complete a professional office project</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-ai-prod" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/lightning-bolt.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">AI Productivity Tools</h5>
+                <small class="text-white-50">All Levels · Modern Workplace Skills</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CODING MODALS -->
+    <div class="modal fade" id="modal-python" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Python Programming</h5>
+                <small class="text-white-50">Beginner · Most Popular Language</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Python is the world's most beginner-friendly and versatile language. Learn to automate tasks, handle data, and build real-world applications from day one.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>2 Month</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-code me-1"></i>Python 3</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Variables, data types, and operators</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Conditionals, loops, and functions</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Lists, tuples, dictionaries, and sets</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>File handling and exception management</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Libraries — math, random, datetime, os</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — Python automation script</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-java" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Java Programming</h5>
+                <small class="text-white-50">Beginner–Intermediate · OOP & Enterprise</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Java powers enterprise applications, Android apps, and backend systems worldwide. Master object-oriented programming with one of the most in-demand languages.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3 Month</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner+</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-code me-1"></i>Java SE</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Java syntax, variables, and data types</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Object-Oriented Programming — classes, objects, inheritance</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Interfaces, abstract classes, and polymorphism</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Collections framework — ArrayList, HashMap</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Exception handling and file I/O</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — Java OOP application</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-cpp" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">C / C++ Programming</h5>
+                <small class="text-white-50">Beginner–Intermediate · System Programming</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">C and C++ are the foundation of system software, embedded systems, and high-performance applications. Build strong programming fundamentals from the ground up.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>2-3 Month</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner+</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-cpu me-1"></i>Systems</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>C basics — syntax, data types, operators, control flow</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Functions, arrays, strings, and pointers</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Memory management — malloc, free, stack vs heap</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>C++ OOP — classes, inheritance, and polymorphism</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>STL — vectors, stacks, queues, maps</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — system-level C/C++ application</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-webdev" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Web Development</h5>
+                <small class="text-white-50">Beginner · HTML, CSS & JavaScript</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">Build real, responsive websites from scratch using HTML, CSS, and JavaScript — the three core technologies of every website on the internet.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3-6 Month</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>Beginner</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-globe me-1"></i>Frontend</span></div>
+            </div>
+            <p class="detail-section-title">What You'll Learn</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>HTML5 — structure, semantic tags, forms, tables</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>CSS3 — styling, flexbox, grid, animations</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Responsive design and media queries</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>JavaScript — DOM manipulation, events, functions</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Bootstrap framework basics</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Project — build and deploy a personal website</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modal-combo" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://img.icons8.com/color/96/code.png" style="height:45px;">
+              <div>
+                <h5 class="modal-title mb-0 text-white fw-bold">Coding Combo Program</h5>
+                <small class="text-white-50">All Levels · Multi-Language Bundle</small>
+              </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body p-4">
+            <div class="highlight-box">The ultimate coding bundle — learn multiple programming languages and development skills in one comprehensive program, making you versatile and job-ready.</div>
+            <div class="row g-3 mb-4">
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-clock me-1"></i>3-6-9 Month</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-person me-1"></i>All Levels</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-award me-1"></i>Certificate</span></div>
+              <div class="col-6 col-md-3 text-center"><span class="detail-badge"><i class="bi bi-star me-1"></i>4 Languages</span></div>
+            </div>
+            <p class="detail-section-title">Program Modules</p>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 1 — C / C++ Programming Fundamentals</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 2 — Python Programming</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 3 — Java Programming & OOP</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Module 4 — Web Development (HTML, CSS, JS)</div>
+            <div class="module-item"><i class="bi bi-check-circle-fill"></i>Capstone — full-stack mini project</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+            <a href="quotation.html" class="btn btn-primary btn-sm">Get Quotation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+        <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
+    <script src="assets/js/main-global.js"></script>
   </div>
-</header>
-<!-- End Header -->
-
-      
-      <!-- ======= Main =======-->
-      <main>
-        
-        
-<!-- ======= Hero with Video Background and Top Gradient Overlay ======= -->
-<section id="hero-video" style="position: relative; height: 100vh; overflow: hidden;">
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background-color: #000; z-index: -1;">
-    <source src="assets/video/clay_4a485c49f2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  <!-- Gradient Overlay: Black and Airbus Blue fade down -->
-  <div style="
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 51, 141, 0.3) 30%, rgba(0, 51, 141, 0) 60%);
-    z-index: 0;">
-  </div>
-
-  <!-- Hero Content: Centered horizontally, aligned to bottom -->
-  <div class="container h-100 d-flex flex-column justify-content-end align-items-center text-center text-white" style="position: relative; z-index: 1; padding-bottom: 60px;">
-    <div>
-      <h1 class="display-4 fw-bold mb-4" style="color: #ffffff; text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;">
-        Design Beyond Engineering
-      </h1>
-
-      <a href="#contact" class="btn btn-light me-2">Get Started</a>
-      <a href="#about" class="btn btn-outline-light">Learn More</a>
-    </div>
-  </div>
-</section>
-<!-- End Hero -->
-
-    <!-- ===============================================================================================================================================
-          COURSES
-        =============================================================================================================================================== -->
-    
-<!-- ======= Courses Compact Section with Background Image ======= -->
-<section class="section bg-light py-5 courses-background" id="course">
-  <div class="container">
-    <div class="text-center mb-5">
-      <span class="text-uppercase text-primary fw-semibold fs-6">Courses</span>
-      <h2 class="fw-bold">Build Future-Ready Design Experts</h2>
-      <p>On-campus 4-day CAD training with certification & job guidance. Choose from single software or full combo plans.</p>
-    </div>
-
-    <div class="row justify-content-center g-4 text-center">
-
-      <!-- All -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/all.png" alt="All" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">All Courses</h5>
-          <p class="small">CAD Foundation Course | Certificate Included | Job-Ready Skills</p>
-          <p class="text-primary fw-semibold">₹3,25,000 + GST</p>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- AutoCAD -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/autocad.png" alt="AutoCAD" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">AutoCAD</h5>
-          <p class="small">2D + Basic 3D training | Certification | Job Support</p>
-          <p class="text-primary fw-semibold">₹65,000 + GST</p>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- SolidWorks -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/solidworks.png" alt="SolidWorks" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">SolidWorks</h5>
-          <p class="small">3D parametric modeling | Real-world design focus</p>
-          <p class="text-primary fw-semibold">₹65,000 + GST</p>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- CATIA -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/catia.png" alt="CATIA" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">CATIA</h5>
-          <p class="small">Surface modeling | Automotive & Aerospace focus</p>
-          <p class="text-primary fw-semibold">₹65,000 + GST</p>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- NX CAD -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/nx.png" alt="NX CAD" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">NX CAD</h5>
-          <p class="small">Assemblies | Drafting | Product development | Manufacturing</p>
-          <p class="text-primary fw-semibold">₹65,000 + GST</p>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- CREO -->
-      <div class="col-md-4 d-flex align-items-stretch">
-        <div class="card w-100 h-100 border-0 shadow-sm p-4">
-          <img src="assets/images/logo/creo.png" alt="CREO" class="mb-3 mx-auto" style="height: 60px; object-fit: contain;">
-          <h5 class="fw-bold">CREO</h5>
-          <p class="small">Simulation | Parametric modeling | Product Visualization</p>
-          <p class="text-primary fw-semibold">₹65,000 + GST</p>
-          <div class="d-flex justify-content-center gap-2 mt-2 flex-wrap">
-            <a href="#" class="btn btn-outline-primary btn-sm">Details</a>
-            <a href="#" class="btn btn-outline-primary btn-sm">Buy Now</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <!-- Additional Images at Bottom -->
-    <!-- ======= Full-Screen Classroom Image Section ======= -->
-<section class="p-0 m-0">
-  <div class="d-flex align-items-center justify-content-center bg-black w-100 vh-100 text-white px-3">
-
-
-    <!-- Center Image -->
-    <div class="text-center">
-      <img src="assets/images/Courses/12.png" 
-           alt="CDTC Training Session" 
-           class="img-fluid" 
-           style="max-width: 90vw; max-height: 80vh;">
-    </div>
-
-
-  </div>
-</section>
-
-         
-
-
-            <!-- ======= Footer =======-->
-           <!--  Footer Content -->
-<footer class="footer pt-5 pb-5 bg-primary text-white">
-  <div class="container">
-
-    <!-- Main Footer Content -->
-    <div class="row justify-content-between mb-5 g-xl-5">
-
-      <!-- About & Social -->
-      <div class="col-md-4 mb-5 mb-lg-0">
-        <h3 class="mb-3">About</h3>
-        <hr>
-        <p>Harness our tools to transform ideas into impactful designs. Create with ease and share your vision effortlessly.</p>
-        <!-- Social Media Icons -->
-        <div class="d-flex gap-3 mt-4">
-          <a href="https://www.linkedin.com" target="_blank" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.instagram.com" target="_blank" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.facebook.com" target="_blank" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.youtube.com" target="_blank" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-7">
-        <div class="row gy-4">
-
-          <!-- Company -->
-          <div class="col-6 col-lg-4">
-            <h3 class="mb-3">Company</h3>
-            <hr>
-            <ul class="list-unstyled">
-              <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
-              <li><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
-              <li><a href="#contact" class="text-white text-decoration-none">Contact Us</a></li>
-              <li><a href="page-terms-conditions.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
-              <li><a href="page-privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          <!-- Accounts -->
-          <div class="col-6 col-lg-4">
-            <h3 class="mb-3">Accounts</h3>
-            <hr>
-            <ul class="list-unstyled">
-              <li><a href="page-signup.html" class="text-white text-decoration-none">Register</a></li>
-              <li><a href="page-signin.html" class="text-white text-decoration-none">Sign In</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="col-12 col-lg-4">
-            <h3 class="mb-3">Contact</h3>
-            <hr>
-            <p class="d-flex mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Jaraka, Jajpur, Odisha,<br>755050, India</p>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cdtc.edu@gmail.com" target="_blank"
-                  class="d-flex mb-2 text-white text-decoration-none">
-                  <i class="bi bi-envelope-fill me-2"></i>cdtc.edu@gmail.com
-                </a>            
-              <a href="tel:+917735791012" class="d-flex text-white text-decoration-none"><i class="bi bi-telephone-fill me-2"></i>+91 77 357 91012</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="row border-top border-light pt-4">
-      <div class="col-12 text-center">
-        &copy; <script>document.write(new Date().getFullYear());</script> CDTC. All rights reserved.
-      </div>
-    </div>
-
-  </div>
-</footer>
-<!-- End Footer -->
-
-        </main>
-    </div>
-
-    <!-- ======= Back to Top =======-->
-    <button id="back-to-top"><i class="bi bi-arrow-up-short"></i></button>
-    <!-- End Back to top-->
-
-    <!-- ======= Javascripts =======-->
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/gsap/gsap.min.js"></script>
-    <script src="assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendors/isotope/isotope.pkgd.min.js"></script>
-    <script src="assets/vendors/glightbox/glightbox.min.js"></script>
-    <script src="assets/vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendors/aos/aos.js"></script>
-    <script src="assets/vendors/purecounter/purecounter.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="./assets/js/contactEmail.js"></script>
-    <!-- End JavaScripts-->
 </body>
-
 </html>

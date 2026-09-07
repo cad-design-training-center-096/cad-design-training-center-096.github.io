@@ -1,168 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> CDTC Official </title>
-     
-    <!-- ======= Google Font =======-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
-    <!-- End Google Font-->
-    
-    <!-- ======= Styles =======-->
-    <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/vendors/aos/aos.css" rel="stylesheet">
-    <!-- End Styles-->
-    
-    <!-- ======= Theme Style =======-->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- End Theme Style-->
 
-  
-    
-    <!-- ======= Apply theme =======-->
-    <script>
-      // Apply the theme as early as possible to avoid flicker
-      (function() {
+<head>
+  <meta charset="utf-8">
+    <link rel="icon" href="https://cdtc.in/assets/Logo/logo.png" sizes="48x48" type="image/png">
+  <link rel="shortcut icon" href="https://cdtc.in/assets/Logo/logo.ico" sizes="48x48" type="image/x-icon" >
+  <title> CDTC Official </title>
+
+  <!-- ======= Google Font =======-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+  <!-- End Google Font-->
+
+  <!-- ======= Styles =======-->
+  <link href="assets/vendors/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendors/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/vendors/glightbox/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendors/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- End Styles-->
+
+  <!-- ======= Theme Style =======-->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- End Theme Style-->
+
+
+
+  <!-- ======= Apply theme =======-->
+  <script>
+    // Apply the theme as early as possible to avoid flicker
+    (function () {
       const storedTheme = localStorage.getItem('theme') || 'light';
       document.documentElement.setAttribute('data-bs-theme', storedTheme);
-      })();
-    </script>
-  </head>
-  <body>
-    
-    
-    <!-- ======= Site Wrap =======-->
-    <div class="site-wrap">
-      
-      
-      <!-- ======= Header =======-->
-<header class="fbs__net-navbar navbar navbar-expand-lg fixed-top bg-white shadow-sm" aria-label="freebootstrap.net navbar">
-  <div class="container d-flex align-items-center justify-content-between">
-    
-    <!-- Start Logo-->
-    <a class="navbar-brand w-auto" href="index.html">
-      <!-- Uncomment to use a text logo -->
-      <!-- Vertex --> 
-      
-      <!-- 
-      <img class="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder"> 
-      <img class="logo light img-fluid" src="assets/images/logo-light.svg" alt="FreeBootstrap.net image placeholder"> 
-      -->
-    </a>
-    <!-- End Logo-->
+    })();
+  </script>
 
-    <!-- Start offcanvas-->
-    <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1" aria-labelledby="fbs__net-navbarsLabel">
-      
-      <div class="offcanvas-header">
-        <div class="offcanvas-header-logo">
-          <a class="logo-link" id="fbs__net-navbarsLabel" href="index.html">
-            <!-- logo dark -->
-            <!-- <img class="logo dark img-fluid" src="assets/images/logo-dark.svg" alt="FreeBootstrap.net image placeholder">  -->
-            <!-- logo light -->
-            <img class="logo light img-fluid" src="assets/images/logo-light.svg" alt="FreeBootstrap.net image placeholder">
-          </a>
-        </div>
-        <button class="btn-close btn-close-black" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
+  <style>
+    .faq_v2{
+        background-color:rgba(255,255,255,0.85); 
+        margin: auto; 
+        padding: 30px; 
+        border-radius: 10px; 
+        box-shadow: 0 0 10px rgba(0,0,0,0.9)"
+    }
+  </style>
+</head>
 
-      <div class="offcanvas-body align-items-lg-center">
-        <ul class="navbar-nav nav me-auto ps-lg-5 mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link scroll-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="course.html">Courses</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="certification.html">Certification</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="placement.html">Placement</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="testimonial.html">Testimonial</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="faqs.html">FAQs</a></li>
-          <li class="nav-item"><a class="nav-link scroll-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <!-- End offcanvas-->
+<body>
 
-    <div class="ms-auto w-auto">
-      <div class="header-social d-flex align-items-center gap-1">
-        <a class="btn btn-primary py-2" href="#">Buy Now</a>
-        <a class="btn btn-primary py-2" href="./assets/pages/quotation.html">Quotation</a>
 
-        <button class="fbs__net-navbar-toggler justify-content-center align-items-center ms-auto" data-bs-toggle="offcanvas" data-bs-target="#fbs__net-navbars" aria-controls="fbs__net-navbars" aria-label="Toggle navigation" aria-expanded="false">
-          <svg class="fbs__net-icon-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="21" x2="3" y1="6" y2="6"></line>
-            <line x1="15" x2="3" y1="12" y2="12"></line>
-            <line x1="17" x2="3" y1="18" y2="18"></line>
-          </svg>
-          <svg class="fbs__net-icon-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M18 6 6 18"></path>
-            <path d="m6 6 12 12"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</header>
-<!-- End Header -->
+  <!-- ======= Site Wrap =======-->
+  <div class="site-wrap">
 
-      
-      <!-- ======= Main =======-->
-      <main>
-        
-        
-<!-- ======= Hero with Video Background and Top Gradient Overlay ======= -->
-<section id="hero-video" style="position: relative; height: 100vh; overflow: hidden;">
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; background-color: #000; z-index: -1;">
-    <source src="assets/video/clay_4a485c49f2.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <!-- Gradient Overlay: Black and Airbus Blue fade down -->
-  <div style="
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 51, 141, 0.3) 30%, rgba(0, 51, 141, 0) 60%);
-    z-index: 0;">
-  </div>
-
-  <!-- Hero Content: Centered horizontally, aligned to bottom -->
-  <div class="container h-100 d-flex flex-column justify-content-end align-items-center text-center text-white" style="position: relative; z-index: 1; padding-bottom: 60px;">
-    <div>
-      <h1 class="display-4 fw-bold mb-4" style="color: #ffffff; text-shadow: 
-        -1px -1px 0 #000,  
-         1px -1px 0 #000,
-        -1px  1px 0 #000,
-         1px  1px 0 #000;">
-        Design Beyond Engineering
-      </h1>
-
-      <a href="#contact" class="btn btn-light me-2">Get Started</a>
-      <a href="#about" class="btn btn-outline-light">Learn More</a>
-    </div>
-  </div>
-</section>
-<!-- End Hero -->
-
-        <!-- ======= Main =======-->
-        <main>
+      <div id="header-placeholder"></div>
 
 <!-- ======= FAQ =======-->
-<section class="section faq__v2" id="faqs">
-    <div class="container">
+<section class="section faq_v2" id="faqs">
+    <div class="container py-8 ">
         <div class="row mb-4">
             <div class="col-md-6 col-lg-7 mx-auto text-center">
-                <span class="subtitle text-uppercase mb-3 fs-6" data-aos="fade-up">FAQs</span>
-                <h2 class="h2 fw-bold mb-3" data-aos="fade-up">Frequently Asked Questions</h2>
+                <h2 style="text-align:center; margin-top: 0; font-size:34px; font-weight:800; color:#003399;" data-aos="fade-up">Frequently Asked Questions</h2>
                 <p data-aos="fade-up" data-aos-delay="100">
-                    We've answered some common questions to help you understand our CAD training, certification process,
-                    and
-                    placement support better.
+                    We've answered some common questions to help you understand our training, certification process,
+                    and skills support.
                 </p>
             </div>
         </div>
@@ -172,111 +75,111 @@
                 <div class="faq-content">
                     <div class="accordion custom-accordion" id="accordionPanelsStayOpenExample">
 
+                
                         <!-- FAQ 1 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq1" aria-expanded="true">
-                                    What software tools are covered in the training?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse show" id="faq1">
-                                <div class="accordion-body">
-                                    Our program covers top industry software such as AutoCAD, SolidWorks, CATIA, Creo,
-                                    and Siemens NX. You
-                                    can choose to specialize in one or learn multiple tools depending on your goals.
-                                </div>
-                            </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq1" aria-expanded="true">
+                            What programs are offered by CDTC?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse show" id="faq1">
+                        <div class="accordion-body">
+                            CDTC offers training programs across multiple technology domains including 
+                            Robotics, CAD Design, Coding & Programming, Artificial Intelligence, Advanced Microsoft Office,
+                            and Agentic AI-based Digital Productivity Tools. Institutions can select the most 
+                            suitable program for their students based on their academic needs.
                         </div>
+                    </div>
+                </div>
 
-                        <!-- FAQ 2 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq2">
-                                    Do I receive a certificate after completing the training?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="faq2">
-                                <div class="accordion-body">
-                                    Yes, all participants receive a professional CAD Design Training Certificate from
-                                    CDTC upon successful
-                                    course completion. This certificate adds value to your resume and boosts your
-                                    credibility with
-                                    employers.
-                                </div>
-                            </div>
+                <!-- FAQ 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq2">
+                            Do students receive a certificate after the training?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="faq2">
+                        <div class="accordion-body">
+                            Yes. Students receive an official CDTC Certificate upon successful completion 
+                            of the program. The certificate recognizes their participation and learning 
+                            in the selected technology training.
                         </div>
+                    </div>
+                </div>
 
-                        <!-- FAQ 3 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq3">
-                                    Is placement assistance included?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="faq3">
-                                <div class="accordion-body">
-                                    Yes. We connect certified candidates with over 100 design and manufacturing
-                                    companies across India.
-                                    Support includes resume writing, mock interviews, and direct HR referrals for core
-                                    design roles.
-                                </div>
-                            </div>
+                <!-- FAQ 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq3">
+                            What skills will students gain from this program?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="faq3">
+                        <div class="accordion-body">
+                            Students gain practical exposure to modern/STEM technologies used in real industries. 
+                            The training focuses on building creativity, problem-solving ability, 
+                            technology awareness, and confidence in using industry-relevant digital tools.
                         </div>
+                    </div>
+                </div>
 
-                        <!-- FAQ 4 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq4">
-                                    Who can enroll in this program?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="faq4">
-                                <div class="accordion-body">
-                                    Engineering students (especially Mechanical, Civil, and Electrical), diploma
-                                    holders, and recent
-                                    graduates can enroll. No prior software knowledge is required — our course starts
-                                    from the basics.
-                                </div>
-                            </div>
+                <!-- FAQ 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq4">
+                            Who can participate in CDTC programs?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="faq4">
+                        <div class="accordion-body">
+                            CDTC programs are designed for school students, college students, and 
+                            institutions looking to introduce modern technology skills early in education. 
+                            No prior technical knowledge is required as the training starts with 
+                            fundamental concepts.
                         </div>
+                    </div>
+                </div>
 
-                        <!-- FAQ 5 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq5">
-                                    How long is the training and where is it conducted?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="faq5">
-                                <div class="accordion-body">
-                                    Our standard course duration is 4 days per software, conducted on-campus at your
-                                    institution. We also
-                                    offer custom durations and online options for special cases upon request.
-                                </div>
-                            </div>
+                <!-- FAQ 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq5">
+                            How long is the training and where is it conducted?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="faq5">
+                        <div class="accordion-body">
+                            CDTC typically conducts focused training sessions which are delivered 
+                            directly on campus in collaboration with partner institutions. 
+                            Custom sessions can also be arranged based on institutional requirements.
                         </div>
+                    </div>
+                </div>
 
-                        <!-- FAQ 6 -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#faq6">
-                                    Will I work on real-world projects during the course?
-                                </button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="faq6">
-                                <div class="accordion-body">
-                                    Absolutely. Our training includes hands-on projects like 2D drafting, 3D modeling,
-                                    and industrial
-                                    design tasks to help you build a job-ready portfolio aligned with industry needs.
-                                </div>
-                            </div>
+                <!-- FAQ 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq6">
+                            What type of learning experience does the program provide?
+                        </button>
+                    </h2>
+                    <div class="accordion-collapse collapse" id="faq6">
+                        <div class="accordion-body">
+                            The training is designed to be practical and interactive. Students learn 
+                            through demonstrations, guided exercises, and real-world examples that 
+                            help them understand how technologies like Robotics, design tools, coding, 
+                            artificial intelligence, and digital productivity platforms are used in industries.
                         </div>
+                    </div>
+                </div>
 
                     </div> <!-- /.accordion -->
                 </div>
@@ -289,82 +192,7 @@
          
 
 
-            <!-- ======= Footer =======-->
-  <!--  Footer Content -->
-<footer class="footer pt-5 pb-5 bg-primary text-white">
-  <div class="container">
-
-    <!-- Main Footer Content -->
-    <div class="row justify-content-between mb-5 g-xl-5">
-
-      <!-- About & Social -->
-      <div class="col-md-4 mb-5 mb-lg-0">
-        <h3 class="mb-3">About</h3>
-        <hr>
-        <p>Harness our tools to transform ideas into impactful designs. Create with ease and share your vision effortlessly.</p>
-        <!-- Social Media Icons -->
-        <div class="d-flex gap-3 mt-4">
-          <a href="https://www.linkedin.com" target="_blank" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
-          <a href="https://www.instagram.com" target="_blank" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-          <a href="https://www.facebook.com" target="_blank" class="text-white fs-5"><i class="bi bi-facebook"></i></a>
-          <a href="https://www.youtube.com" target="_blank" class="text-white fs-5"><i class="bi bi-youtube"></i></a>
-        </div>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-7">
-        <div class="row gy-4">
-
-          <!-- Company -->
-          <div class="col-6 col-lg-4">
-            <h3 class="mb-3">Company</h3>
-            <hr>
-            <ul class="list-unstyled">
-              <li><a href="#about" class="text-white text-decoration-none">About Us</a></li>
-              <li><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
-              <li><a href="#contact" class="text-white text-decoration-none">Contact Us</a></li>
-              <li><a href="page-terms-conditions.html" class="text-white text-decoration-none">Terms & Conditions</a></li>
-              <li><a href="page-privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          <!-- Accounts -->
-          <div class="col-6 col-lg-4">
-            <h3 class="mb-3">Accounts</h3>
-            <hr>
-            <ul class="list-unstyled">
-              <li><a href="page-signup.html" class="text-white text-decoration-none">Register</a></li>
-              <li><a href="page-signin.html" class="text-white text-decoration-none">Sign In</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="col-12 col-lg-4">
-            <h3 class="mb-3">Contact</h3>
-            <hr>
-            <p class="d-flex mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Jaraka, Jajpur, Odisha,<br>755050, India</p>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=cdtc.edu@gmail.com" target="_blank"
-                  class="d-flex mb-2 text-white text-decoration-none">
-                  <i class="bi bi-envelope-fill me-2"></i>cdtc.edu@gmail.com
-                </a>            
-              <a href="tel:+917735791012" class="d-flex text-white text-decoration-none"><i class="bi bi-telephone-fill me-2"></i>+91 77 357 91012</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer Bottom -->
-    <div class="row border-top border-light pt-4">
-      <div class="col-12 text-center">
-        &copy; <script>document.write(new Date().getFullYear());</script> CDTC. All rights reserved.
-      </div>
-    </div>
-
-  </div>
-</footer>
-<!-- End Footer -->
-
-        </main>
+<div id="footer-placeholder"></div>
     </div>
 
     <!-- ======= Back to Top =======-->
@@ -382,6 +210,10 @@
     <script src="assets/vendors/purecounter/purecounter.js"></script>
     <script src="assets/js/custom.js"></script>
     <script src="./assets/js/contactEmail.js"></script>
+
+
+        <!-- SINGLE GLOBAL SCRIPT CALL FOR HEADER, FOOTER, DESKTOP MODE & SECURITY -->
+    <script src="assets/js/main-global.js"></script>
     <!-- End JavaScripts-->
 </body>
 

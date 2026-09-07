@@ -1,0 +1,73 @@
+<header class="fbs__net-navbar navbar navbar-expand-lg fixed-top bg-white shadow-sm" aria-label="Main Navigation">
+    <div class="container d-flex align-items-center justify-content-between py-2">
+
+        <!-- Brand Logo -->
+        <a class="navbar-brand d-flex align-items-center m-0 p-0" href="index.html">
+            <img src="assets/images/New Logo/logo.png" style="width: 50px; height: 45px; object-fit: contain;" alt="CDTC">
+        </a>
+
+        <!-- Offcanvas Mobile & Tablet Navigation Menu -->
+        <div class="offcanvas offcanvas-start w-75" id="fbs__net-navbars" tabindex="-1" aria-labelledby="fbs__net-navbarsLabel">
+            <div class="offcanvas-header border-bottom px-4 py-3">
+                <div class="offcanvas-title" id="fbs__net-navbarsLabel">
+                    <img src="assets/images/New Logo/logo.png" style="width: 45px; height: 40px; object-fit: contain;" alt="CDTC">
+                </div>
+                <button class="btn-close shadow-none" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body px-4 px-lg-0 align-items-lg-center">
+                <!-- Added id="desktop-nav-menu" -->
+                <ul id="desktop-nav-menu" class="navbar-nav nav me-auto ps-lg-4 mb-2 mb-lg-0 gap-lg-2">
+                    <li class="nav-item"><a class="nav-link px-2 text-dark fw-medium" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-dark fw-medium" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-dark fw-medium" href="course.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-dark fw-medium" href="certification.html">Certification</a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-dark fw-medium" href="institutions.html">Institutions</a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-dark fw-medium" href="career.html">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-dark fw-medium" href="faqs.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link px-2 text-dark fw-medium" href="contact.html">Contact</a></li>
+                    
+                    <!-- Mobile View Extra Controls -->
+                    <div class="d-block d-lg-none mt-4 pt-2 border-top">
+                        <div class="d-grid gap-2">
+                            <a class="btn btn-primary py-2" href="contact.html">Contact Us</a>
+                            <a class="btn btn-outline-primary py-2" href="https://cad-design-training-center-096.github.io/cdtc_internal_dashboard">User Portal</a>
+                        </div>
+                        <div class="text-center mt-4">
+                            <small class="text-muted">Version 2.0 (Stable)</small>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Desktop Actions & Responsive Toggler -->
+        <div class="ms-auto w-auto">
+            <div class="header-social d-flex align-items-center gap-2">
+                <!-- Desktop Buttons -->
+                <a class="btn btn-primary btn-sm px-2 py-1 d-none d-lg-inline-block" style="font-size: 12px;" href="contact.html">Contact Us</a>
+                <a class="btn btn-outline-primary btn-sm px-2 py-1 d-none d-lg-inline-block" style="font-size: 12px;" href="https://cad-design-training-center-096.github.io/cdtc_internal_dashboard">User portal</a>
+
+                <!-- Added id="mobile-toggler" -->
+                <button id="mobile-toggler" class="fbs__net-navbar-toggler d-flex d-lg-none justify-content-center align-items-center rounded p-2 border-0 text-dark"
+                    style="background-color: #f1f3f5; width: 42px; height: 42px; transition: background-color 0.2s;"
+                    data-bs-toggle="offcanvas" data-bs-target="#fbs__net-navbars" aria-controls="fbs__net-navbars"
+                    aria-label="Toggle navigation" aria-expanded="false">
+                    <svg class="fbs__net-icon-menu" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <line x1="21" x2="3" y1="6" y2="6"></line>
+                        <line x1="15" x2="3" y1="12" y2="12"></line>
+                        <line x1="17" x2="3" y1="18" y2="18"></line>
+                    </svg>
+                    <svg class="fbs__net-icon-close" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M18 6 6 18"></path>
+                        <path d="m6 6 12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
