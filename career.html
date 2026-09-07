@@ -223,12 +223,35 @@
       <div id="footer-placeholder"></div>
     </main>
 
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendors/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/vendors/aos/aos.js"></script>
     <script>
       AOS.init();
-      fetch('header.html').then(r => r.text()).then(h => document.getElementById('header-placeholder').innerHTML = h);
-      fetch('footer.html').then(r => r.text()).then(d => document.getElementById('footer-placeholder').innerHTML = d);
+
+      // Load header and safely initialize Bootstrap components once injected
+      fetch('header.html')
+        .then(r => r.text())
+        .then(h => {
+          document.getElementById('header-placeholder').innerHTML = h;
+          
+          // Re-initialize Bootstrap offcanvas elements for dynamically loaded header content
+          var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'));
+          offcanvasElementList.map(function (offcanvasEl) {
+              return new bootstrap.Offcanvas(offcanvasEl);
+          });
+        })
+        .catch(err => console.warn('Failed to load header:', err));
+
+      // Load footer
+      fetch('footer.html')
+        .then(r => r.text())
+        .then(d => {
+          document.getElementById('footer-placeholder').innerHTML = d;
+          if (document.getElementById('current-year')) {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+          }
+        })
+        .catch(err => console.error('Failed to load footer:', err));
 
       function setJob(jobName) {
         const jobSelect = document.getElementById('jobSelect');
@@ -236,7 +259,15 @@
         new bootstrap.Modal(document.getElementById('applyModal')).show();
       }
     </script>
+
+    <!-- disable Inspect Element -->
+<script
+    disable-select = "true"
+    disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'>
+</script>
+
     <script src="assets/js/ApplyJobs.js"></script>
+    
   </div>
 </body>
 </html>
